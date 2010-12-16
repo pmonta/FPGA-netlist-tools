@@ -1,5 +1,5 @@
 module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] dout, input [7:0] din, input rw);
-  reg [7:0] mem[0:65535];
+  reg [7:0] mem[0:65535] /*verilator public*/;
 
 `ifndef verilator
   integer i;
@@ -24,11 +24,11 @@ module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] d
   end
 `endif
 
-  reg key_ready;
+  reg key_ready /*verilator public*/;
   reg display_ready;
   reg display_first;
-  reg display_flag;
-  reg [7:0] display_byte;
+  reg display_flag /*verilator public*/;
+  reg [7:0] display_byte /*verilator public*/;
 
   reg clk1;
 
@@ -58,7 +58,7 @@ module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] d
 
       if (!clk && clk1 && !rw) begin                  // writes
 `ifdef DISPLAY_WRITES
-        $display($time,,"mem[%04x] <- %02x",a,din);
+        $display("mem[%04x] <- %02x",a,din);
 `endif
         mem[a] <= din;
         if ((a==16'hd012)||(a==16'hd0f2)) begin  // fixme: separate peripheral code from generic RAM code

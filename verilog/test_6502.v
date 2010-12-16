@@ -1,11 +1,12 @@
 module main();
-  wire eclk,ereset;
+  wire eclk /*verilator public*/;
+  wire ereset /*verilator public*/;
 
 `ifndef verilator
   clk_reset_gen _clk_reset_gen(eclk, ereset);
 `endif
 
-  wire [15:0] ab;
+  wire [15:0] ab /*verilator public*/;
   wire [7:0] db_i;
   wire [7:0] db_o;
   wire [7:0] db_t;

@@ -1,8 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <string.h>
+#include <stdlib.h>
 
 #include "Vmain.h"
 #include "verilated.h"
+
+#include "Vmain_main.h"
+#include "Vmain_ram_6502.h"
 
 Vmain* top;
 
@@ -12,73 +17,106 @@ void read_binary_file(char* filename,int start_addr)
   int addr;
 
   myfile.open(filename, ios::in | ios::binary);
+  if (!myfile) {
+    cerr << "error opening code file" << endl;
+    return; }
   addr = start_addr;
+  cout << "starting address: " << hex << addr << endl << flush;
   while (1) {
     myfile.read(&c,1);
     if (!myfile)
       break;
-    top->v__DOT___ram_6502__DOT__mem[addr++] = (unsigned char)c; }
+    top->v->_ram_6502->mem[addr++] = (int)((unsigned char)c); }
   myfile.close();
   cout << "ending address: " << hex << addr << endl << flush;
-  top->v__DOT___ram_6502__DOT__mem[0xfffc] = 0x00;
-  top->v__DOT___ram_6502__DOT__mem[0xfffd] = 0xe0;
 }
+
+void set_reset_vector(int x)
+{ top->v->_ram_6502->mem[0xfffc] = x&0xff;
+  top->v->_ram_6502->mem[0xfffd] = (x>>8)&0xff;
+  cout << "reset vector: " << hex << x << endl << flush; }
 
 unsigned int main_time = 0;
 
-//char* x = "0FFF0.FFFF\r";
-char* x = "0PRINT 1234/7\rPRINT 1234/7\r";
+char* x = "0FFF0.FFFF\r";
+//char* x = "0PRINT 1234/7\rPRINT 1234/7\r";
 int xi = 0;
-//int xmax = 11;
-int xmax = 26;
+int xmax = 11;
+//int xmax = 26;
 
 void handle_io(Vmain* top)
 { int display_flag,display_byte;
   int key_ready;
 
-  display_flag = top->v__DOT___ram_6502__DOT__display_flag;
-  display_byte = top->v__DOT___ram_6502__DOT__display_byte;
+  display_flag = top->v->_ram_6502->display_flag;
+  display_byte = top->v->_ram_6502->display_byte;
   if (display_flag) {
     if (display_byte==0x0d)
       display_byte = 0x0a;
     cout << char(display_byte) << flush;
     //    cout << "<" << int(display_byte) << ">" << flush;
-    top->v__DOT___ram_6502__DOT__display_flag = 0; }
+    top->v->_ram_6502->display_flag = 0; }
 
-  key_ready = top->v__DOT___ram_6502__DOT__key_ready;
+  key_ready = top->v->_ram_6502->key_ready;
   if ((!key_ready) && (xi<xmax)) {
     //    cout << "[input "; cout << xi; cout << "]"; cout << flush;
-    top->v__DOT___ram_6502__DOT__mem[0xd010] = x[xi++] | 0x80;
-    top->v__DOT___ram_6502__DOT__key_ready = 1; }
+    top->v->_ram_6502->mem[0xd010] = x[xi++] | 0x80;
+    top->v->_ram_6502->key_ready = 1; }
 
 }
 
+int status_address = 0;
+char code_filename[100];
+int code_start;
+int do_reset_vector = 0;
+int reset_vector;
+
+void args(int argc, char* argv[])
+{ int i;
+  for (i=0; i<argc; i++) {
+    if (strcmp(argv[i],"-status_address")==0)
+      status_address = 1;
+    if (strcmp(argv[i],"-code")==0)
+      strcpy(code_filename,argv[++i]);
+    if (strcmp(argv[i],"-code_start")==0)
+      code_start = atoi(argv[++i]);
+    if (strcmp(argv[i],"-reset_vector")==0) {
+      do_reset_vector = 1;
+      reset_vector = atoi(argv[++i]); } } }
+
 void status(Vmain* top)
-{}
-//{ cout << "[ab:" << hex << int(top->v__DOT__ab) << "]" << flush; }
+{ if (status_address)
+    cout << "[ab:" << hex << int(top->v->ab) << "]" << flush; }
 
 int main(int argc, char **argv, char **env)
 { Verilated::commandArgs(argc, argv);
+  args(argc, argv);
+
   top = new Vmain;
-  top->v__DOT__eclk = 0;
-  top->v__DOT__ereset = 1;
-  read_binary_file("../6502-test-code/test1.bin",0xfff0);
-//  read_binary_file("../6502-test-code/apple1monitor.bin",0xff00);
-//  read_binary_file("../6502-test-code/apple1basic.bin",0xe000);
+
+  read_binary_file(code_filename,code_start);
+  if (do_reset_vector)
+    set_reset_vector(reset_vector);
+
+  top->v->eclk = 0;
+  top->v->ereset = 1;
   top->eval();
+
   while (!Verilated::gotFinish()) {
-    if (main_time>100)
-      top->v__DOT__ereset = 0;
-    top->v__DOT__eclk = 1;
+    if (main_time>200)
+      top->v->ereset = 0;
+    top->v->eclk = 1;
     top->eval();
     main_time++;
     if (main_time>40000)
       handle_io(top);
-    top->v__DOT__eclk = 0;
+    top->v->eclk = 0;
     top->eval();
     main_time++;
     if (main_time>40000)
       handle_io(top);
-    if ((main_time%10000)==0) status(top);
+    if ((main_time%10000)==0)
+      status(top);
     }
+
   exit(0); }
