@@ -38,11 +38,11 @@ void set_reset_vector(int x)
 
 unsigned int main_time = 0;
 
-char* x = "0FFF0.FFFF\r";
-//char* x = "0PRINT 1234/7\rPRINT 1234/7\r";
+//char* x = "0FFF0.FFFF\r";
+char* x = "0PRINT 1234/7\r";
 int xi = 0;
-int xmax = 11;
-//int xmax = 26;
+//int xmax = 11;
+int xmax = 14;
 
 void handle_io(Vmain* top)
 { int display_flag,display_byte;
@@ -108,14 +108,14 @@ int main(int argc, char **argv, char **env)
     top->v->eclk = 1;
     top->eval();
     main_time++;
-    if (main_time>40000)
+    if (main_time>20000)
       handle_io(top);
     top->v->eclk = 0;
     top->eval();
     main_time++;
-    if (main_time>40000)
+    if (main_time>20000)
       handle_io(top);
-    if ((main_time%10000)==0)
+    if ((main_time%180000)==0)
       status(top);
     }
 
