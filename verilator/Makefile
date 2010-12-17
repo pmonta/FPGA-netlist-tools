@@ -1,6 +1,6 @@
 sim:
 #	verilator -DDISPLAY_WRITES --cc ../verilog/top.v --top-module main -I../verilog --exe sim_main.cpp
-	verilator --cc ../verilog/top.v --top-module main -I../verilog --exe sim_main.cpp
+	verilator -DW=6 --cc ../verilog/top.v --top-module main -I../verilog --exe sim_main.cpp
 	(cd obj_dir ; make -f Vmain.mk )
 
 run_monitor:
