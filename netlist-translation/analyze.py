@@ -102,4 +102,4 @@ print_summary(p)
 detect_gates(p)
 print_summary(p)
 
-print_verilog_spice_netlist(p,'chip_6502.v')
+print_verilog_spice_netlist(p,'../verilog/chip_6502.v')

@@ -31,7 +31,7 @@ module main();
   initial begin
     $dumpfile("test_6502.lxt");
     $dumpvars(0,main);
-    #150000;
+    #`MAXTICKS;
     $finish();
   end
 `endif

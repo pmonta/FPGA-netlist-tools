@@ -7,8 +7,8 @@ def glist(x,s):
   return r
 
 def gen(s):
-  print 'module spice_node_%d(input eclk,ereset, input signed [`W:0] %s, output reg signed [`W:0] v);' % (s,string.join(glist('i',s),','))
-  print '  wire signed [`W:0] i = %s;' % string.join(glist('i',s),'+')
+  print 'module spice_node_%d(input eclk,ereset, input signed [`W-1:0] %s, output reg signed [`W-1:0] v);' % (s,string.join(glist('i',s),','))
+  print '  wire signed [`W-1:0] i = %s;' % string.join(glist('i',s),'+')
   print ''
   print '  always @(posedge eclk)'
   print '    if (ereset)'
@@ -19,7 +19,7 @@ def gen(s):
   print 'endmodule'
 
 def gen0():
-  print 'module spice_node_0(input eclk,ereset, output signed [`W:0] v);'
+  print 'module spice_node_0(input eclk,ereset, output signed [`W-1:0] v);'
   print '  assign v = 0;'
   print 'endmodule'
 

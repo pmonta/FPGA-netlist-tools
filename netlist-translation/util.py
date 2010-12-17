@@ -65,7 +65,7 @@ def nodelist_index(p,n,c):
 
 def t_function(p,g):
   if type(g)==type(""):
-    return '~%s_v[`W]' % name(p,g)
+    return '~%s_v[`W-1]' % name(p,g)
   else:
     op = g[0]
     if op=='and':
@@ -141,8 +141,8 @@ def print_verilog_spice_netlist(p,filename):
     if sn=='vss' or sn=='vcc':
       continue
     for (i,c) in enumerate(p.components(n)):
-      f.write('  wire signed [`W:0] %s_i%d;\n' % (name(p,n),i))
-    f.write('  wire signed [`W:0] %s_v;\n' % name(p,n))
+      f.write('  wire signed [`W-1:0] %s_i%d;\n' % (name(p,n),i))
+    f.write('  wire signed [`W-1:0] %s_v;\n' % name(p,n))
   f.write('\n')
 
 # input pins

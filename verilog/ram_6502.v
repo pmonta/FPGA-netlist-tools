@@ -6,6 +6,7 @@ module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] d
   integer fp;
   integer pc;
   integer c;
+  reg [15:0] reset;
   initial begin
     for (i=0; i<65536; i=i+1)
       mem[i] = 0;
@@ -20,6 +21,9 @@ module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] d
       pc = pc + 1;
       c = $fgetc(fp);
     end
+    reset = 16'h`RESET;
+    mem[16'hfffc] = reset[7:0];
+    mem[16'hfffd] = reset[15:8];
     $display($time,,"done initializing RAM; last address 0x%04x",pc);
   end
 `endif
