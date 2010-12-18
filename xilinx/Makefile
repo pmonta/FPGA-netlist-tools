@@ -10,4 +10,5 @@ all:
 #	bitgen -g StartupClk:JtagClk -w chip.ncd chip.bit chip.pcf
 
 clean:
-	rm -rf xst _xmsgs
+	rm -rf xst _xmsgs xlnx_auto_0_xdb
+	rm -f *.bld *.map *.mrp *.ngc *.ngd *.ngm *.pad *.par *.pcf *.ptwx *.unroutes *.xpi *.xrpt *.csv *.txt *.xml *.lst *.html
