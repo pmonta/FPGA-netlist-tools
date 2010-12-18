@@ -1,5 +1,6 @@
-#DEVICE=xc6slx75-3fgg484
-DEVICE=xc6slx150-2fgg484
+DEVICE=xc6slx75-3fgg484
+#DEVICE=xc6slx100-3fgg484
+#DEVICE=xc6slx150-2fgg484
 
 all:
 	echo "run -ifn chip.v -ifmt Verilog -top chip_6502 -ofn chip -p ${DEVICE}" | xst
