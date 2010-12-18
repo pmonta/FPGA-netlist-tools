@@ -1,3 +1,7 @@
+// Top-level test SoC for 6502 core, RAM, peripherals, clocks
+//
+// Copyright (c) 2010 Peter Monta
+
 module main();
   wire eclk /*verilator public*/;
   wire ereset /*verilator public*/;

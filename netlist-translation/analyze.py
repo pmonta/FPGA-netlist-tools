@@ -5,7 +5,7 @@
 #
 # Analyze the 6502 netlist
 #
-# Peter Monta
+# Copyright (c) 2010 Peter Monta
 # November 2010
 #
 

@@ -1,3 +1,9 @@
+// Main program for verilator 6502 simulation; includes "driver" for Apple 1 I/O
+// (simple fixed strings for the moment on input; should fix this to use a socket
+// for console I/O)
+//
+// Copyright (c) 2010 Peter Monta
+
 #include <iostream>
 #include <fstream>
 #include <string.h>

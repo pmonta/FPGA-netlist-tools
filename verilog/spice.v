@@ -1,3 +1,7 @@
+// Models for transistors and nodes
+//
+// Copyright (c) 2010 Peter Monta
+
 `include "common.h"
 
 module spice_pin_input(input p, input signed [`W-1:0] v, output signed [`W-1:0] i);

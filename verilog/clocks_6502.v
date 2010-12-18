@@ -1,3 +1,7 @@
+// Generate reset and clk0 for the 6502 core
+//
+// Copyright (c) 2010 Peter Monta
+
 module clocks_6502(input eclk, ereset, output reg res, output reg clk0);
   reg [10:0] c;
   reg [7:0] i;

@@ -1,0 +1,4 @@
+Tools for translating transistor netlists to HDL in a style that supports switch-level emulation.
+
+To run the apple1basic demo, install verilator and then do a "make demo".  See verilator/sim_main.cpp
+for the simulation code.  The 6502 model itself is in verilog/chip_6502.v.

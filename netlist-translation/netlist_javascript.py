@@ -1,3 +1,7 @@
+# Import the visual6502 netlist files
+#
+# Copyright (c) 2010 Peter Monta
+
 import re
 from netlist import *
 from util import *

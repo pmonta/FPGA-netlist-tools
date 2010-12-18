@@ -1,3 +1,7 @@
+# Generate Verilog models of nodes of various sizes
+#
+# Copyright (c) 2010 Peter Monta
+
 import string
 
 def glist(x,s):

@@ -1,3 +1,8 @@
+// RAM and peripherals for 6502 test system
+// fixme: separate peripherals into separate modules
+//
+// Copyright (c) 2010 Peter Monta
+
 module ram_6502(input eclk,ereset, input clk, input [15:0] a, output reg [7:0] dout, input [7:0] din, input rw);
   reg [7:0] mem[0:65535] /*verilator public*/;
 

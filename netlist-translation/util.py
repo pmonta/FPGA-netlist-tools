@@ -1,3 +1,7 @@
+# Netlist utilities, including Verilog generation
+#
+# Copyright (c) 2010 Peter Monta
+
 import string
 
 def expr_nodes(x):

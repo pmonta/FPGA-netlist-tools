@@ -1,4 +1,6 @@
-#fixme: nodes should have names as well as keys? other metadata?
+# Simple netlist class
+#
+# Copyright (c) 2010 Peter Monta
 
 def expr_nodes(x):
   if type(x)==type(''):
