@@ -38,6 +38,15 @@ def print_verilog_spice_netlist(p,filename):
       f.write('  wire signed [`W-1:0] %s;\n' % string.join(wires,', '))
   f.write('\n')
 
+  for c in p.nodes():
+    t = c.ntype()
+    if t=='node_digital':
+      sn = c.name()
+      if sn=='vss' or sn=='vcc':
+        continue
+      f.write('  wire %s_v;\n' % sn)
+  f.write('\n')
+
 # input pins
 
   for c in p.nodes():
@@ -94,6 +103,19 @@ def print_verilog_spice_netlist(p,filename):
       n = c['s']
       i = find_port(n,c)
       f.write('  spice_pullup %s(%s_v, %s_%s);\n' % (c,n,n,i))
+  f.write('\n')
+
+# latches
+
+  for c in p.nodes():
+    if c.ntype()=='latch':
+      l_g = t_function(c,c.data['function'])
+      if c['din'].name()=='vss' or c['din'].name()=='vcc':
+        print 'latch has input of vss or vcc, skipping'
+        continue
+      l_in = binarize(c['din'])
+      l_out = '%s_v' % c['dout'].name()
+      f.write('  spice_latch %s(eclk,ereset, %s, %s, %s);\n' % (c,l_g,l_in,l_out))
   f.write('\n')
 
 # nodes

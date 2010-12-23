@@ -25,8 +25,8 @@ detect_gates(p)
 print_summary(p)
 #print_gate_stats(p)
 
-#detect_latches(p)
-#print_summary(p)
+detect_latches(p)
+print_summary(p)
 
 #detect_inverters(p)
 #print_summary(p)

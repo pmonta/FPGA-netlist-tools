@@ -53,7 +53,11 @@ def nodelist_index(p,n,c):
 
 def t_function(c,s):
   if type(s)==type(""):
-    return '~%s_v[`W-1]' % c[s]
+    node = c[s]
+    if node.ntype()=='node_analog':
+      return '~%s_v[`W-1]' % node
+    else:
+      return '%s_v' % node
   else:
     op = s[0]
     if op=='and':
@@ -61,3 +65,9 @@ def t_function(c,s):
     else:
       j = '|'
     return '(%s)' % string.join(map(lambda x:t_function(c,x),s[1:]),j)
+
+def binarize(n):
+  if n.ntype()=='node_analog':
+    return '~%s_v[`W-1]' % n.name()
+  else:
+    return '%s_v' % n.name()
