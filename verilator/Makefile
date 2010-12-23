@@ -8,3 +8,6 @@ run_monitor:
 
 run_basic:
 	(cd obj_dir ; ./Vmain -code ../../6502-test-code/apple1basic.bin -code_start 57344 -reset_vector 57344)
+
+clean:
+	rm -rf obj_dir

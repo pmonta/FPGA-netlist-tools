@@ -11,4 +11,4 @@ all:
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb
-	rm -f *.bld *.map *.mrp *.ngc *.ngd *.ngm *.pad *.par *.pcf *.ptwx *.unroutes *.xpi *.xrpt *.csv *.txt *.xml *.lst *.html
+	rm -f *.bld *.map *.mrp *.ngc *.ngd *.ngm *.ncd *.pad *.par *.pcf *.ptwx *.unroutes *.xpi *.xrpt *.csv *.txt *.xml *.lst *.html

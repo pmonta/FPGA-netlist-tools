@@ -2,78 +2,95 @@
 #
 # Copyright (c) 2010 Peter Monta
 
-def expr_nodes(x):
-  if type(x)==type(''):
-    return [x]
-  else:
-    r = []
-    for e in x[1:]:
-      r = r + expr_nodes(e)
-    return r
+#
+# Nodes serve as both components (transitors, gates, etc.) and wires.
+#
+
+class node:
+  def __init__(self,c,ntype):
+    self._name = c
+    self._ntype = ntype
+    self._neighbors = {}
+    self.data = {}
+    self.p = 0
+
+  def __str__(self):
+    return self._name
+
+  def __repr__(self):
+    return self._name
+
+  def __getitem__(self, port):
+    return self._neighbors[port]
+
+  def add(self,port,n):
+    if not port:
+      port = 'port_%d' % self.p
+      self.p = self.p + 1
+    self._neighbors[port] = n
+
+  def remove(self,port):
+    del self._neighbors[port]
+
+  def ports(self):
+    return self._neighbors.keys()
+
+  def name(self):
+    return self._name
+
+  def ntype(self):
+    return self._ntype
+
+  def neighbors(self):
+    return self._neighbors.values()
+
+  def set_type(self,new_type):
+    self._ntype = new_type
+
+#
+# A netlist is just a collection of nodes indexed by name
+#
 
 class netlist:
   def __init__(self):
-    self._components = {}
     self._nodes = {}
-    self._ctype = {}
-    self._node_to_name = {}
-    self._name_to_node = {}
 
-  def add_component(self, c, ctype, node_list):
-#    print 'adding component',c,ctype,node_list
-    for n in node_list:
-      for nn in expr_nodes(n):
-        self._components[nn].append(c)
-    self._nodes[c] = node_list
-    self._ctype[c] = ctype
+  def add_node(self, c, ntype):
+    if self._nodes.has_key(c):
+      n = self._nodes[c]
+      if n.ntype()!=ntype:
+        print 'type conflict when adding node',c,ntype
+      return n
+    n = node(c,ntype)
+    self._nodes[c] = n
+    return n
 
-  def remove_component(self, c):
-#    print 'removing component',c
-    nodes = self._nodes[c]
-    del self._nodes[c]
-    del self._ctype[c]
-    for n in nodes:
-      for nn in expr_nodes(n):
-        for (i,cc) in enumerate(self._components[nn]):
-          if cc==c:
-            del self._components[nn][i]
+  def remove_node(self, c):
+    for n in c.neighbors():
+      unlink(n,c)
+    del self._nodes[c.name()]
 
-  def remove_node(self, n):
-#    print 'removing node %s' % n
-#    print 'components were',self._components[n]
-    del self._components[n]
+  def nodes(self):
+    return self._nodes.values()
 
-  def component_exists(self, c):
-    return self._nodes.has_key(c)
+  def __getitem__(self, key):
+    return self._nodes[key]
 
-  def add_node(self, node):
-    if not self._components.has_key(node):
-      self._components[node] = []
+  def __contains__(self, item):
+    return self._nodes.has_key(item)
 
-  def set_node_name(self, node, name):
-    self._node_to_name[node] = name
-    self._name_to_node[name] = node
+#
+# Utility functions for nodes and netlists
+#
 
-  def name_to_node(self, name):
-    return self._name_to_node[name]
+def link(c1, port1, c2, port2):
+  c1.add(port1,c2)
+  c2.add(port2,c1)
 
-  def node_to_name(self, node):
-    if self._node_to_name.has_key(node):
-      return self._node_to_name[node]
-    else:
-      return None
-
-  def components(self, n=None):
-    if n:
-      return self._components[n]
-    else:
-      return self._nodes.keys()
-
-  def nodes(self, c=None):
-    if c:
-      return self._nodes[c]
-    else:
-      return self._components.keys()
-
-  def type(self,c):
-    return self._ctype[c]
+def unlink(c1, c2):
+  for p in c1.ports():
+    if c1[p]==c2:
+      c1.remove(p)
+  for p in c2.ports():
+    if c2[p]==c1:
+      c2.remove(p)

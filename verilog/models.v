@@ -10,9 +10,8 @@ module spice_pin_input(input p, input signed [`W-1:0] v, output signed [`W-1:0] 
   assign i = {{2{dv[`W]}},dv[`W:3]};
 endmodule
 
-module spice_pin_output(output p, input signed [`W-1:0] v, output signed [`W-1:0] i);
+module spice_pin_output(output p, input signed [`W-1:0] v);
   assign p = ~v[`W-1];
-  assign i = 0;
 endmodule
 
 module spice_pin_bidirectional(input p_i, output p_o, output p_t, input signed [`W-1:0] v, output signed [`W-1:0] i);
@@ -53,4 +52,19 @@ module spice_pullup(input signed [`W-1:0] v, output signed [`W-1:0] i);
   wire signed [`W-1:0] hi = `HI;
   wire signed [`W:0] dv = {hi[`W-1],hi} - {v[`W-1],v};
   assign i = {{3{dv[`W]}},dv[`W:4]};
+endmodule
+
+module spice_latch(input eclk,ereset, input g, input in, output out);
+  reg x;
+
+  always @(posedge eclk)
+    if (ereset)
+      x <= 0;
+    else begin
+      if (g)
+        x <= in;
+    end
+
+  assign out = g ? in : x;
+
 endmodule

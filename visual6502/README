@@ -1,3 +1,6 @@
-These files are from the Visual 6502 project's JavaScript simulator.
+These files are from the Visual 6502 project's JavaScript simulator:
 
 http://visual6502.org
+
+with the exception of the pins.txt file, which establishes the HDL port
+list and the type of each port (input, output, or bidirectional).
