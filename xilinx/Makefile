@@ -1,4 +1,5 @@
-DEVICE=xc6slx75-3fgg484
+DEVICE=xc6slx45-3csg324
+#DEVICE=xc6slx75-3fgg484
 #DEVICE=xc6slx100-3fgg484
 #DEVICE=xc6slx150-2fgg484
 

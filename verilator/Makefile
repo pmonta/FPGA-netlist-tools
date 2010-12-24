@@ -1,5 +1,5 @@
 sim:
-	verilator -DW=6 -DHALFCYCLE=90 --cc ../verilog/top.v --top-module main -I../verilog --exe sim_main.cpp
+	verilator -DW=6 -DHALFCYCLE=75 --cc ../verilog/top.v --top-module main -I../verilog --exe sim_main.cpp
 #	(cd obj_dir ; make -f Vmain.mk )
 	(cd obj_dir ; make OPT_FAST="-O2" -f Vmain.mk )
 
