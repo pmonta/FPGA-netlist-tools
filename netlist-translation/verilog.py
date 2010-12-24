@@ -22,6 +22,16 @@ def print_verilog_spice_netlist(p,filename):
   f.write('\n);\n')
   f.write('\n')
 
+# Verilog functions (for readability)
+
+  f.write('  function v;   // convert an analog node value to 2-level\n');
+  f.write('  input [`W-1:0] x;\n');
+  f.write('  begin\n');
+  f.write('    v = ~x[`W-1];\n');
+  f.write('  end\n');
+  f.write('  endfunction\n');
+  f.write('\n');
+
 # wires
 
   for c in p.nodes():

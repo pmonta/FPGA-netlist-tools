@@ -55,7 +55,7 @@ def t_function(c,s):
   if type(s)==type(""):
     node = c[s]
     if node.ntype()=='node_analog':
-      return '~%s_v[`W-1]' % node
+      return 'v(%s_v)' % node
     else:
       return '%s_v' % node
   else:
@@ -68,6 +68,6 @@ def t_function(c,s):
 
 def binarize(n):
   if n.ntype()=='node_analog':
-    return '~%s_v[`W-1]' % n.name()
+    return 'v(%s_v)' % n.name()
   else:
     return '%s_v' % n.name()
