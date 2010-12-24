@@ -160,6 +160,14 @@ def drives(c,node):
     s = c['pin']
     if node==s:
       return True
+  elif t=='latch':
+    s = c['dout']
+    if node==s:
+      return True
+  elif t=='gate':
+    s = c['dout']
+    if node==s:
+      return True
   return False
 
 def all_gates(x,node):
@@ -217,10 +225,29 @@ def get_pulldown(x,n,gnd):
           return None
         if s==gnd:
           pd = c
+        else:
+          return None
     elif c.ntype()=='latch':
       if c['dout']==n:
         return None
   return pd
+
+def drivers(n):
+  r = []
+  for c in n.neighbors():
+    if drives(c,n):
+      r.append(c)
+  return r
+
+def driven_by_latch(n):
+  d = drivers(n)
+  if len(d)==1 and d[0].ntype()=='latch':
+    return True
+  elif len(d)==1 and d[0].ntype()=='gate':
+    print 'driven by gate'
+    return True
+  else:
+    return False
 
 def detect_inverters(p):
   gnd = p['vss']
@@ -233,6 +260,18 @@ def detect_inverters(p):
     pd = get_pulldown(cc,n,gnd)
     if not pd:
       continue
+
+    if type(pd.data['function'])==type([]):  # do only inverters for now, not more general gates
+      continue
+    x = transistor_inputs(pd)
+    if len(x)!=1:
+      print 'inverter has more than one input'
+    (n0,p0) = x[0]
+#    print n0.ntype()
+    if not driven_by_latch(n0):
+      continue
+    print 'inverter driven by latch'
+
     k = p.add_node(new_name('gate'),'gate')
     link(k,'dout',n,None)
     for (g,port) in transistor_inputs(pd):

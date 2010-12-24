@@ -118,6 +118,15 @@ def print_verilog_spice_netlist(p,filename):
       f.write('  spice_latch %s(eclk,ereset, %s, %s, %s);\n' % (c,l_g,l_in,l_out))
   f.write('\n')
 
+# gates
+
+  for c in p.nodes():
+    if c.ntype()=='gate':
+      gate_in = '~(%s)' % t_function(c,c.data['function'])
+      gate_out = '%s_v' % c['dout'].name()
+      f.write('  assign %s = %s;\n' % (gate_out,gate_in))
+  f.write('\n')
+
 # nodes
 
   node_sizes = set([])
