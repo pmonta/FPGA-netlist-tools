@@ -244,10 +244,51 @@ def driven_by_latch(n):
   if len(d)==1 and d[0].ntype()=='latch':
     return True
   elif len(d)==1 and d[0].ntype()=='gate':
-    print 'driven by gate'
+#    print 'driven by gate'
     return True
   else:
     return False
+
+def is_input(n,c):
+  if c.ntype()=='t':
+    return not (n==c['s'] or n==c['d'])
+  elif c.ntype()=='gate':
+    return not n==c['dout']
+  else:
+    return False
+
+def driven_by(c):
+# driven nodes
+# all components adjacent to these nodes except c
+  if c.ntype()=='t':
+    d = set([c['s'],c['d']])
+  elif c.ntype()=='gate':
+    d = set([c['dout']])
+  else:
+    d = set([])
+  r = []
+  for n in d:
+    for cc in n.neighbors():
+      if is_input(n,cc):
+        r.append(cc)
+  return r
+
+def next(s):
+  r = s
+  for x in s:
+    r = r | set(driven_by(x))
+  return r
+
+def cyclic(n):
+  s = next(set([n])) - set([n])
+  while 1:
+    print '<cyclic>',s
+    t = next(s)
+    if t==s:
+      return False
+    if n in t:
+      return True
+    s = t
 
 def detect_inverters(p):
   gnd = p['vss']
@@ -261,16 +302,20 @@ def detect_inverters(p):
     if not pd:
       continue
 
-    if type(pd.data['function'])==type([]):  # do only inverters for now, not more general gates
+#    x = transistor_inputs(pd)
+#    valid = True
+#    for (n0,p0) in x:
+#      if not driven_by_latch(n0):
+#        valid = False
+#    if not valid:
+#      continue
+
+    print 'testing',pd
+
+    if cyclic(pd):
+      print pd,'is cyclic'
       continue
-    x = transistor_inputs(pd)
-    if len(x)!=1:
-      print 'inverter has more than one input'
-    (n0,p0) = x[0]
-#    print n0.ntype()
-    if not driven_by_latch(n0):
-      continue
-    print 'inverter driven by latch'
+    print pd,'is acyclic'
 
     k = p.add_node(new_name('gate'),'gate')
     link(k,'dout',n,None)

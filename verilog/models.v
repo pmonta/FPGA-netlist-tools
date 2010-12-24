@@ -54,17 +54,18 @@ module spice_pullup(input signed [`W-1:0] v, output signed [`W-1:0] i);
   assign i = {{3{dv[`W]}},dv[`W:4]};
 endmodule
 
-module spice_latch(input eclk,ereset, input g, input in, output out);
-  reg x;
+module spice_latch(input eclk,ereset, input g, input in, output reg out);
+
+  reg g1,g2,g3;
 
   always @(posedge eclk)
-    if (ereset)
-      x <= 0;
-    else begin
-      if (g)
-        x <= in;
+    if (ereset) begin
+      out <= 0;
+      {g1,g2,g3} <= 0;
+    end else begin
+      {g1,g2,g3} <= {g,g1,g2};
+      if (g&g1&g2&g3)
+        out <= in;
     end
-
-  assign out = g ? in : x;
 
 endmodule
