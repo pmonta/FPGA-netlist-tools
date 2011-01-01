@@ -32,6 +32,14 @@ def print_verilog_spice_netlist(p,filename):
   f.write('  endfunction\n');
   f.write('\n');
 
+  f.write('  function [`W-1:0] a;   // convert a 2-level node value to analog\n');
+  f.write('  input x;\n');
+  f.write('  begin\n');
+  f.write('    a = x ? `HI2 : `LO2;\n');
+  f.write('  end\n');
+  f.write('  endfunction\n');
+  f.write('\n');
+
 # wires
 
   for c in p.nodes():
@@ -99,10 +107,20 @@ def print_verilog_spice_netlist(p,filename):
         i_d = '%s_%s' % (d.name(),find_port(d,c))
         f.write('  spice_transistor_nmos_gnd %s(%s, %s, %s);\n' % (c,t_function(c,c.data['function']),v_d,i_d))
       else:
-        v_s = '%s_v' % s.name()
-        i_s = '%s_%s' % (s.name(),find_port(s,c))
-        v_d = '%s_v' % d.name()
-        i_d = '%s_%s' % (d.name(),find_port(d,c))
+        if s.ntype()=='node_analog':
+          v_s = '%s_v' % s.name()
+          i_s = '%s_%s' % (s.name(),find_port(s,c))
+        else:
+          v_s = 'a(%s_v)' % s.name()
+          i_s = new_name('temp')
+          f.write('  wire [`W-1:0] %s;\n' % i_s)
+        if d.ntype()=='node_analog':
+          v_d = '%s_v' % d.name()
+          i_d = '%s_%s' % (d.name(),find_port(d,c))
+        else:
+          v_d = 'a(%s_v)' % d.name()
+          i_d = new_name('temp')
+          f.write('  wire [`W-1:0] %s;\n' % i_d)
         f.write('  spice_transistor_nmos %s(%s, %s, %s, %s, %s);\n' % (c,t_function(c,c.data['function']),v_s,v_d,i_s,i_d))
   f.write('\n')
 

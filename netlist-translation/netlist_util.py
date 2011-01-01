@@ -221,12 +221,14 @@ def get_pulldown(x,n,gnd):
       if d!=n:
         s,d = d,s
       if d==n:
-        if pd:
+        if pd and s==gnd:
+          print 'warning: two distinct pulldown networks'
           return None
-        if s==gnd:
+        elif s==gnd:
           pd = c
         else:
-          return None
+#          return None
+          print 'non-grounded transistor: continuing'
     elif c.ntype()=='latch':
       if c['dout']==n:
         return None
@@ -295,9 +297,13 @@ def detect_inverters(p):
   for c in p.nodes():
     if c.ntype()!='pullup':
       continue
+
     n = c['s']
     cc = set(n.neighbors())
     cc.remove(c)
+
+    print 'detect_inverters: pulldown',n
+
     pd = get_pulldown(cc,n,gnd)
     if not pd:
       continue
@@ -310,7 +316,7 @@ def detect_inverters(p):
 #    if not valid:
 #      continue
 
-    print 'testing',pd
+    print 'testing pulldown',pd
 
     if cyclic(pd):
       print pd,'is cyclic'
