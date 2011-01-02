@@ -161,28 +161,21 @@ def print_verilog_spice_netlist(p,filename):
 
 # multiplexers
 
-  for c in p.nodes():
-    if c.ntype()!='mux2':
-      continue
-    clk0 = t_function(c,c.data['function0'])
-    clk1 = t_function(c,c.data['function1'])
-    x0 = binarize(c['x0'])
-    x1 = binarize(c['x1'])
-    dout = c['dout']
-    f.write('  spice_mux_2 %s(eclk, ereset, %s, %s, %s, %s, %s_v);\n' % (c,clk0,clk1,x0,x1,dout));
-  f.write('\n');
+  mux_sizes = set([])
 
   for c in p.nodes():
-    if c.ntype()!='mux3':
+    if c.ntype()!='mux':
       continue
-    clk0 = t_function(c,c.data['function0'])
-    clk1 = t_function(c,c.data['function1'])
-    clk2 = t_function(c,c.data['function2'])
-    x0 = binarize(c['x0'])
-    x1 = binarize(c['x1'])
-    x2 = binarize(c['x2'])
+    s = len(c.data['functions'])
+    mux_sizes.add(s)
+    clks = []
+    for fn in c.data['functions']:
+      clks.append(t_function(c,fn))
+    xs = []
+    for i in xrange(0,s):
+      xs.append(binarize(c['x%d'%i]))
     dout = c['dout']
-    f.write('  spice_mux_3 %s(eclk, ereset, %s, %s, %s, %s, %s, %s, %s_v);\n' % (c,clk0,clk1,clk2,x0,x1,x2,dout));
+    f.write('  spice_mux_%d %s(eclk, ereset, %s, %s, %s_v);\n' % (s,c,string.join(clks,','),string.join(xs,','),dout));
   f.write('\n');
 
 # nodes
@@ -225,5 +218,6 @@ def print_verilog_spice_netlist(p,filename):
 
 # mux modules
 
-  gen_mux(f,2)
-  gen_mux(f,3)
+  for s in mux_sizes:
+    gen_mux(f,s)
+    f.write('\n')

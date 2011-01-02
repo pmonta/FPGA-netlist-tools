@@ -364,7 +364,7 @@ def print_netlist(p,filename):
   for c in p.nodes():
     f.write(`c.name(),c.ntype(),c.neighbors(),c.data`+'\n')
 
-def detect_mux2(p):
+def detect_muxes(p):
   for n in p.nodes():
     if n.ntype()!='node_analog':
       continue
@@ -372,7 +372,8 @@ def detect_mux2(p):
     if sn=='vss' or sn=='vcc':
       continue
     d = drivers(n)
-    if len(d)!=2:
+    s = len(d)
+    if s!=2 and s!=3:
       continue
     clk = []
     x = []
@@ -386,67 +387,17 @@ def detect_mux2(p):
         x.append(c['d'])
       else:
         x.append(c['s'])
-    if len(cc)!=2 or len(clk)!=2 or len(x)!=2:
-      print 'size',len(clk),len(x)
+    if len(clk)!=s:
+      print 'size',len(clk)
       continue
-    print 'clk0,clk1,x0,x1',clk[0],clk[1],x[0],x[1]
 # new component: mux.  inputs clk* and x*; output: this node.
-    k = p.add_node(new_name('mux2'),'mux2')
-    for (g,port) in transistor_inputs(cc[0]):
-      link(g,None,k,port)
-    for (g,port) in transistor_inputs(cc[1]):
-      link(g,None,k,port)
-    k.data['function0'] = clk[0]
-    k.data['function1'] = clk[1]
-    link(x[0],None,k,'x0')
-    link(x[1],None,k,'x1')
-    link(n,None,k,'dout')
-# change type of this node to digital
-    n.set_type('node_digital')
-# remove transistors
-    for c in d:
-      p.remove_node(c)
-
-def detect_mux3(p):
-  for n in p.nodes():
-    if n.ntype()!='node_analog':
-      continue
-    sn = n.name()
-    if sn=='vss' or sn=='vcc':
-      continue
-    d = drivers(n)
-    if len(d)!=3:
-      continue
-    clk = []
-    x = []
-    cc = []
-    for c in d:
-      if c.ntype()!='t':
-        continue
-      cc.append(c)
-      clk.append(c.data['function'])
-      if c['s']==n:
-        x.append(c['d'])
-      else:
-        x.append(c['s'])
-    if len(cc)!=3 or len(clk)!=3 or len(x)!=3:
-      print 'size',len(clk),len(x)
-      continue
-    print 'clk0,clk1,clk2,x0,x1,x2',clk[0],clk[1],clk[2],x[0],x[1],x[2]
-# new component: mux.  inputs clk* and x*; output: this node.
-    k = p.add_node(new_name('mux3'),'mux3')
-    for (g,port) in transistor_inputs(cc[0]):
-      link(g,None,k,port)
-    for (g,port) in transistor_inputs(cc[1]):
-      link(g,None,k,port)
-    for (g,port) in transistor_inputs(cc[2]):
-      link(g,None,k,port)
-    k.data['function0'] = clk[0]
-    k.data['function1'] = clk[1]
-    k.data['function2'] = clk[2]
-    link(x[0],None,k,'x0')
-    link(x[1],None,k,'x1')
-    link(x[2],None,k,'x2')
+    k = p.add_node(new_name('mux'),'mux')
+    for c in cc:
+      for (g,port) in transistor_inputs(c):
+        link(g,None,k,port)
+    k.data['functions'] = clk
+    for (i,c) in enumerate(x):
+      link(c,None,k,'x%d'%i)
     link(n,None,k,'dout')
 # change type of this node to digital
     n.set_type('node_digital')

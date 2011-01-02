@@ -37,10 +37,7 @@ print_summary(p)
 detect_inverters(p)
 print_summary(p)
 
-detect_mux2(p)
-print_summary(p)
-
-detect_mux3(p)
+detect_muxes(p)
 print_summary(p)
 
 #print_netlist(p,'netlist.txt')
