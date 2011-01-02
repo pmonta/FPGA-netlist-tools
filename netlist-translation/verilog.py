@@ -162,7 +162,7 @@ def print_verilog_spice_netlist(p,filename):
 # multiplexers
 
   for c in p.nodes():
-    if c.ntype()!='mux':
+    if c.ntype()!='mux2':
       continue
     clk0 = t_function(c,c.data['function0'])
     clk1 = t_function(c,c.data['function1'])
@@ -170,6 +170,19 @@ def print_verilog_spice_netlist(p,filename):
     x1 = binarize(c['x1'])
     dout = c['dout']
     f.write('  spice_mux_2 %s(eclk, ereset, %s, %s, %s, %s, %s_v);\n' % (c,clk0,clk1,x0,x1,dout));
+  f.write('\n');
+
+  for c in p.nodes():
+    if c.ntype()!='mux3':
+      continue
+    clk0 = t_function(c,c.data['function0'])
+    clk1 = t_function(c,c.data['function1'])
+    clk2 = t_function(c,c.data['function2'])
+    x0 = binarize(c['x0'])
+    x1 = binarize(c['x1'])
+    x2 = binarize(c['x2'])
+    dout = c['dout']
+    f.write('  spice_mux_3 %s(eclk, ereset, %s, %s, %s, %s, %s, %s, %s_v);\n' % (c,clk0,clk1,clk2,x0,x1,x2,dout));
   f.write('\n');
 
 # nodes

@@ -84,3 +84,22 @@ module spice_mux_2(input eclk,ereset, input clk0,clk1, input x0,x1, output reg y
       endcase
 
 endmodule
+
+module spice_mux_3(input eclk,ereset, input clk0,clk1,clk2, input x0,x1,x2, output reg y);
+
+  always @(posedge eclk)
+    if (ereset)
+      y <= 0;
+    else
+      case ({clk0,clk1,clk2})
+        3'b100: y <= x0;
+        3'b010: y <= x1;
+        3'b001: y <= x2;
+        3'b110: y <= ((x0==1'b0)|(x1==1'b0)) ? 0 : 1;
+        3'b011: y <= ((x1==1'b0)|(x2==1'b0)) ? 0 : 1;
+        3'b101: y <= ((x0==1'b0)|(x2==1'b0)) ? 0 : 1;
+        3'b111: y <= ((x0==1'b0)|(x1==1'b0)|(x2==1'b0)) ? 0 : 1;
+        default: ;
+      endcase
+
+endmodule
