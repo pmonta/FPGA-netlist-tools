@@ -76,36 +76,3 @@ module mux_cascade(input c0,v0,c1,v1, output c, output reg v);
       default: v = 0;
     endcase
 endmodule
-
-module spice_mux_2(input eclk,ereset, input clk0,clk1, input x0,x1, output reg y);
-
-  wire clk,x;
-
-  mux_cascade m0(clk0, x0, clk1, x1, clk, x);
-
-  always @(posedge eclk)
-    if (ereset)
-      y <= 0;
-    else begin
-      if (clk)
-        y <= x;
-    end
-
-endmodule
-
-module spice_mux_3(input eclk,ereset, input clk0,clk1,clk2, input x0,x1,x2, output reg y);
-
-  wire clk_t0,x_t0,clk,x;
-
-  mux_cascade m0(clk0, x0, clk1, x1, clk_t0, x_t0);
-  mux_cascade m1(clk_t0, x_t0, clk2, x2, clk, x);
-
-  always @(posedge eclk)
-    if (ereset)
-      y <= 0;
-    else begin
-      if (clk)
-        y <= x;
-    end
-
-endmodule

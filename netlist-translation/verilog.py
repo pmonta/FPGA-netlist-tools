@@ -222,3 +222,8 @@ def print_verilog_spice_netlist(p,filename):
   for s in node_sizes:
     gen(f,s)
     f.write('\n')
+
+# mux modules
+
+  gen_mux(f,2)
+  gen_mux(f,3)

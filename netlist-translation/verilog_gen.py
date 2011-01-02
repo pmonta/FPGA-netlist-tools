@@ -75,3 +75,29 @@ def binarize(n):
     return 'v(%s_v)' % n.name()
   else:
     return '%s_v' % n.name()
+
+def gen_mux(f,s):
+  clk_list = string.join(glist('clk',s),',')
+  x_list = string.join(glist('x',s),',')
+  f.write('module spice_mux_%d(input eclk,ereset, input %s, input %s, output reg y);\n' % (s,clk_list,x_list))
+  for i in xrange(0,s):
+    f.write('  wire c%d,z%d;\n' % (i,i));
+  f.write('\n');
+  f.write('  assign c0 = clk0;\n')
+  f.write('  assign z0 = x0;\n')
+  f.write('\n');
+  for i in xrange(0,s-1):
+    f.write('  mux_cascade m%d(c%d, z%d, clk%d, x%d, c%d, z%d);\n' % (i,i,i,i+1,i+1,i+1,i+1))
+  f.write('\n');
+  f.write('  wire clk = c%d;\n' % (s-1));
+  f.write('  wire x = z%d;\n' % (s-1));
+  f.write('\n');
+  f.write('  always @(posedge eclk)\n');
+  f.write('    if (ereset)\n');
+  f.write('      y <= 0;\n');
+  f.write('    else begin\n');
+  f.write('      if (clk)\n');
+  f.write('        y <= x;\n');
+  f.write('    end\n');
+  f.write('\n');
+  f.write('endmodule\n');
