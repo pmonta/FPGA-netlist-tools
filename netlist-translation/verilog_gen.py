@@ -67,7 +67,11 @@ def t_function(c,s):
     return '(%s)' % string.join(map(lambda x:t_function(c,x),s[1:]),j)
 
 def binarize(n):
-  if n.ntype()=='node_analog':
+  if n.name()=='vss':
+    return "1'b0"
+  elif n.name()=='vcc':
+    return "1'b1"
+  elif n.ntype()=='node_analog':
     return 'v(%s_v)' % n.name()
   else:
     return '%s_v' % n.name()

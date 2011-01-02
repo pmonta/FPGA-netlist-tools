@@ -363,3 +363,46 @@ def print_netlist(p,filename):
   f = open(filename,"w")
   for c in p.nodes():
     f.write(`c.name(),c.ntype(),c.neighbors(),c.data`+'\n')
+
+def detect_muxes(p):
+  for n in p.nodes():
+    if n.ntype()!='node_analog':
+      continue
+    sn = n.name()
+    if sn=='vss' or sn=='vcc':
+      continue
+    d = drivers(n)
+    if len(d)!=2:
+      continue
+    clk = []
+    x = []
+    cc = []
+    for c in d:
+      if c.ntype()!='t':
+        continue
+      cc.append(c)
+      clk.append(c.data['function'])
+      if c['s']==n:
+        x.append(c['d'])
+      else:
+        x.append(c['s'])
+    if len(cc)!=2 or len(clk)!=2 or len(x)!=2:
+      print 'size',len(clk),len(x)
+      continue
+    print 'clk0,clk1,x0,x1',clk[0],clk[1],x[0],x[1]
+# new component: mux.  inputs clk* and x*; output: this node.
+    k = p.add_node(new_name('mux'),'mux')
+    for (g,port) in transistor_inputs(cc[0]):
+      link(g,None,k,port)
+    for (g,port) in transistor_inputs(cc[1]):
+      link(g,None,k,port)
+    k.data['function0'] = clk[0]
+    k.data['function1'] = clk[1]
+    link(x[0],None,k,'x0')
+    link(x[1],None,k,'x1')
+    link(n,None,k,'dout')
+# change type of this node to digital
+    n.set_type('node_digital')
+# remove transistors
+    for c in d:
+      p.remove_node(c)

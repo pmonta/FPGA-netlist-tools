@@ -69,3 +69,18 @@ module spice_latch(input eclk,ereset, input g, input in, output reg out);
     end
 
 endmodule
+
+module spice_mux_2(input eclk,ereset, input clk0,clk1, input x0,x1, output reg y);
+
+  always @(posedge eclk)
+    if (ereset)
+      y <= 0;
+    else
+      case ({clk0,clk1})
+        2'b10: y <= x0;
+        2'b01: y <= x1;
+        2'b11: y <= ((x0==1'b0)|(x1==1'b0)) ? 0 : 1;
+        default: ;
+      endcase
+
+endmodule

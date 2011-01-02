@@ -37,5 +37,8 @@ print_summary(p)
 detect_inverters(p)
 print_summary(p)
 
+detect_muxes(p)
+print_summary(p)
+
 #print_netlist(p,'netlist.txt')
 print_verilog_spice_netlist(p,'../verilog/chip_6502.v')

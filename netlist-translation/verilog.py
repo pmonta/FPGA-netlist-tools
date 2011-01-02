@@ -79,7 +79,11 @@ def print_verilog_spice_netlist(p,filename):
   for c in p.nodes():
     if c.ntype()=='pin_output':
       n = c['pin']
-      f.write('  spice_pin_output %s(%s, %s_v);\n' % (c,c.data['name'],n))
+      if n.ntype()=='node_analog':
+        s = '%s_v' % n
+      else:
+        s = 'a(%s_v)' % n
+      f.write('  spice_pin_output %s(%s, %s);\n' % (c,c.data['name'],s))
   f.write('\n')
 
 # bidirectional pins
@@ -154,6 +158,19 @@ def print_verilog_spice_netlist(p,filename):
       gate_out = '%s_v' % c['dout'].name()
       f.write('  assign %s = %s;\n' % (gate_out,gate_in))
   f.write('\n')
+
+# multiplexers
+
+  for c in p.nodes():
+    if c.ntype()!='mux':
+      continue
+    clk0 = t_function(c,c.data['function0'])
+    clk1 = t_function(c,c.data['function1'])
+    x0 = binarize(c['x0'])
+    x1 = binarize(c['x1'])
+    dout = c['dout']
+    f.write('  spice_mux_2 %s(eclk, ereset, %s, %s, %s, %s, %s_v);\n' % (c,clk0,clk1,x0,x1,dout));
+  f.write('\n');
 
 # nodes
 
