@@ -1,1 +1,1 @@
-net eclk period = 12ns;
+net eclk period = 11.8ns;
