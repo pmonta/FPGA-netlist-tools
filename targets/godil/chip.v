@@ -2,3 +2,4 @@
 
 `include "../verilog/chip_6502.v"
 `include "../verilog/models.v"
+`include "godil.v"
