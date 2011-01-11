@@ -1,0 +1,21 @@
+# Clock period constraint.
+
+net clk_50mhz period = 20ns;  # on-board 50 MHz crystal oscillator
+
+#
+# Digilent Spartan-3E Starter Board pins
+#
+
+net "clk_50mhz" loc = "c9" | iostandard = LVCMOS33 ;
+
+net "led<7>" loc = "f9" | iostandard = LVTTL | slew  = slow | drive = 8 ;
+net "led<6>" loc = "e9" | iostandard = LVTTL | slew  = slow | drive = 8 ;
+net "led<5>" loc = "d11" | iostandard = LVTTL | slew = slow | drive = 8 ;
+net "led<4>" loc = "c11" | iostandard = LVTTL | slew = slow | drive = 8 ;
+net "led<3>" loc = "f11" | iostandard = LVTTL | slew = slow | drive = 8 ;
+net "led<2>" loc = "e11" | iostandard = LVTTL | slew = slow | drive = 8 ;
+net "led<1>" loc = "e12" | iostandard = LVTTL | slew = slow | drive = 8 ;
+net "led<0>" loc = "f12" | iostandard = LVTTL | slew = slow | drive = 8 ;
+
+net "rs232_dce_rxd" loc = "r7" | iostandard = LVTTL ;
+net "rs232_dce_txd" loc = "m14" | iostandard = LVTTL | drive = 8 | slew = slow ;
