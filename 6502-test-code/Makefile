@@ -7,5 +7,8 @@ test1.bin: test1.asm
 test2.bin: test2.asm
 	acme -o test2.bin test2.asm
 
+test3.bin: test3.asm
+	acme -o test3.bin test3.asm
+
 clean:
 	rm -f AllSuiteA.bin test1.bin
