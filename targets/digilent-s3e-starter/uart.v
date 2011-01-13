@@ -14,8 +14,7 @@ module uart(
 
   wire [7:0] rx_d;
 
-  wire [15:0] divisor = 16'd27;  // 115200 baud at 50 MHz, 0.5 percent error
-//  wire [15:0] divisor = 16'd163;  // 19200 baud at 50 MHz, 0.15 percent error
+  wire [15:0] divisor = 16'd163;  // 19200 baud at 50 MHz, 0.15 percent error
 
   uart_transceiver _uart_transceiver(.sys_clk(clk), .sys_rst(reset),
     .uart_rx(rs232_rxd), .uart_tx(rs232_txd),
@@ -25,18 +24,16 @@ module uart(
 
 // RX
 
-  reg [1:0] rx_state;
-
   always @(posedge clk)
-    if (reset) begin
-      rx_state <= 0;
+    if (reset)
       rx_flag <= 0;
-    end else
-      case (rx_state)
-        2'd0: if (rx_done) begin rx_data <= rx_d; rx_state <= 2'd1; end
-        2'd1: if (!rx_done) begin rx_flag <= 1; rx_state <= 2'd2; end
-        2'd2: if (rx_ack) begin rx_flag <= 0; rx_state <= 2'd0; end
-      endcase
+    else begin
+      if (rx_done) begin
+        rx_flag <= 1;
+        rx_data <= rx_d;
+      end else if (rx_ack)
+        rx_flag <= 0;
+    end
 
 // TX
 

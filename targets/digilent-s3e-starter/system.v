@@ -24,13 +24,6 @@ module system(
 
   clocks_6502 _clocks_6502(eclk,ereset, res, clk0);
 
-// blinking LED
-
-  reg [26:0] c;
-  always @(posedge eclk)
-    c <= c+1;
-  assign led = c[26:19];
-
   wire so = 1'b0;
   wire rdy = 1'b1;
   wire nmi = 1'b1;
@@ -66,12 +59,14 @@ module system(
   reg clk2out1;
   always @(posedge eclk)
     clk2out1 <= clk2out;
+
   wire wr = !rw & clk2out1 & !clk2out;
   wire rd = rw & clk2out1 & !clk2out;
 
   wire wr_ram = (page==4'h0 || page==4'h1) && wr;
-  wire rd_keyboard = (ab==16'hd011) && rd;
+  wire rd_keyboard = (ab==16'hd010) && rd;
   wire wr_display = ((ab==16'hd012)||(ab==16'hd0f2)) && wr;
+  wire wr_leds = (ab==16'ha000) && wr;
 
 // ROM
 
@@ -109,6 +104,12 @@ module system(
     tx_data, tx_flag, tx_wr,
     wr_display, db_o, display_data, display_ready);
 
+// on-board LEDs
+
+  leds _leds(eclk, ereset,
+    led,
+    wr_leds, db_o);
+
 endmodule
 
 module keyboard_6502(
@@ -122,7 +123,7 @@ module keyboard_6502(
 );
 
   assign rx_ack = rd_keyboard;
-  assign keyboard_data = rx_data;
+  assign keyboard_data = {rx_data[7:6],rx_data[6] ? 1'b0 : rx_data[5],rx_data[4:0]};  // force incoming keyboard data to upper case
   assign keyboard_flag = rx_flag;
 
 endmodule
@@ -8417,5 +8418,20 @@ module ram_6502(
   always @(posedge eclk)
     if (wr)
       mem[ab[12:0]] <= din;
+
+endmodule
+
+module leds(
+  input eclk, ereset,
+  output reg [7:0] led,
+  input wr_leds,
+  input [7:0] din
+);
+
+  always @(posedge eclk)
+    if (ereset)
+      led <= 0;
+    else if (wr_leds)
+      led <= din;
 
 endmodule
