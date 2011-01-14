@@ -49,7 +49,7 @@ module system(
   wire [3:0] page = ab[15:12];
   assign db_i =
     (page==4'he || page==4'hf) ? db_rom :
-    (page==4'h0 || page==4'h1) ? db_ram :
+    (ab[15]==1'b0) ? db_ram :
     (ab==16'hd010) ? {1'b1,keyboard_data[6:0]} :
     (ab==16'hd011) ? {keyboard_flag,7'd0} :
     ((ab==16'hd012)||(ab==16'hd0f2)) ? {!display_ready,display_data[6:0]} : 8'd0;
@@ -63,7 +63,7 @@ module system(
   wire wr = !rw & clk2out1 & !clk2out;
   wire rd = rw & clk2out1 & !clk2out;
 
-  wire wr_ram = (page==4'h0 || page==4'h1) && wr;
+  wire wr_ram = (ab[15]==1'b0) && wr;
   wire rd_keyboard = (ab==16'hd010) && rd;
   wire wr_display = ((ab==16'hd012)||(ab==16'hd0f2)) && wr;
   wire wr_leds = (ab==16'ha000) && wr;
@@ -8404,20 +8404,14 @@ module ram_6502(
   input [7:0] din
 );
 
-  reg [7:0] mem[0:8191];
-
-  integer i;
-
-//  initial
-//    for (i=0; i<8192; i=i+1)
-//      mem[i] = 0;
+  reg [7:0] mem[0:32767];
 
   always @(posedge eclk)
-    d <= mem[ab[12:0]];
+    d <= mem[ab[14:0]];
 
   always @(posedge eclk)
     if (wr)
-      mem[ab[12:0]] <= din;
+      mem[ab[14:0]] <= din;
 
 endmodule
 
