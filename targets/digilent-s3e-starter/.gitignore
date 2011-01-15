@@ -5,8 +5,10 @@ test_sys.lxt
 
 # Xilinx cruft
 
-_impactbatch.log
 _xmsgs
+xlnx_auto_0_xdb
+xst
+
 *.bgn
 *.bit
 *.bld
@@ -33,9 +35,8 @@ _xmsgs
 *_xst.xrpt
 *_map.xrpt
 *_par.xrpt
+
+_impactbatch.log
 netlist.lst
 usage_statistics_webtalk.html
 webtalk.log
-
-xlnx_auto_0_xdb
-xst

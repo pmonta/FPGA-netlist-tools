@@ -7,3 +7,4 @@
 `include "system.v"
 `include "uart.v"
 `include "uart_transceiver.v"
+`include "rom.v"

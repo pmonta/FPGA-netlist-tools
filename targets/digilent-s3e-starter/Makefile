@@ -12,4 +12,9 @@ prog:
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb
-	rm -f *.bld *.map *.mrp *.ngc *.ngd *.ngm *.ncd *.pad *.par *.pcf *.ptwx *.unroutes *.xpi *.xrpt *.csv *.txt *.xml *.lst *.html
+	rm -f *~
+	rm -f *.bgn *.bld *.drc *.map *.mrp *.ncd *.ngc *.ngd *.ngm *.pad *.par *.pcf *.ptwx *.unroutes *.xpi
+	rm -f *_bitgen.xwbt *_ngdbuild.xrpt *_pad.csv *_pad.txt *_summary.xml *_usage.xml
+	rm -f *_xst.xrpt *_map.xrpt *_par.xrpt
+	rm -f _impactbatch.log netlist.lst usage_statistics_webtalk.html webtalk.log
+	rm -f a.out *.lxt
