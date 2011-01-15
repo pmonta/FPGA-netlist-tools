@@ -3,7 +3,7 @@
 # incoming clk0 from the host system and multiply it by about 60 using DCMs.
 # For concreteness, Use Apple II's clock of nominally 14.31818 MHz divided by 14
 
-net clk0 period = 977.777ns;  # 1.022727 MHz clk0 (6502 pin 37) from host system
+#net clk0 period = 977.777ns;  # 1.022727 MHz clk0 (6502 pin 37) from host system
 
 # inputs only
 #NET m49                       LOC=P89 | IOSTANDARD = LVCMOS33 ;

@@ -1,18 +1,16 @@
-DEVICE=xc3s500e-4vqg100c
-#DEVICE=xc6slx16-2ftg256
-#DEVICE=xc6slx25-2ftg256
-#DEVICE=xc6slx45-3csg324
-#DEVICE=xc6slx75-3fgg484
-#DEVICE=xc6slx100-3fgg484
-#DEVICE=xc6slx150-2fgg484
+DEVICE=xc3s500e-4vq100
 
 all:
-	echo "run -ifn chip.v -ifmt Verilog -top chip_6502 -ofn chip -p ${DEVICE}" | xst
+	echo "run -ifn chip.v -ifmt Verilog -top godil40_xc3s500e -ofn chip -p ${DEVICE}" | xst
 	ngdbuild -p ${DEVICE} -uc chip.ucf chip
 	map -w -timing -p ${DEVICE} chip.ngd chip.pcf
 	par -w chip.ncd chip.ncd chip.pcf
-#	bitgen -g StartupClk:JtagClk -w chip.ncd chip.bit chip.pcf
+	bitgen -g StartupClk:JtagClk -w chip.ncd chip.bit chip.pcf
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb
-	rm -f *.bld *.map *.mrp *.ngc *.ngd *.ngm *.ncd *.pad *.par *.pcf *.ptwx *.unroutes *.xpi *.xrpt *.csv *.txt *.xml *.lst *.html
+	rm -f *~
+	rm -f *.bgn *.bld *.drc *.map *.mrp *.ncd *.ngc *.ngd *.ngm *.pad *.par *.pcf *.ptwx *.unroutes *.xpi
+	rm -f *_bitgen.xwbt *_ngdbuild.xrpt *_pad.csv *_pad.txt *_summary.xml *_usage.xml
+	rm -f *_xst.xrpt *_map.xrpt *_par.xrpt
+	rm -f _impactbatch.log netlist.lst usage_statistics_webtalk.html webtalk.log
