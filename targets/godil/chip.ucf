@@ -15,8 +15,8 @@
 #NET rts                       LOC=P30 | IOSTANDARD = LVCMOS33 | PULLUP ;
 
 # I/O's for uart & spi flash
-#NET sin                       LOC=P43 | IOSTANDARD = LVCMOS33 ;
-#NET cts                       LOC=P25 | IOSTANDARD = LVCMOS33 ;
+NET led<0>                       LOC=P43 | IOSTANDARD = LVCMOS33 ;  // sin
+NET led<1>                       LOC=P25 | IOSTANDARD = LVCMOS33 ;  // cts
 #NET cso                       LOC=P24 | IOSTANDARD = LVCMOS33 ;
 #NET vs2                       LOC=P47 | IOSTANDARD = LVCMOS33 ;
 

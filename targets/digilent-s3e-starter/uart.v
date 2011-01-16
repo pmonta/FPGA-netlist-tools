@@ -14,7 +14,8 @@ module uart(
 
   wire [7:0] rx_d;
 
-  wire [15:0] divisor = 16'd163;  // 19200 baud at 50 MHz, 0.15 percent error
+//  wire [15:0] divisor = 16'd163;  // 19200 baud at 50 MHz, 0.15 percent error
+  wire [15:0] divisor = 16'd183;  // 19200 baud at 56.25 MHz
 
   uart_transceiver _uart_transceiver(.sys_clk(clk), .sys_rst(reset),
     .uart_rx(rs232_rxd), .uart_tx(rs232_txd),

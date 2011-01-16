@@ -5,7 +5,7 @@ all:
 	ngdbuild -p ${DEVICE} -uc chip.ucf chip
 	map -w -timing -p ${DEVICE} chip.ngd chip.pcf
 	par -w chip.ncd chip.ncd chip.pcf
-	bitgen -g StartupClk:JtagClk -w chip.ncd chip.bit chip.pcf
+	bitgen -g StartupClk:JtagClk -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -w chip.ncd chip.bit chip.pcf
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb

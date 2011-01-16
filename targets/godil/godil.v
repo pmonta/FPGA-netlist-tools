@@ -1,6 +1,7 @@
 // Top-level module for GODIL40_XC3S500E board
 
 module godil40_xc3s500e(
+// start of 6502 pins on DIL connector
   output [15:0] ab,
   inout [7:0] db,
   input res,
@@ -12,7 +13,9 @@ module godil40_xc3s500e(
   output clk2out,
   input rdy,
   input nmi,
-  input irq
+  input irq,
+// end of 6502 pins on DIL connector
+  output [1:0] led
 );
 
 // handle three-state data bus
@@ -26,6 +29,16 @@ module godil40_xc3s500e(
 
   wire clk0_i;
   BUFG _ibuf_clk0(.I(clk0), .O(clk0_i));
+
+// blink an LED using buffered clk0
+
+  blink #(20) _blink(clk0_i, led[0]);
+
+// blink an LED using an internal ring oscillator
+
+  wire osc;
+  ring_osc _ring_osc(osc);
+  blink #(24) _blink(osc, led[1]);
 
 // create an emulation clock from clk0
 
@@ -54,13 +67,13 @@ module clock_and_reset(
   output ereset
 );
 
-  wire clk_30x;
-  wire clk_60x;
+  wire clk_27x;
+  wire clk_54x;
 
-  dcm_mult #(30) _dcm0(clk0, clk_30x);
-  dcm_mult #(2) _dcm1(clk_30x, clk_60x);
+  dcm_mult #(27) _dcm0(clk0, clk_27x);
+  dcm_mult #(2) _dcm1(clk_27x, clk_54x);
 
-  BUFG b0(.I(clk_60x), .O(eclk));
+  BUFG b0(.I(clk_54x), .O(eclk));
 
   reg [7:0] r = 8'd0;
 
@@ -88,5 +101,37 @@ module dcm_mult(
    .CLKFX(clk_out),     // DCM CLK synthesis out (M/D)
    .CLKIN(clk_in)    // Clock input (from IBUFG, BUFG or DCM)
 );
+
+endmodule
+
+module blink(
+  input clk,
+  output led
+);
+
+  parameter W = 8;
+
+  reg [W-1:0] c;
+
+  always @(posedge clk)
+    c <= c + 1;
+
+  assign led = c[W-1];
+
+endmodule
+
+module ring_osc(
+  output osc
+);
+
+  (* S = "TRUE" *) wire t0,t1,t2,t3,t4;
+
+  LUT1 #(.INIT(2'h1)) inv0(.O(t0), .I0(t4));
+  LUT1 #(.INIT(2'h1)) inv1(.O(t1), .I0(t0));
+  LUT1 #(.INIT(2'h1)) inv2(.O(t2), .I0(t1));
+  LUT1 #(.INIT(2'h1)) inv3(.O(t3), .I0(t2));
+  LUT1 #(.INIT(2'h1)) inv4(.O(t4), .I0(t3));
+
+  BUFG _bufg(.I(t0), .O(osc));
 
 endmodule

@@ -174,10 +174,11 @@ module clock_and_reset(
 );
 
   wire _clk_50mhz;
+  wire clk_5625mhz;
 
   IBUFG i0(.I(clk_50mhz), .O(_clk_50mhz));
-  BUFG b0(.I(_clk_50mhz), .O(eclk));
-//  assign eclk = clk_50mhz;
+  dcm_fx #(9,8) _dcm(_clk_50mhz, clk_5625mhz);
+  BUFG b0(.I(clk_5625mhz), .O(eclk));
 
   reg [7:0] r = 8'd0;
 
@@ -185,6 +186,25 @@ module clock_and_reset(
     r <= {r[6:0], 1'b1};
 
   assign ereset = ~r[7];
+
+endmodule
+
+module dcm_fx(
+  input clk_in,
+  output clk_out
+);
+
+  parameter N = 2;
+  parameter D = 1;
+
+  DCM_SP #(
+   .CLKFX_DIVIDE(D),    // Can be any integer from 1 to 32
+   .CLKFX_MULTIPLY(N),  // Can be any integer from 2 to 32
+   .STARTUP_WAIT("TRUE")    // Delay configuration DONE until DCM LOCK, TRUE/FALSE
+) DCM_SP_inst (
+   .CLKFX(clk_out),     // DCM CLK synthesis out (M/D)
+   .CLKIN(clk_in)    // Clock input (from IBUFG, BUFG or DCM)
+);
 
 endmodule
 
