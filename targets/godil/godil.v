@@ -1,7 +1,7 @@
 // Top-level module for GODIL40_XC3S500E board
 
 module godil40_xc3s500e(
-// start of 6502 pins on DIL connector
+// start of 6502 pins on DIL40 connector
   output [15:0] ab,
   inout [7:0] db,
   input res,
@@ -14,7 +14,7 @@ module godil40_xc3s500e(
   input rdy,
   input nmi,
   input irq,
-// end of 6502 pins on DIL connector
+// end of 6502 pins on DIL40 connector
   output [1:0] led
 );
 
@@ -32,13 +32,13 @@ module godil40_xc3s500e(
 
 // blink an LED using buffered clk0
 
-  blink #(20) _blink(clk0_i, led[0]);
+  blink #(20) _blink0(clk0_i, led[0]);
 
 // blink an LED using an internal ring oscillator
 
   wire osc;
   ring_osc _ring_osc(osc);
-  blink #(24) _blink(osc, led[1]);
+  blink #(24) _blink1(osc, led[1]);
 
 // create an emulation clock from clk0
 
