@@ -5,6 +5,8 @@
 
 #net clk0 period = 977.777ns;  # 1.022727 MHz clk0 (6502 pin 37) from host system
 
+net "clk_49152mhz" loc = "p89" | iostandard = LVCMOS33 ;
+
 # inputs only
 #NET m49                       LOC=P89 | IOSTANDARD = LVCMOS33 ;
 #NET sw1                       LOC=P39 | IOSTANDARD = LVCMOS33 ;

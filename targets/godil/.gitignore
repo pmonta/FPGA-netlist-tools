@@ -7,8 +7,10 @@ xst
 *.bgn
 *.bit
 *.bld
+*.cfi
 *.drc
 *.map
+*.mcs
 *.mrp
 *.ncd
 *.ngc
@@ -17,6 +19,7 @@ xst
 *.pad
 *.par
 *.pcf
+*.prm
 *.ptwx
 *.unroutes
 *.xpi
@@ -32,6 +35,8 @@ xst
 *_par.xrpt
 
 _impactbatch.log
+_impact.cmd
+_impact.log
 netlist.lst
 usage_statistics_webtalk.html
 webtalk.log
