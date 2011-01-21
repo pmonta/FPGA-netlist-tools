@@ -20,7 +20,10 @@ xst
 *.par
 *.pcf
 *.prm
+*.psr
 *.ptwx
+*.twr
+*.twx
 *.unroutes
 *.xpi
 

@@ -2,7 +2,7 @@
 
 module godil40_xc3s500e(
   input clk_49152mhz,
-// start of 6507 pins on DIL40 connector (center 28 pins)
+// start of 6507 pins on DIL40 connector (using the center 28 pins)
   output [12:0] ab,
   inout [7:0] db,
   input res,
@@ -10,7 +10,7 @@ module godil40_xc3s500e(
   input clk0,
   output clk2out,
   input rdy,
-// end of 6502 pins on DIL40 connector
+// end of 6507 pins on DIL40 connector (using the center 28 pins)
   output [1:0] led
 );
 

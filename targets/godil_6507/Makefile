@@ -3,10 +3,11 @@ DEVICE=xc3s500e-4vq100
 all:
 	echo "run -ifn chip.v -ifmt Verilog -top godil40_xc3s500e -ofn chip -p ${DEVICE}" | xst
 	ngdbuild -p ${DEVICE} -uc chip.ucf chip
-	map -w -timing -p ${DEVICE} chip.ngd chip.pcf
-	par -w chip.ncd chip.ncd chip.pcf
+	map -w -timing -detail -ol high -p ${DEVICE} chip.ngd chip.pcf
+	par -w -ol high chip.ncd chip.ncd chip.pcf
+	trce -v 20 chip.ncd chip.pcf
 	bitgen -g StartupClk:JtagClk -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -w chip.ncd chip.bit chip.pcf
-	promgen -w -u 0 chip.bit -p mcs
+	promgen -w -spi -p mcs -u 0 chip.bit
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb

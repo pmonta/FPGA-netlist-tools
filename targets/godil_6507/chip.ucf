@@ -4,6 +4,7 @@
 # For concreteness, Use Apple II's clock of nominally 14.31818 MHz divided by 14
 
 #net clk0 period = 838.095ns;  # 1.1931818 MHz clk0 (fsc/3) (6507 pin xx) from host system
+net clk_49152mhz period = 20.345ns;
 
 net "clk_49152mhz" loc = "p89" | iostandard = LVCMOS33 ;
 
