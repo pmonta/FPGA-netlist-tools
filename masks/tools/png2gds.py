@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import sys
 import scipy
 import readmagick
 import gdspy
@@ -18,9 +19,14 @@ def layer(c,file,gds_layer):
   for y in xrange(0,height):
     stripe(c,gds_layer,img[y,:,0],height-y-1)
 
+# parse command-line arguments
+
+name = sys.argv[1]
+scale = sys.argv[2]
+
 # GDS initialization
 
-c = gdspy.Cell('6502')
+c = gdspy.Cell(name)
 
 # GDS layers
 
@@ -35,4 +41,4 @@ layer(c,"overglass.png",7)
 # GDS finalize
 
 import sys
-gdspy.gds_print(sys.stdout, unit=1.2e-6, precision=1.0e-9)
+gdspy.gds_print(sys.stdout, unit=float('%se-6'%scale), precision=1.0e-9)

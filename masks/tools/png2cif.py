@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import sys
 import scipy
 import readmagick
 from mask_util import *
@@ -18,12 +19,17 @@ def layer(file,cif_name):
   for y in xrange(0,height):
     stripe(img[y,:,0],height-y-1)
 
+# parse command-line arguments
+
+name = sys.argv[1]
+scale = sys.argv[2]
+
 # CIF header
 #   set CIF scale to 0.6 microns per pixel
 
 print "( CIF conversion of visual6502 polygon data );"
-print "DS 1 60 1;"
-print "9 6502_chip;"
+print "DS 1 %d 1;" % round(100*float(scale))
+print "9 %s;" % name
 
 # CIF layers (NMOS)
 
