@@ -1,0 +1,352 @@
+# metal: 109 objects
+# diffusion: 122 objects
+# contact: 160 objects
+# gate: 168 objects
+# implant: 0 objects
+p Vss m3
+p phi1 m2
+p Gnd2 m11
+p sync d1
+p z4 m69
+p phi2 m1
+p Gnd m39
+p y1 m109
+p y0 m95
+p x0 m67
+p x1 m77
+p z0 m94
+p z1 m88
+p z2 m78
+p z3 m74
+c m1 d2
+c m2 d3
+c m5 d4
+c m4 d5
+c m6 d7
+c m7 d8
+c m7 d10
+c m8 d11
+c m3 d12
+c m11 d14
+c m9 d13
+c m13 d17
+c m12 d18
+c m13 d15
+c m14 d13
+c m10 d21
+c m5 d20
+c m15 d22
+c m3 d9
+c m16 d23
+c m17 d2
+c m18 d24
+c m3 d25
+c m20 d22
+c m19 d26
+c m21 d3
+c m3 d27
+c m3 d16
+c m23 d26
+c m24 d31
+c m27 d28
+c m26 d1
+c m25 d32
+c m29 d29
+c m30 d33
+c m3 d30
+c m31 d5
+c m32 d7
+c m34 d18
+c m35 d23
+c m33 d11
+c m3 d6
+c m39 d37
+c m40 d36
+c m42 d31
+c m41 d39
+c m18 d40
+c m3 d34
+c m36 d39
+c m37 d38
+c m28 d8
+c m38 d20
+c m46 d21
+c m45 d15
+c m43 d41
+c m18 d35
+c m47 d19
+c m11 d43
+c m3 d46
+c m39 d49
+c m51 d48
+c m44 d45
+c m50 d44
+c m31 d47
+c m47 d51
+c m52 d52
+c m39 d42
+c m53 d53
+c m54 d56
+c m3 d50
+c m39 d54
+c m49 d53
+c m39 d55
+c m48 d59
+c m56 d56
+c m39 d60
+c m57 d58
+c m58 d61
+c m3 d62
+c m11 d64
+c m39 d57
+c m35 d65
+c m60 d66
+c m59 d63
+c m61 d67
+c m62 d68
+c m64 d68
+c m3 d70
+c m65 d66
+c m63 d71
+c m67 d73
+c m66 d72
+c m39 d74
+c m3 d75
+c m34 d76
+c m55 d76
+c m69 d72
+c m39 d77
+c m71 d78
+c m72 d76
+c m70 d73
+c m3 d79
+c m74 d78
+c m73 d80
+c m76 d81
+c m68 d82
+c m3 d69
+c m77 d80
+c m78 d81
+c m33 d84
+c m32 d86
+c m3 d83
+c m31 d85
+c m35 d88
+c m79 d87
+c m80 d90
+c m39 d89
+c m82 d88
+c m22 d91
+c m75 d92
+c m83 d84
+c m85 d93
+c m84 d93
+c m3 d94
+c m87 d86
+c m87 d96
+c m88 d90
+c m89 d98
+c m3 d99
+c m3 d95
+c m90 d100
+c m21 d100
+c m92 d101
+c m86 d102
+c m94 d98
+c m93 d103
+c m3 d107
+c m81 d104
+c m100 d86
+c m99 d85
+c m97 d103
+c m95 d110
+c m91 d111
+c m101 d113
+c m98 d108
+c m102 d109
+c m104 d105
+c m103 d97
+c m105 d115
+c m107 d112
+c m39 d114
+c m106 d106
+c m105 d116
+c m27 d117
+c m108 d112
+c m109 d121
+c m109 d119
+c m39 d122
+c m39 d118
+c m39 d120
+t m6 d4 d6 e
+t m8 d4 d6 e
+t m10 d9 d15 e
+t m9 d13 d14 e
+t m10 d8 d9 e
+t m13 d9 d19 e
+t m12 d16 d10 e
+t m12 d12 d13 e
+t m14 d16 d17 e
+t m15 d22 d14 e
+t m16 d16 d17 e
+t m19 d26 d14 e
+t m20 d16 d10 e
+t m16 d22 d30 e
+t m21 d24 d29 e
+t m22 d28 d30 e
+t m22 d4 d6 e
+t m4 d26 d30 e
+t m24 d14 d31 e
+t m26 d32 d34 e
+t m25 d32 d37 e
+t m29 d9 d33 e
+t m28 d25 d35 e
+t m17 d33 d36 e
+t m36 d38 d30 e
+t m38 d27 d21 e
+t m37 d37 d38 e
+t m6 d30 d31 e
+t m30 d33 d42 e
+t m41 d43 d39 e
+t m27 d30 d39 e
+t m16 d30 d39 e
+# gate 33 has single diffusion (MOS capacitor?)
+t m43 d48 d34 e
+t m44 d30 d38 e
+t m21 d41 d38 e
+t m48 d46 d39 e
+t m47 d40 d9 e
+t m40 d50 d44 e
+t m22 d45 d46 e
+t m20 d45 d46 e
+t m28 d8 d54 e
+t m38 d20 d54 e
+t m46 d21 d54 e
+t m17 d48 d47 e
+t m18 d35 d54 e
+t m45 d15 d55 e
+t m47 d19 d55 e
+# gate 49 has single diffusion (MOS capacitor?)
+# gate 50 has single diffusion (MOS capacitor?)
+t m49 d43 d53 e
+t m44 d49 d45 e
+t m21 d44 d52 e
+t m51 d48 d49 e
+t m50 d57 d44 e
+t m50 d9 d51 e
+t m48 d53 d46 e
+# gate 58 has single diffusion (MOS capacitor?)
+t m55 d50 d58 e
+t m54 d50 d58 e
+t m52 d50 d63 e
+t m6 d59 d62 e
+t m56 d56 d60 e
+t m25 d56 d62 e
+t m53 d56 d62 e
+t m8 d59 d62 e
+t m4 d59 d62 e
+t m21 d58 d61 e
+t m20 d56 d62 e
+t m12 d59 d62 e
+t m57 d58 d60 e
+t m48 d64 d59 e
+t m59 d57 d63 e
+t m60 d66 d60 e
+t m16 d66 d62 e
+t m61 d67 d60 e
+t m25 d66 d62 e
+t m8 d68 d62 e
+t m17 d65 d67 e
+t m53 d66 d62 e
+t m58 d67 d70 e
+t m63 d73 d69 e
+t m17 d63 d71 e
+t m64 d64 d68 e
+t m27 d72 d75 e
+t m4 d72 d75 e
+t m20 d72 d75 e
+t m62 d72 d75 e
+t m42 d72 d75 e
+t m66 d72 d74 e
+t m14 d72 d75 e
+t m68 d76 d70 e
+t m70 d73 d77 e
+t m22 d75 d78 e
+t m16 d75 d78 e
+t m23 d75 d78 e
+t m42 d75 d78 e
+t m14 d75 d78 e
+t m62 d75 d78 e
+t m71 d74 d78 e
+t m72 d74 d76 e
+t m73 d80 d77 e
+t m75 d79 d87 e
+t m76 d81 d74 e
+t m22 d81 d83 e
+t m12 d81 d83 e
+t m20 d81 d83 e
+t m4 d81 d83 e
+t m62 d81 d83 e
+t m6 d81 d83 e
+t m70 d80 d69 e
+t m17 d82 d87 e
+t m79 d89 d87 e
+t m16 d90 d83 e
+t m81 d97 d69 e
+t m53 d90 d83 e
+t m27 d90 d83 e
+t m80 d89 d90 e
+t m83 d89 d84 e
+t m21 d92 d84 e
+t m84 d89 d93 e
+# gate 122 has single diffusion (MOS capacitor?)
+t m27 d93 d94 e
+t m53 d93 d94 e
+t m20 d93 d94 e
+t m86 d84 d95 e
+t m17 d97 d91 e
+# gate 128 has single diffusion (MOS capacitor?)
+t m89 d89 d98 e
+t m91 d101 d95 e
+t m85 d98 d94 e
+t m93 d89 d103 e
+t m17 d96 d106 e
+t m92 d89 d101 e
+t m82 d105 d99 e
+t m90 d104 d105 e
+t m16 d107 d103 e
+t m53 d107 d103 e
+t m95 d107 d103 e
+t m17 d101 d102 e
+# gate 141 has single diffusion (MOS capacitor?)
+t m4 d112 d107 e
+t m21 d108 d109 e
+t m25 d107 d110 e
+t m97 d105 d99 e
+t m16 d112 d107 e
+t m98 d106 d99 e
+t m14 d112 d107 e
+t m27 d112 d107 e
+t m101 d113 d114 e
+t m95 d114 d110 e
+t m42 d112 d107 e
+t m8 d112 d107 e
+t m21 d113 d111 e
+t m100 d115 d95 e
+t m106 d120 d106 e
+t m107 d112 d114 e
+t m108 d107 d119 e
+t m105 d113 d95 e
+t m105 d114 d116 e
+t m27 d117 d118 e
+t m99 d109 d95 e
+t m104 d105 d122 e
+t m102 d120 d109 e
+t m103 d97 d122 e
+t m109 d121 d114 e
+t m65 d109 d95 e
+t m65 d116 d95 e
+# metal orphans:  set([96])
+# diffusion orphans:  set([])
+# contact orphans:  set([])
+# gate orphans:  set([33, 49, 50, 58, 122, 128, 141])
