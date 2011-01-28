@@ -18,7 +18,7 @@ def pin_list(p):
     if t=='pin_output' or t=='pin_input' or t=='pin_bidirectional':
       r.append((c.data['index'],c.data['name'],t))
   r.sort()
-  return reduce(lambda x,y:x+y,map(pin_verilog,r))
+  return reduce(lambda x,y:x+y,map(pin_verilog,r),'')
 
 #
 # generate a Verilog model of an analog node
