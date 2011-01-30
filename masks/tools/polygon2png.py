@@ -42,8 +42,16 @@ ctx.set_fill_rule(cairo.FILL_RULE_EVEN_ODD)
 
 draw_polygon(ctx,[(0,0),(0,4000),(4000,4000),(4000,0)],1)
 
-for x in sys.stdin.readlines():
+lines = sys.stdin.readlines()
+
+for x in lines:
   (p,color) = parse_polygon(x)
-  draw_polygon(ctx,p,color)
+  if color==0:
+    draw_polygon(ctx,p,color)
+
+for x in lines:
+  (p,color) = parse_polygon(x)
+  if color==1:
+    draw_polygon(ctx,p,color)
 
 surface.write_to_png("out.png")
