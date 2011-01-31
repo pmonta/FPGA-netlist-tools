@@ -6,18 +6,20 @@ import readmagick
 import gdspy
 from mask_util import *
 
-def stripe(c,gds_layer,x,y):
-  for (z,k) in rle(x):
-    c.add(gdspy.Rectangle(gds_layer, (z,y), (z+k,y+1)))
-
 def layer(c,file,gds_layer):
   try:
     img = readmagick.readimg(file)
   except:
     return
-  height,width,bytes = img.shape
-  for y in xrange(0,height):
-    stripe(c,gds_layer,img[y,:,0],height-y-1)
+  img = img[:,:,0]
+  width,height = img.shape
+  y = 0
+  while True:
+    box = extract_box(img,y)
+    if not box:
+      break
+    (x,y,x2,y2) = box
+    c.add(gdspy.Rectangle(gds_layer, (x,height-y), (x2,height-y2)))
 
 # parse command-line arguments
 
