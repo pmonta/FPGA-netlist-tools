@@ -6,14 +6,14 @@ from netlist_util import *
 # translate a netlist into a Verilog module
 #
 
-def print_verilog_spice_netlist(p,filename):
+def print_verilog_spice_netlist(p,filename,verilog_module_name):
   f = open(filename,"w")
 
 # verilog header
 
   f.write('`include "common.h"\n')
   f.write('\n')
-  f.write('module chip_6502(\n')
+  f.write('module %s(\n' % verilog_module_name)
   f.write('  input eclk, ereset,\n')
 
 # ports

@@ -85,6 +85,8 @@ def read_pins(filename):
   f = open(filename,'r')
   i = 0
   for x in f.readlines():
+    if x=='' or x[0]=='#':
+      continue
     m = string.split(x)
     name = m[0]
     ptype = m[1]

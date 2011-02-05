@@ -41,4 +41,4 @@ detect_muxes(p)
 print_summary(p)
 
 #print_netlist(p,'netlist.txt')
-print_verilog_spice_netlist(p,'../verilog/chip_6502.v')
+print_verilog_spice_netlist(p,'../verilog/chip_6502.v','chip_6502')
