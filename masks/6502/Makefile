@@ -4,7 +4,10 @@ PNGS = buried.png contact.png diffusion.png metal.png poly.png implant.png
 NAME = 6502
 SCALE = 0.94
 
-6502.cif: $(PNGS)
+nodes.txt:
+	./polygon2label.py <6502Node-subsplits.svg >nodes.txt
+
+6502.cif: $(PNGS) nodes.txt
 	../tools/png2cif.py $(NAME) $(SCALE) >6502.cif
 
 6502.gds: $(PNGS)

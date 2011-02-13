@@ -1,0 +1,36 @@
+* 6502 circuit simulation
+
+.model efet NMOS level=1 vt0=1.0
+.model dfet NMOS level=1 vt0=-3.0
+
+* supply voltages
+
+v0 gnd! 0 dc 0
+v1 vcc 0 dc 5
+v2 vss 0 dc 0
+
+* pull down the data bus to supply 0x00 for reads and allow writes to be seen
+
+r0 db0 0 10k
+r1 db1 0 10k
+r2 db2 0 10k
+r3 db3 0 10k
+r4 db4 0 10k
+r5 db5 0 10k
+r6 db6 0 10k
+r7 db7 0 10k
+
+* pin settings, reset pulse, clock waveform
+
+v10 res 0 pulse (0 5 20u 2n 2n)
+v11 so 0 dc 0
+v12 rdy 0 dc 5
+v13 nmi 0 dc 5
+v14 irq 0 dc 5
+v15 clk0 0 pulse (0 5 10n 2n 2n 2u 4u)
+
+* the 6502 model
+
+.include "6502.spice"
+
+.end

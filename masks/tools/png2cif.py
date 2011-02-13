@@ -3,9 +3,13 @@
 import sys
 import scipy
 import readmagick
+import string
 from mask_util import *
 
+height = 0
+
 def layer(file,cif_name):
+  global height
   try:
     img = readmagick.readimg(file)
   except:
@@ -19,7 +23,20 @@ def layer(file,cif_name):
     if not box:
       break
     (x,y,x2,y2) = box
-    print ' B %d %d %d %d;' % (2*(x2-x),2*(y2-y),x+x2,y+y2)
+    print ' B %d %d %d %d;' % (2*(x2-x),2*(y2-y),x+x2,2*height-(y+y2))
+
+def node_labels(file):
+  try:
+    f = open(file,"r")
+  except:
+    return
+  for t in f.readlines():
+    r = string.split(t)
+    node = r[0]
+    x = int(r[1])
+    y = int(r[2])
+    layer = r[3]
+    print '94 %s %d %d %s;' % (node,2*x,2*height-2*y,layer)
 
 # parse command-line arguments
 
@@ -41,6 +58,10 @@ layer("poly.png","NP")
 layer("contact.png","NC")
 layer("metal.png","NM")
 layer("overglass.png","NG")
+
+# node labels
+
+node_labels("nodes.txt")
 
 # CIF footer
 
