@@ -1,0 +1,4 @@
+Data sources:
+
+6502.svg, 6502Node.svg, pullups.js: Barry Silverman (derived from polygon data)
+dep: Segher Boessenkool (list of probable additional depletion transistors)

@@ -4,6 +4,8 @@ import re
 import string
 #import cairo
 
+subs = {'vcc':'Vdd!', 'vss':'GND!'}
+
 nodenames = {}
 
 def sanitize(s):
@@ -11,13 +13,15 @@ def sanitize(s):
   s = s.replace(r'/',r'_')
   s = s.replace(r'+',r'_')
   s = s.replace(r'-',r'_')
-  s = s.replace(r'#',r'_')
+  s = s.replace(r'#',r'n')
   s = s.replace(r'(',r'_')
   s = s.replace(r')',r'_')
   if s[0] in ['0','1','2','3','4','5','6','7','8','9']:
     s = 'n_' + s
   if nodenames.has_key(s):
-    return nodenames[s]
+    s = nodenames[s]
+  if subs.has_key(s):
+    s = subs[s]
   return s
 
 def read_nodenames(filename):

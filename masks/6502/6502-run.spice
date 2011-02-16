@@ -1,0 +1,9 @@
+* top-level ngspice script
+
+.control
+  source 6502-system.spice
+  tran 2ns 150us
+  write 6502-spice-rawfile.raw
+.endc
+
+.end
