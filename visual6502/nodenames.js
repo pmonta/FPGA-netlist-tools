@@ -82,7 +82,7 @@ x4: 85,
 x5: 589,
 x6: 448,
 x7: 777,
-pcl0: 1139,     // machine state: program counter low (first storage node)
+pcl0: 1139,     // machine state: program counter low (first storage node output)
 pcl1: 1022,
 pcl2: 655,
 pcl3: 1359,
@@ -90,14 +90,22 @@ pcl4: 900,
 pcl5: 622,
 pcl6: 377,
 pcl7: 1611,
-pclp0: 1227,    // machine state: program counter low (pre-incremented?, second storage node)
-pclp1: 1102,
-pclp2: 1079,
-pclp3: 868,
-pclp4: 39,
-pclp5: 1326,
-pclp6: 731,
-pclp7: 536,
+pclp0: 488,    // machine state: program counter low (pre-incremented?, second storage node)
+pclp1: 976,
+pclp2: 481,
+pclp3: 723,
+pclp4: 208,
+pclp5: 72,
+pclp6: 1458,
+pclp7: 1647,
+"#pclp0": 1227,    // machine state: program counter low (pre-incremented?, inverse second storage node)
+"#pclp1": 1102,
+"#pclp2": 1079,
+"#pclp3": 868,
+"#pclp4": 39,
+"#pclp5": 1326,
+"#pclp6": 731,
+"#pclp7": 536,
 pch0: 1670,     // machine state: program counter high (first storage node)
 pch1: 292,
 pch2: 502,
@@ -106,14 +114,22 @@ pch4: 948,
 pch5: 49,
 pch6: 1551,
 pch7: 205,
-pchp0: 780,     // machine state: program counter high (pre-incremented?, second storage node)
-pchp1: 113,
-pchp2: 114,
-pchp3: 124,
-pchp4: 820,
-pchp5: 33,
-pchp6: 751,
-pchp7: 535,
+pchp0: 1722,     // machine state: program counter high (pre-incremented?, second storage node output)
+pchp1: 209,
+pchp2: 1496,
+pchp3: 141,
+pchp4: 27,
+pchp5: 1301,
+pchp6: 652,
+pchp7: 1206,
+"#pchp0": 780,     // machine state: program counter high (pre-incremented?, inverse second storage node)
+"#pchp1": 113,
+"#pchp2": 114,
+"#pchp3": 124,
+"#pchp4": 820,
+"#pchp5": 33,
+"#pchp6": 751,
+"#pchp7": 535,
                 // machine state: status register (not the storage nodes)
 p0: 32,         // C bit of status register (storage node)
 p1: 627,        // Z bit of status register (storage node)
@@ -165,6 +181,22 @@ t2: 971,        // internal state: timing control
 t3: 1567,
 t4: 690,
 t5: 909,
+noty0: 1025,    // datapath state: not Y register
+noty1: 1138,
+noty2: 1484,
+noty3: 184,
+noty4: 565,
+noty5: 981,
+noty6: 1439,
+noty7: 1640,
+notx0: 987,     // datapath state: not X register
+notx1: 1434,
+notx2: 890,
+notx3: 1521,
+notx4: 485,
+notx5: 1017,
+notx6: 730,
+notx7: 1561,
 nots0: 418,     // datapath state: not stack pointer
 nots1: 1064,
 nots2: 752,
@@ -295,7 +327,7 @@ abl3: 1250,
 abl4: 1232,
 abl5: 234,
 abl6: 178,
-abl7: 178,
+abl7: 567,
 "#ABL0": 153,   // internal state: address bus low latched data out (storage node, inverted)
 "#ABL1": 107,
 "#ABL2": 707,
@@ -331,10 +363,7 @@ cp1: 710,       // internal signal: clock phase 1
 cclk: 943,      // unbonded pad: internal non-overlappying phi2
 fetch: 879,     // internal signal
 clearIR: 1077,  // internal signal
-D1x1: 827,      // internal signal: interrupt handler related
 H1x1: 1042,     // internal signal: drive status byte onto databus
-"brk-done": 1382,  // internal signal: interrupt handler related
-INTG: 1350,     // internal signal: interrupt handler related
 
                 // internal signal: pla outputs block 1 (west/left edge of die)
                 // often 130 pla outputs are mentioned - we have 131 here
@@ -503,17 +532,33 @@ INTG: 1350,     // internal signal: interrupt handler related
 "#WR": 1352,
 "op-rmw": 434,
 "short-circuit-idx-add": 1185,
+"short-circuit-branch-add": 430,
 "#op-set-C": 252,
 
 // internal signals: control signals
 nnT2BR: 967,    // doubly inverted
 BRtaken: 1544,  // aka #TAKEN
 
-// interrupt and vector related
+// internal signals and state: interrupt and vector related
+// segher says:
+//   "P" are the latched external signals.
+//   "G" are the signals that actually trigger the interrupt.
+//   "NMIL" is to do the edge detection -- it's pretty much just a delayed NMIG.
+//   INTG is IRQ and NMI taken together.
+IRQP: 675,
+"#IRQP": 888,
 NMIP: 1032,
+"#NMIP": 297,
+"#NMIG": 264,
+NMIL: 1374,
+RESP: 67,
+RESG: 926,
 VEC0: 1465,
 VEC1: 1481,
 "#VEC": 1134,
+D1x1: 827,         // internal signal: interrupt handler related
+"brk-done": 1382,  // internal signal: interrupt handler related
+INTG: 1350,        // internal signal: interrupt handler related
 
 // internal state: misc pipeline state clocked by cclk (phi2)
 "pipe#VEC": 1431,     // latched #VEC
@@ -651,20 +696,46 @@ AxB7: 1241,
 "#(AxB3).C23": 860,
 "#(AxB5).C45": 817,
 "#(AxB7).C67": 1217,
+"#A.B0": 1628,
+"#A.B1": 841,
+"#A.B2": 681,
+"#A.B3": 350,
+"#A.B4": 1063,
+"#A.B5": 477,
+"#A.B6": 336,
+"#A.B7": 1318,
+"A+B0": 693,
 "A+B1": 1021,
+"A+B2": 110,
 "A+B3": 1313,
+"A+B4": 918,
 "A+B5": 1236,
+"A+B6": 803,
 "A+B7": 117,
-
-aluanorb0: 143,
-aluanandb0: 1628,
-aluaorb0: 693,
-notaluoutmux0: 957,   // alu result latch input
-
-aluanorb1: 155,
-aluanandb1: 841,
-aluaorb1: 1021,
-notaluoutmux1: 250,   // alu result latch input
+"#(A+B)0": 143,
+"#(A+B)1": 155,
+"#(A+B)2": 1691,
+"#(A+B)3": 649,
+"#(A+B)4": 404,
+"#(A+B)5": 1632,
+"#(A+B)6": 1084,
+"#(A+B)7": 1398,
+"#(AxB)0": 1525,
+"#(AxB)2": 701,
+"#(AxB)4": 308,
+"#(AxB)6": 1459,
+"#(AxB)1": 953,
+"#(AxB)3": 884,
+"#(AxB)5": 1469,
+"#(AxB)7": 177,
+"#aluresult0": 957,   // alu result latch input
+"#aluresult1": 250,
+"#aluresult2": 740,
+"#aluresult3": 1071,
+"#aluresult4": 296,
+"#aluresult5": 277,
+"#aluresult6": 722,
+"#aluresult7": 304,
 
 // internal signals: datapath control signals
 
@@ -722,7 +793,7 @@ dpc32_PCHADH: 1235,  // drive adh from pch incremented
 dpc33_PCHDB: 247,    // drive idb from pch incremented
 dpc34_PCLC: 1704,    // pch carry in and pcl FF detect?
 dpc35_PCHC: 1334,    // pcl 0x?F detect - half-carry
-dpc36_IPC: 379,      // pcl carry in
+"dpc36_#IPC": 379,   // pcl carry in (inverted)
 dpc37_PCLDB: 283,    // drive idb from pcl incremented
 dpc38_PCLADL: 438,   // drive adl from pcl incremented
 dpc39_PCLPCL: 898,   // load pcl from pcl incremented
