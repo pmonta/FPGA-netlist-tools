@@ -2,3 +2,15 @@ Data sources:
 
 6502.svg, 6502Node.svg, pullups.js: Barry Silverman (derived from polygon data)
 dep: Segher Boessenkool (list of probable additional depletion transistors)
+
+notes on chip scale:
+
+slide 20 in SIGGRAPH presentation:
+  ~820 pixels per inch, derived from pin spacing of 0.1" and 0.6"
+  results in a 6502 die size of 3.28 mm by 3.66 mm
+
+high-res 6502 photos:
+  about 0.73 microns per pixel
+
+bitmap scale:
+  about 0.94 microns per pixel
