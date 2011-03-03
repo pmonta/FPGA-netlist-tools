@@ -32,7 +32,11 @@ def node_labels(file):
     return
   for t in f.readlines():
     r = string.split(t)
+    if not r:
+      continue
     node = r[0]
+    if node[0]==';':
+      continue
     x = int(r[1])
     y = int(r[2])
     layer = r[3]
@@ -62,6 +66,7 @@ layer("overglass.png","NG")
 # node labels
 
 node_labels("nodes.txt")
+node_labels("pads.txt")
 
 # CIF footer
 

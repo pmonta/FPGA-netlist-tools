@@ -1,0 +1,51 @@
+pad_vss      1487  133  NM    ; pin 1
+pad_rdy      1308  131  NM    ; pin 2
+pad_clk1out   943  134  NM    ; pin 3
+pad_irq       764  130  NM    ; pin 4
+pad_nc1       585  131  NM
+pad_nmi       314  129  NM    ; pin 6
+pad_sync      428 1442  NM    ; pin 7
+pad_vcc       428 1757  NM    ; pin 8
+pad_ab0       309 2037  NM    ; pin 9
+pad_ab1       309 2583  NM    ; pin 10
+pad_ab2       309 2781  NM    ; pin 11
+pad_ab3       309 2980  NM    ; pin 12
+pad_ab4       309 3178  NM    ; pin 13
+pad_ab5       309 3375  NM    ; pin 14
+pad_ab6       309 3579  NM    ; pin 15
+pad_ab7       420 3866  NM    ; pin 16
+pad_ab8       843 3866  NM    ; pin 17
+pad_ab9      1028 3863  NM    ; pin 18
+pad_ab10     1422 3866  NM    ; pin 19
+pad_ab11     1607 3864  NM    ; pin 20
+pad_vss      1881 3864  NM    ; pin 21
+pad_ab12     2153 3867  NM    ; pin 22
+pad_ab13     2338 3866  NM    ; pin 23
+pad_ab14     2735 3867  NM    ; pin 24
+pad_ab15     3044 3869  NM    ; pin 25
+pad_db7      3691 3811  NM    ; pin 26
+pad_db6      3691 3611  NM    ; pin 27
+pad_db5      3691 3400  NM    ; pin 28
+pad_db4      3691 3201  NM    ; pin 29
+pad_db3      3695 2803  NM    ; pin 30
+pad_db2      3694 2624  NM    ; pin 31
+pad_db1      3694 2447  NM    ; pin 32
+pad_db0      3700  331  NM    ; pin 33
+pad_rw       3700  136  NM    ; pin 34
+pad_nc2      3260  138  NM
+pad_clk0     3076  136  NM    ; pin 37
+pad_so       2238  138  NM    ; pin 38
+pad_clk2out  1842  134  NM    ; pin 39
+pad_res      1663  135  NM    ; pin 40
+
+testpad_1     260 2161  NM
+testpad_2     340 2161  NM
+testpad_3     260 2240  NM
+testpad_4     341 2236  NM
+testpad_5     260 2314  NM
+testpad_6     339 2312  NM
+testpad_7     259 2386  NM
+testpad_8     340 2386  NM
+
+testpad_9    3689 2944  NM
+testpad_10   3690 3068  NM
