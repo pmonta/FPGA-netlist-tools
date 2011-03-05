@@ -1,0 +1,17 @@
+cp          2226  685  NM ; pin 1
+data_in     2226   96  NM ; pin 2
+q0          1615   97  NM ; pin 3
+q1          1309   96  NM ; pin 4
+vss         1011   96  NM ; pin 5
+q2           541   97  NM ; pin 6
+q3           102   97  NM ; pin 7
+q4           103  402  NM ; pin 8
+vss          104  738  NM
+q5           104 1066  NM ; pin 9
+q6           104 1336  NM ; pin 10
+q7           493 1335  NM ; pin 11
+q8          1012 1333  NM ; pin 12
+q9          1311 1331  NM ; pin 13
+vdd         1606 1330  NM ; pin 14
+serial_out  2227 1335  NM ; pin 15
+e           2227  982  NM ; pin 16

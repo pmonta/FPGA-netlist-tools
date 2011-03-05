@@ -12,7 +12,7 @@ def layer(c,file,gds_layer):
   except:
     return
   img = img[:,:,0]
-  width,height = img.shape
+  height,width = img.shape
   y = 0
   while True:
     box = extract_box(img,y)

@@ -1,11 +1,11 @@
-pad_vss      1487  133  NM    ; pin 1
+GND!         1487  133  NM    ; pin 1
 pad_rdy      1308  131  NM    ; pin 2
 pad_clk1out   943  134  NM    ; pin 3
 pad_irq       764  130  NM    ; pin 4
 pad_nc1       585  131  NM
 pad_nmi       314  129  NM    ; pin 6
 pad_sync      428 1442  NM    ; pin 7
-pad_vcc       428 1757  NM    ; pin 8
+Vdd!          428 1757  NM    ; pin 8
 pad_ab0       309 2037  NM    ; pin 9
 pad_ab1       309 2583  NM    ; pin 10
 pad_ab2       309 2781  NM    ; pin 11
@@ -18,7 +18,7 @@ pad_ab8       843 3866  NM    ; pin 17
 pad_ab9      1028 3863  NM    ; pin 18
 pad_ab10     1422 3866  NM    ; pin 19
 pad_ab11     1607 3864  NM    ; pin 20
-pad_vss      1881 3864  NM    ; pin 21
+GND!         1881 3864  NM    ; pin 21
 pad_ab12     2153 3867  NM    ; pin 22
 pad_ab13     2338 3866  NM    ; pin 23
 pad_ab14     2735 3867  NM    ; pin 24

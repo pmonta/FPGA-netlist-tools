@@ -16,7 +16,7 @@ def layer(file,cif_name):
     return
   print 'L '+cif_name+';'
   img = img[:,:,0]
-  width,height = img.shape
+  height,width = img.shape
   y = 0
   while True:
     box = extract_box(img,y)

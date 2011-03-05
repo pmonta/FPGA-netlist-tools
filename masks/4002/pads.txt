@@ -1,0 +1,17 @@
+d0      2880  303  NM ; pin 1
+d1      2097  300  NM ; pin 2
+d2       276 2214  NM ; pin 3
+d3       276 4134  NM ; pin 4
+GND!     279 4995  NM ; pin 5
+clk1     279 6159  NM ; pin 6
+clk2    1410 7401  NM ; pin 7
+GND!    2238 7401  NM
+sync    3183 7401  NM ; pin 8
+reset   3852 7401  NM ; pin 9
+p0      5127 7401  NM ; pin 10
+cm      6270 4233  NM ; pin 11
+Vdd!    6258 3552  NM ; pin 12
+o3      6258 3033  NM ; pin 13
+o2      6258 1959  NM ; pin 14
+o1      5616  306  NM ; pin 15
+o0      4530  324  NM ; pin 16

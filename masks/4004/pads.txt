@@ -1,0 +1,16 @@
+;d0
+;d1
+;d2
+;d3
+;vss
+clk1        5709  942  NM  ; pin 6
+clk2        4833  252  NM  ; pin 7
+;sync
+;reset
+;test
+;cm_rom
+;vdd
+;cm_ram3
+;cm_ram2
+;cm_ram1
+;cm_ram0

@@ -55,7 +55,6 @@ read_nodenames("../../visual6502/nodenames.js")
 deps = dep_nodes()
 
 for x in sys.stdin.readlines():
-  x = x.replace(r'**FLOATING',r';**FLOATING')
   if x[0]=='M':
     y = string.split(x)
     g,s,d = y[2],y[1],y[3]
