@@ -4,6 +4,7 @@
 	ext2spice $* >ext2spice.log 2>ext2spice.log2
 	../tools/fix_spice_comments.py <$*.spice >temp1.spice
 	bash -c 'if [ -f ./mark_new_depletion.py ]; then (./mark_new_depletion.py <temp1.spice >temp2.spice); else mv temp1.spice temp2.spice; fi'
+	rm -f temp1.spice
 	mv temp2.spice $*.spice
 
 %.ext: %.cif

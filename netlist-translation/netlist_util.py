@@ -363,6 +363,39 @@ def print_netlist(p,filename):
   f = open(filename,"w")
   for c in p.nodes():
     f.write(`c.name(),c.ntype(),c.neighbors(),c.data`+'\n')
+  f.close()
+
+def spice_name(s):
+  s = s.name()
+  if s=='vss':
+    return 'GND'
+  elif s=='vcc':
+    return 'Vdd'
+  else:
+    return s
+
+def print_spice_netlist(p,filename):
+  f = open(filename,"w")
+  f.write('* SPICE3 netlist\n')
+  f.write('\n')
+  i = 0
+  for c in p.nodes():
+    if c.ntype()!='t':
+      continue
+    port = c.data['function']
+    g = c[port]
+    s,d = c['s'],c['d']
+    g,s,d = spice_name(g),spice_name(s),spice_name(d)
+    f.write('M%d %s %s %s GND efet\n' % (i,s,g,d))
+    i = i + 1
+  for c in p.nodes():
+    if c.ntype()!='pullup':
+      continue
+    s = c['s']
+    s = spice_name(s)
+    f.write('M%d %s %s Vdd GND efet\n' % (i,s,s))
+    i = i + 1
+  f.close()
 
 def detect_muxes(p):
   for n in p.nodes():

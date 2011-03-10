@@ -46,7 +46,7 @@ def read_nodenames(filename):
       nodenames[node] = name
   f.close()
 
-def read_transdefs(filename):
+def read_transdefs(filename,remove_shorts=True):
   r = []
   f = open(filename,'r')
   for x in f.readlines():
@@ -56,7 +56,7 @@ def read_transdefs(filename):
       gate = sanitize(m.group(2))
       source = sanitize(m.group(3))
       drain = sanitize(m.group(4))
-      if source==drain:
+      if remove_shorts and source==drain:
         print 'omitting %s, source tied to drain' % name
       else:
         r.append((name,gate,source,drain))
@@ -114,16 +114,17 @@ def remove_duplicates(transdefs):
     print 'removed %d duplicate transistors' % duplicates
   return r
 
-def read_netlist_from_javascript(dir):
+def read_netlist_from_javascript(dir,remove_dups=True,remove_shorts=True):
   p = netlist()
 
   read_nodenames(dir+'/nodenames.js')
 
-  transdefs = read_transdefs(dir+'/transdefs.js')
+  transdefs = read_transdefs(dir+'/transdefs.js',remove_shorts)
   pullups = read_segdefs(dir+'/segdefs.js')
   pins = read_pins(dir+'/pins.txt')
 
-  transdefs = remove_duplicates(transdefs)
+  if remove_dups:
+    transdefs = remove_duplicates(transdefs)
 
   for (name,g,s,d) in transdefs:
     ng = p.add_node(g,'node_analog')
