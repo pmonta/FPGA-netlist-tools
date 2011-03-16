@@ -53,7 +53,7 @@ module clock_and_reset(
 );
 
   wire clk_65mhz;
-  dcm_mult #(4,3) _dcm0(clk_in, clk_65mhz);
+  dcm_mult #(3,2) _dcm0(clk_in, clk_65mhz);
   BUFG b0(.I(clk_65mhz), .O(eclk));
 
   reg [7:0] r = 8'd0;

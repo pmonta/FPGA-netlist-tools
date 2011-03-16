@@ -6,8 +6,8 @@ all:
 	map -w -timing -detail -ol high -p ${DEVICE} chip.ngd chip.pcf
 	par -w -ol high chip.ncd chip.ncd chip.pcf
 	trce -v 20 chip.ncd chip.pcf
-	bitgen -g StartupClk:JtagClk -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -w chip.ncd chip.bit chip.pcf
-	promgen -w -spi -p mcs -u 0 chip.bit
+	bitgen -g StartupClk:CClk -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -w chip.ncd chip.bit chip.pcf
+	promgen -w -spi -p mcs -s 4096 -u 0 chip.bit
 
 clean:
 	rm -rf xst _xmsgs xlnx_auto_0_xdb
@@ -18,3 +18,5 @@ clean:
 	rm -f *_bitgen.xwbt *_ngdbuild.xrpt *_pad.csv *_pad.txt *_summary.xml *_usage.xml
 	rm -f *_xst.xrpt *_map.xrpt *_par.xrpt
 	rm -f _impactbatch.log netlist.lst usage_statistics_webtalk.html webtalk.log
+	rm -f *.mcs *.psr *.twr *.twx
+	rm -f output.txt
