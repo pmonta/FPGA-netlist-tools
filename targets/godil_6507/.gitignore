@@ -5,12 +5,10 @@ xlnx_auto_0_xdb
 xst
 
 *.bgn
-*.bit
 *.bld
 *.cfi
 *.drc
 *.map
-*.mcs
 *.mrp
 *.ncd
 *.ngc

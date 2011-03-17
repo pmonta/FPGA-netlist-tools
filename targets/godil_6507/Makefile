@@ -18,5 +18,5 @@ clean:
 	rm -f *_bitgen.xwbt *_ngdbuild.xrpt *_pad.csv *_pad.txt *_summary.xml *_usage.xml
 	rm -f *_xst.xrpt *_map.xrpt *_par.xrpt
 	rm -f _impactbatch.log netlist.lst usage_statistics_webtalk.html webtalk.log
-	rm -f *.mcs *.psr *.twr *.twx
+	rm -f *.psr *.twr *.twx
 	rm -f output.txt
