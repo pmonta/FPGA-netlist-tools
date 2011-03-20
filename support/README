@@ -1,0 +1,12 @@
+nmos.tech
+  Technology file for magic (VLSI CAD tool).  Place in /usr/lib/magic/sys or /usr/lib64/magic/sys
+
+klayout-nmos.lyp
+  Layer properties (colors and transparency) for klayout.  Specified Mead-and-Conway-like colors
+  for NMOS GDSII files.  To load this file automatically, see
+    http://klayout.de/forum/comments.php?DiscussionID=102&page=1#Item_0
+  Other helpful settings for klayout:
+    In File->Setup:
+      Application->Layer List:  use klayout-nmos.lyp as default layer table
+      Display->General:  use 2x oversampling for a nicer display
+      Navigation->New Cell:  check "Select all hierarchy levels"
