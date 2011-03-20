@@ -1,5 +1,9 @@
 nmos.tech
-  Technology file for magic (VLSI CAD tool).  Place in /usr/lib/magic/sys or /usr/lib64/magic/sys
+  Technology file for magic (VLSI CAD tool).  Place in /usr/lib/magic/sys or /usr/lib64/magic/sys.
+  Obtained from an old Magic version 6 distribution:
+    http://embedded.eecs.berkeley.edu/pubs/downloads/magic/magic_6.tar.Z
+  linked from
+    http://embedded.eecs.berkeley.edu/pubs/downloads/magic/
 
 klayout-nmos.lyp
   Layer properties (colors and transparency) for klayout.  Specified Mead-and-Conway-like colors
