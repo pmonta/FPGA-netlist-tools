@@ -135,7 +135,7 @@ M1064 n_865 cclk n_958 GND efet w=13 l=8
 M1065 GND n_47 n_603 GND efet w=50 l=7
 + ad=0 pd=0 as=561 ps=162 
 M1066 clk1out n_747 Vdd GND dfet w=68 l=7
-+ ad=0 pd=0 as=568767 ps=107282 
++ ad=0 pd=0 as=568855 ps=107108 
 M1067 n_1417 n_670 Vdd GND dfet w=25 l=8
 + ad=0 pd=0 as=0 ps=0 
 M1068 Vdd n_747 n_747 GND dfet w=26 l=8
@@ -577,7 +577,7 @@ M1285 Vdd x_op_T3_plp_pla x_op_T3_plp_pla GND dfet w=9 l=19
 M1286 GND _t5 op_T5_brk GND efet w=15 l=6
 + ad=0 pd=0 as=2366 ps=590 
 M1287 GND _t5 op_T5_rti GND efet w=15 l=6
-+ ad=0 pd=0 as=2050 ps=546 
++ ad=0 pd=0 as=2064 ps=520 
 M1288 GND _t5 op_T5_jsr GND efet w=14 l=7
 + ad=0 pd=0 as=2221 ps=572 
 M1289 op_T2_abs_access op_push_pull GND GND efet w=14 l=6
@@ -635,7 +635,7 @@ M1314 n_400 n_400 Vdd GND dfet w=10 l=10
 M1315 n_402 cp1 notRnWprepad GND efet w=13 l=7
 + ad=240 pd=76 as=2954 ps=702 
 M1316 GND _t5 op_T5_ind_y GND efet w=14 l=7
-+ ad=0 pd=0 as=1245 ps=348 
++ ad=0 pd=0 as=1259 ps=322 
 M1317 GND n_678 _t3 GND efet w=68 l=6
 + ad=0 pd=0 as=962 ps=280 
 M1318 op_T4_rts _t4 GND GND efet w=14 l=6
@@ -767,7 +767,7 @@ M1380 op_T2_branch _t2 GND GND efet w=14 l=6
 M1381 op_T2_zp_zp_idx _t2 GND GND efet w=14 l=6
 + ad=998 pd=256 as=0 ps=0 
 M1382 GND _t3 x_op_T3_plp_pla GND efet w=15 l=6
-+ ad=0 pd=0 as=1900 ps=528 
++ ad=0 pd=0 as=1914 ps=502 
 M1383 GND _t3 op_T3_mem_zp_idx GND efet w=15 l=6
 + ad=0 pd=0 as=1074 ps=268 
 M1384 op_T2_ind _t2 GND GND efet w=14 l=6
@@ -807,11 +807,11 @@ M1400 GND notir1 op_xy GND efet w=14 l=6
 M1401 GND notir1 x_op_T0_txa GND efet w=14 l=6
 + ad=0 pd=0 as=1879 ps=464 
 M1402 GND notir1 op_T0_dex GND efet w=14 l=6
-+ ad=0 pd=0 as=1739 ps=478 
++ ad=0 pd=0 as=1753 ps=452 
 M1403 GND notir1 op_from_x GND efet w=14 l=6
 + ad=0 pd=0 as=1323 ps=360 
 M1404 GND notir1 op_T0_txs GND efet w=15 l=6
-+ ad=0 pd=0 as=2090 ps=556 
++ ad=0 pd=0 as=2104 ps=530 
 M1405 irline3 irline3 Vdd GND dfet w=13 l=6
 + ad=18753 pd=6276 as=0 ps=0 
 M1406 n_724 fetch n_310 GND efet w=23 l=8
@@ -823,7 +823,7 @@ M1408 GND ir0 notir0 GND efet w=66 l=7
 M1409 GND notir1 op_T0_ldx_tax_tsx GND efet w=14 l=6
 + ad=0 pd=0 as=1418 ps=374 
 M1410 GND notir1 op_T__dex GND efet w=15 l=6
-+ ad=0 pd=0 as=1603 ps=474 
++ ad=0 pd=0 as=1632 ps=420 
 M1411 GND notir1 op_T0_tsx GND efet w=16 l=6
 + ad=0 pd=0 as=1888 ps=466 
 M1412 GND notir1 op_ror GND efet w=14 l=6
@@ -831,9 +831,9 @@ M1412 GND notir1 op_ror GND efet w=14 l=6
 M1413 op_sty_cpy_mem irline3 GND GND efet w=14 l=6
 + ad=1306 pd=328 as=0 ps=0 
 M1414 op_T0_iny_dey irline3 GND GND efet w=14 l=6
-+ ad=1679 pd=492 as=0 ps=0 
++ ad=1707 pd=440 as=0 ps=0 
 M1415 x_op_T0_tya irline3 GND GND efet w=14 l=6
-+ ad=2138 pd=546 as=0 ps=0 
++ ad=2146 pd=530 as=0 ps=0 
 M1416 op_T0_cpy_iny irline3 GND GND efet w=14 l=6
 + ad=1486 pd=380 as=0 ps=0 
 M1417 op_T0_cpx_inx irline3 GND GND efet w=14 l=6
@@ -845,15 +845,15 @@ M1419 GND notir1 op_rol_ror GND efet w=13 l=6
 M1420 GND notir1 op_shift GND efet w=15 l=6
 + ad=0 pd=0 as=1141 ps=304 
 M1421 GND notir1 op_T__shift_a GND efet w=14 l=6
-+ ad=0 pd=0 as=1713 ps=478 
++ ad=0 pd=0 as=1726 ps=454 
 M1422 GND notir1 op_T0_txa GND efet w=14 l=6
 + ad=0 pd=0 as=1830 ps=460 
 M1423 op_T__inx irline3 GND GND efet w=15 l=6
 + ad=1993 pd=520 as=0 ps=0 
 M1424 op_T__iny_dey irline3 GND GND efet w=14 l=6
-+ ad=1801 pd=500 as=0 ps=0 
++ ad=1816 pd=472 as=0 ps=0 
 M1425 op_T0_ldy_mem irline3 GND GND efet w=13 l=6
-+ ad=1328 pd=360 as=0 ps=0 
++ ad=1342 pd=334 as=0 ps=0 
 M1426 op_T0_tay_ldy_not_idx irline3 GND GND efet w=14 l=6
 + ad=1483 pd=384 as=0 ps=0 
 M1427 op_T0_jsr irline3 GND GND efet w=14 l=6
@@ -881,11 +881,11 @@ M1437 op_T4_rti irline3 GND GND efet w=14 l=6
 M1438 op_plp_pla irline3 GND GND efet w=14 l=6
 + ad=1642 pd=432 as=0 ps=0 
 M1439 GND notir1 op_T0_shift_a GND efet w=14 l=6
-+ ad=0 pd=0 as=1700 ps=472 
++ ad=0 pd=0 as=1714 ps=446 
 M1440 GND notir1 op_T0_tax GND efet w=14 l=6
-+ ad=0 pd=0 as=1534 ps=418 
++ ad=0 pd=0 as=1548 ps=392 
 M1441 GND notir1 op_T0_shift_right_a GND efet w=14 l=6
-+ ad=0 pd=0 as=1805 ps=484 
++ ad=0 pd=0 as=1819 ps=458 
 M1442 GND notir1 op_shift_right GND efet w=14 l=6
 + ad=0 pd=0 as=1194 ps=316 
 M1443 op_rti_rts irline3 GND GND efet w=14 l=6
@@ -911,9 +911,9 @@ M1452 GND notir1 op_asl_rol GND efet w=14 l=7
 M1453 GND notir1 op_T__asl_rol_a GND efet w=14 l=6
 + ad=0 pd=0 as=1915 ps=506 
 M1454 op_T0_tay irline3 GND GND efet w=14 l=6
-+ ad=1534 pd=406 as=0 ps=0 
++ ad=1541 pd=392 as=0 ps=0 
 M1455 op_T0_bit irline3 GND GND efet w=14 l=6
-+ ad=1690 pd=488 as=0 ps=0 
++ ad=1711 pd=448 as=0 ps=0 
 M1456 op_branch_done irline3 GND GND efet w=14 l=6
 + ad=0 pd=0 as=0 ps=0 
 M1457 op_T2_pha irline3 GND GND efet w=14 l=6
@@ -939,7 +939,7 @@ M1466 op_jsr irline3 GND GND efet w=15 l=6
 M1467 x_op_jmp irline3 GND GND efet w=14 l=6
 + ad=1816 pd=456 as=0 ps=0 
 M1468 op_push_pull irline3 GND GND efet w=14 l=6
-+ ad=1378 pd=382 as=0 ps=0 
++ ad=1392 pd=356 as=0 ps=0 
 M1469 notir0 notir0 Vdd GND dfet w=10 l=7
 + ad=20026 pd=6376 as=0 ps=0 
 M1470 op_T4_brk irline3 GND GND efet w=14 l=6
@@ -965,7 +965,7 @@ M1479 op_T__bit irline3 GND GND efet w=14 l=6
 M1480 op_T0_clc_sec irline3 GND GND efet w=14 l=6
 + ad=1899 pd=498 as=0 ps=0 
 M1481 x_op_T0_bit irline3 GND GND efet w=14 l=6
-+ ad=1523 pd=442 as=0 ps=0 
++ ad=1551 pd=390 as=0 ps=0 
 M1482 op_T0_plp irline3 GND GND efet w=13 l=6
 + ad=1904 pd=506 as=0 ps=0 
 M1483 x_op_T4_rti irline3 GND GND efet w=14 l=6
@@ -1031,11 +1031,11 @@ M1512 GND notir0 op_T__ora_and_eor_adc GND efet w=14 l=7
 M1513 GND notir0 op_T__adc_sbc GND efet w=14 l=7
 + ad=0 pd=0 as=1278 ps=334 
 M1514 GND notir0 op_T0_lda GND efet w=15 l=6
-+ ad=0 pd=0 as=1257 ps=336 
++ ad=0 pd=0 as=1264 ps=322 
 M1515 GND notir0 op_T0_acc GND efet w=13 l=6
 + ad=0 pd=0 as=895 ps=248 
 M1516 GND notir0 op_T0_and GND efet w=14 l=6
-+ ad=0 pd=0 as=1027 ps=276 
++ ad=0 pd=0 as=1034 ps=262 
 M1517 GND notir0 op_T5_ind_y GND efet w=14 l=6
 + ad=0 pd=0 as=0 ps=0 
 M1518 GND notir0 op_sta_cmp GND efet w=13 l=6
@@ -10641,8 +10641,8 @@ C1563 x_op_T__adc_sbc gnd! 3214.0fF
 C1564 op_T0_clc_sec gnd! 1826.1fF
 C1565 n_1363 gnd! 866.0fF
 C1566 op_asl_rol gnd! 1400.3fF
-C1567 x_op_T3_plp_pla gnd! 1629.6fF
-C1568 x_op_T0_bit gnd! 1979.9fF
+C1567 x_op_T3_plp_pla gnd! 1630.0fF
+C1568 x_op_T0_bit gnd! 1980.7fF
 C1569 op_T3_mem_zp_idx gnd! 1282.0fF
 C1570 op_T__bit gnd! 2618.2fF
 C1571 op_T0_cli_sei gnd! 1554.6fF
@@ -10656,7 +10656,7 @@ C1578 xx_op_T5_jsr gnd! 1794.9fF
 C1579 n_173 gnd! 838.1fF
 C1580 op_T2_php_pha gnd! 1757.4fF
 C1581 op_T4_brk gnd! 2008.7fF
-C1582 op_push_pull gnd! 1777.9fF
+C1582 op_push_pull gnd! 1778.3fF
 C1583 op_jsr gnd! 1760.0fF
 C1584 op_T3_branch gnd! 1650.2fF
 C1585 x_op_T4_ind_y gnd! 1463.6fF
@@ -10690,19 +10690,19 @@ C1612 op_sta_cmp gnd! 1838.9fF
 C1613 op_shift_right gnd! 1390.2fF
 C1614 op_T2_brk gnd! 1798.9fF
 C1615 op_T2_pha gnd! 1878.4fF
-C1616 op_T0_shift_right_a gnd! 1649.5fF
+C1616 op_T0_shift_right_a gnd! 1649.9fF
 C1617 op_T4_abs_idx gnd! 1342.2fF
-C1618 op_T0_bit gnd! 1644.8fF
+C1618 op_T0_bit gnd! 1645.2fF
 C1619 op_branch_done gnd! 2400.2fF
-C1620 op_T5_ind_y gnd! 1433.0fF
+C1620 op_T5_ind_y gnd! 1433.4fF
 C1621 op_T0_and gnd! 1344.6fF
-C1622 op_T0_shift_a gnd! 1895.6fF
-C1623 op_T0_tax gnd! 1529.6fF
+C1622 op_T0_shift_a gnd! 1896.0fF
+C1623 op_T0_tax gnd! 1530.0fF
 C1624 op_T0_acc gnd! 1243.5fF
 C1625 op_T0_tay gnd! 1541.0fF
 C1626 op_T0_pla gnd! 1692.5fF
 C1627 op_T0_lda gnd! 1471.9fF
-C1628 op_T__shift_a gnd! 1599.8fF
+C1628 op_T__shift_a gnd! 1600.2fF
 C1629 op_T0_txa gnd! 1673.4fF
 C1630 op_T__ora_and_eor_adc gnd! 1397.2fF
 C1631 n_1456 gnd! 362.4fF
@@ -10741,27 +10741,27 @@ C1663 op_ror gnd! 1689.1fF
 C1664 op_T2 gnd! 2016.3fF
 C1665 op_T3_plp_pla gnd! 1676.4fF
 C1666 op_T0_php_pha gnd! 1669.3fF
-C1667 op_T5_rti gnd! 2807.0fF
+C1667 op_T5_rti gnd! 2807.4fF
 C1668 op_T4_rts gnd! 1879.8fF
 C1669 op_T0_jsr gnd! 2064.6fF
 C1670 op_T5_brk gnd! 2103.6fF
 C1671 op_T0_tay_ldy_not_idx gnd! 1421.3fF
-C1672 op_T__iny_dey gnd! 1605.9fF
+C1672 op_T__iny_dey gnd! 1606.3fF
 C1673 op_T__inx gnd! 1699.1fF
-C1674 op_T0_ldy_mem gnd! 1460.9fF
+C1674 op_T0_ldy_mem gnd! 1461.3fF
 C1675 op_T0_tsx gnd! 1824.4fF
 C1676 op_T0_ldx_tax_tsx gnd! 1389.6fF
-C1677 op_T__dex gnd! 1509.0fF
+C1677 op_T__dex gnd! 1509.8fF
 C1678 op_from_x gnd! 2064.0fF
-C1679 op_T0_txs gnd! 2432.1fF
-C1680 op_T0_dex gnd! 1521.9fF
+C1679 op_T0_txs gnd! 2432.5fF
+C1680 op_T0_dex gnd! 1522.3fF
 C1681 op_T2_ind_x gnd! 1543.8fF
 C1682 op_T0_cpx_inx gnd! 1462.1fF
 C1683 x_op_T0_txa gnd! 1678.9fF
 C1684 op_T2_idx_x_xy gnd! 1719.7fF
 C1685 op_T0_cpy_iny gnd! 1437.3fF
 C1686 op_xy gnd! 1549.7fF
-C1687 op_T0_iny_dey gnd! 1534.8fF
+C1687 op_T0_iny_dey gnd! 1535.6fF
 C1688 x_op_T0_tya gnd! 1787.7fF
 C1689 op_T3_ind_y gnd! 1475.3fF
 C1690 op_T2_abs_y gnd! 1427.7fF

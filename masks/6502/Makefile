@@ -23,7 +23,7 @@ implant.polygon: pullups.js
 	./make_implant_polygons.py <pullups.js >implant.polygon
 
 clean:
-	rm -f *.png *.cif *.gds *.ext *~
+	rm -f $(PNGS) *.cif *.gds *.ext *~
 	rm -f 6502.spice 6502.ext
 	rm -f magic.log magic.log2
 	rm -f ext2spice.log ext2spice.log2

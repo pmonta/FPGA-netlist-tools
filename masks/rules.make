@@ -17,9 +17,10 @@
 	rm -f \(UNNAMED\).ext
 
 %.png: %.polygon
-	<$< ../tools/polygon2png.py
+	bash -c 'if [ -f $*.tweak ]; then (./apply-tweak.py $*.tweak <$< >temp.polygon); else cp $< temp.polygon; fi'
+	<temp.polygon ../tools/polygon2png.py 4000 4000
 	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pnmtopng >$@
-	rm -f out.png
+	rm -f temp.polygon out.png
 
 %.png: %.bmp
 	pbmmake -white 3 3 >t3.pbm
