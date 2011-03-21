@@ -8,7 +8,9 @@
 	mv temp2.spice $*.spice
 
 %.ext: %.cif
-	echo -n 'cif read ' >magic.script
+	echo 'scalegrid 1 200' >magic.script
+	echo 'snap internal' >>magic.script
+	echo -n 'cif read ' >>magic.script
 	echo '$<' >>magic.script
 	echo 'extract' >>magic.script
 	echo 'quit -noprompt' >>magic.script

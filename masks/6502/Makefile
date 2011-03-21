@@ -4,8 +4,7 @@ all: 6502.cif 6502.gds 6502.spice
 
 PNGS = buried.png contact.png diffusion.png metal.png poly.png implant.png
 NAME = 6502
-#SCALE = 0.94
-SCALE = 2
+SCALE = 0.94
 
 sim: 6502-run.spice 6502-system.spice 6502.spice
 	ngspice --batch 6502-run.spice

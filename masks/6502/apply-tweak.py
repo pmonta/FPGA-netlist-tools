@@ -38,7 +38,7 @@ x = sys.stdin.read()
 for (old,new) in tlist:
   n = x.count(old)
   if n!=1:
-    print 'not exactly one instance of ',old
+    sys.stderr.write('not exactly one instance of '+old+'\n')
     sys.exit(1)
   x = x.replace(old,new)
 
