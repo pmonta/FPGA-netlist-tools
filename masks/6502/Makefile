@@ -23,7 +23,7 @@ implant.polygon: pullups.js
 
 clean:
 	rm -f $(PNGS) *.cif *.gds *.ext *~
-	rm -f 6502.spice 6502.ext
+	rm -f 6502.spice 6502.ext 6502.feedback
 	rm -f magic.log magic.log2
 	rm -f ext2spice.log ext2spice.log2
 	rm -f nodes.txt
