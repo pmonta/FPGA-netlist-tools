@@ -1,17 +1,17 @@
-cp          6678 2055  NM ; pin 1
-data_in     6678  288  NM ; pin 2
-q0          4845  291  NM ; pin 3
-q1          3927  288  NM ; pin 4
-GND!        3033  288  NM ; pin 5
-q2          1623  291  NM ; pin 6
-q3           306  291  NM ; pin 7
-q4           309 1206  NM ; pin 8
-GND!         312 2214  NM
-q5           312 3198  NM ; pin 9
-q6           312 4008  NM ; pin 10
-q7          1479 4005  NM ; pin 11
-q8          3036 3999  NM ; pin 12
-q9          3933 3993  NM ; pin 13
-Vdd!        4818 3990  NM ; pin 14
-serial_out  6681 4005  NM ; pin 15
-e           6681 2946  NM ; pin 16
+cp          2226  685  NM ; pin 1
+data_in     2226   96  NM ; pin 2
+q0          1615   97  NM ; pin 3
+q1          1309   96  NM ; pin 4
+GND!        1011   96  NM ; pin 5
+q2           541   97  NM ; pin 6
+q3           102   97  NM ; pin 7
+q4           103  402  NM ; pin 8
+GND!         104  738  NM
+q5           104 1066  NM ; pin 9
+q6           104 1336  NM ; pin 10
+q7           493 1335  NM ; pin 11
+q8          1012 1333  NM ; pin 12
+q9          1311 1331  NM ; pin 13
+Vdd!        1606 1330  NM ; pin 14
+serial_out  2227 1335  NM ; pin 15
+e           2227  982  NM ; pin 16

@@ -1,17 +1,17 @@
-d0      7835 2125  NM ; pin 1
-d1      7832 1096  NM ; pin 2
-d2      6451  394  NM ; pin 3
-d3      4919  397  NM ; pin 4
-GND!    3594  392  NM ; pin 5
-clk1    2064  303  NM ; pin 6
-clk2     743  305  NM ; pin 7
-sync     448 1440  NM ; pin 8
-reset    338 4478  NM ; pin 9
-cl      1597 4989  NM ; pin 10
-cm      2653 4985  NM ; pin 11
-Vdd!    3724 4987  NM ; pin 12
-io3     5022 4988  NM ; pin 13
-io2     6143 4987  NM ; pin 14
-io1     7800 4449  NM ; pin 15
-io0     7830 3551  NM ; pin 16
-GND!    7827 2864  NM
+d0      2611  708  NM ; pin 1
+d1      2610  365  NM ; pin 2
+d2      2150  131  NM ; pin 3
+d3      1639  132  NM ; pin 4
+GND!    1198  130  NM ; pin 5
+clk1     688  101  NM ; pin 6
+clk2     247  101  NM ; pin 7
+sync     149  480  NM ; pin 8
+reset    112 1492  NM ; pin 9
+cl       532 1663  NM ; pin 10
+cm       884 1661  NM ; pin 11
+Vdd!    1241 1662  NM ; pin 12
+io3     1674 1662  NM ; pin 13
+io2     2047 1662  NM ; pin 14
+io1     2600 1483  NM ; pin 15
+io0     2610 1183  NM ; pin 16
+GND!    2609  954  NM

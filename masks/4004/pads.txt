@@ -1,17 +1,17 @@
-d0          2397 7863  NM  ; pin 1
-d1          3849 7869  NM  ; pin 2
-d2          5694 7314  NM  ; pin 3
-d3          5716 5922  NM  ; pin 4
-GND!        5701 1833  NM  ; pin 5
-clk1        5709  942  NM  ; pin 6
-clk2        4833  252  NM  ; pin 7
-GND!        3800  253  NM
-sync        3171  240  NM  ; pin 8
-reset       1912  243  NM  ; pin 9
-test         780  244  NM  ; pin 10
-cm_rom       207 1264  NM  ; pin 11
-Vdd!         204 4444  NM  ; pin 12
-cm_ram3      214 5511  NM  ; pin 13
-cm_ram2      219 6429  NM  ; pin 14
-cm_ram1      630 7867  NM  ; pin 15
-cm_ram0     1650 7857  NM  ; pin 16
+d0           799 2621  NM  ; pin 1
+d1          1283 2623  NM  ; pin 2
+d2          1898 2438  NM  ; pin 3
+d3          1905 1974  NM  ; pin 4
+GND!        1900  611  NM  ; pin 5
+clk1        1903  314  NM  ; pin 6
+clk2        1611   84  NM  ; pin 7
+GND!        1266   84  NM
+sync        1057   80  NM  ; pin 8
+reset        637   81  NM  ; pin 9
+test         260   81  NM  ; pin 10
+cm_rom        69  421  NM  ; pin 11
+Vdd!          68 1481  NM  ; pin 12
+cm_ram3       71 1837  NM  ; pin 13
+cm_ram2       73 2143  NM  ; pin 14
+cm_ram1      210 2622  NM  ; pin 15
+cm_ram0      550 2619  NM  ; pin 16

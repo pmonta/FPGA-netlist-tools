@@ -13,6 +13,8 @@
 	echo -n 'cif read ' >>magic.script
 	echo '$<' >>magic.script
 	echo 'extract' >>magic.script
+	echo -n 'feedback save ' >>magic.script
+	echo '$*.feedback' >>magic.script
 	echo 'quit -noprompt' >>magic.script
 	magic -T nmos -dnull -noconsole <magic.script >magic.log 2>magic.log2
 	rm -f magic.script
@@ -25,6 +27,7 @@
 	rm -f temp.polygon out.png
 
 %.png: %.bmp
-	pbmmake -white 3 3 >t3.pbm
-	<$< bmptoppm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pamenlarge 3 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@
-	rm -f t3.pbm
+#	pbmmake -white 3 3 >t3.pbm
+#	<$< bmptoppm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pamenlarge 3 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@
+#	rm -f t3.pbm
+	<$< bmptoppm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pnmtopng >$@
