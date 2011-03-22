@@ -1,1136 +1,1136 @@
 * SPICE3 file created from 4003.ext - technology: nmos
 
-.option scale=0.01u
+.option scale=0.001u
 
-M1000 Vdd Vdd diff_22392_39168# GND efet w=936 l=864
-+ ad=1.80854e+08 pd=493488 as=3.14358e+07 ps=57744 
-M1001 Vdd Vdd Vdd GND efet w=180 l=468
+M1000 Vdd Vdd diff_223920_391680# GND efet w=9360 l=8640
++ ad=9.05552e+08 pd=4.93488e+06 as=-1.15139e+09 ps=577440 
+M1001 Vdd Vdd Vdd GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1002 Vdd Vdd Vdd GND efet w=252 l=252
+M1002 Vdd Vdd Vdd GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1003 Vdd Vdd diff_133632_86400# GND efet w=576 l=12456
-+ ad=0 pd=0 as=3.1104e+06 ps=9792 
-M1004 diff_133632_86400# diff_20160_39168# GND GND efet w=1296 l=648
-+ ad=0 pd=0 as=8.05262e+08 ps=1.49011e+06 
-M1005 GND diff_127224_87480# diff_22392_39168# GND efet w=21456 l=1224
+M1003 Vdd Vdd diff_1336320_864000# GND efet w=5760 l=124560
++ ad=0 pd=0 as=3.1104e+08 ps=97920 
+M1004 diff_1336320_864000# diff_201600_391680# GND GND efet w=12960 l=6480
++ ad=0 pd=0 as=-1.0782e+09 ps=1.49011e+07 
+M1005 GND diff_1272240_874800# diff_223920_391680# GND efet w=214560 l=12240
 + ad=0 pd=0 as=0 ps=0 
-M1006 Vdd Vdd diff_127224_87480# GND efet w=576 l=12672
-+ ad=0 pd=0 as=1.61171e+07 ps=30672 
-M1007 diff_127224_87480# diff_133632_86400# GND GND efet w=15120 l=1944
+M1006 Vdd Vdd diff_1272240_874800# GND efet w=5760 l=126720
++ ad=0 pd=0 as=1.61171e+09 ps=306720 
+M1007 diff_1272240_874800# diff_1336320_864000# GND GND efet w=151200 l=19440
 + ad=0 pd=0 as=0 ps=0 
-M1008 GND diff_23760_48600# diff_20160_39168# GND efet w=13032 l=648
-+ ad=0 pd=0 as=3.93569e+07 ps=70416 
-M1009 diff_23760_48600# diff_20160_39168# GND GND efet w=5328 l=648
-+ ad=1.75064e+07 pd=40176 as=0 ps=0 
-M1010 q4 diff_35064_81432# GND GND efet w=30492 l=684
-+ ad=3.74751e+07 pd=72288 as=0 ps=0 
-M1011 GND diff_27072_66960# diff_25704_73440# GND efet w=5796 l=684
-+ ad=0 pd=0 as=1.33799e+07 ps=28512 
-M1012 diff_25704_73440# diff_18000_39168# GND GND efet w=3276 l=684
+M1008 GND diff_237600_486000# diff_201600_391680# GND efet w=130320 l=6480
++ ad=0 pd=0 as=-3.59274e+08 ps=704160 
+M1009 diff_237600_486000# diff_201600_391680# GND GND efet w=53280 l=6480
++ ad=1.75064e+09 pd=401760 as=0 ps=0 
+M1010 q4 diff_350640_814320# GND GND efet w=304920 l=6840
++ ad=-5.47454e+08 pd=722880 as=0 ps=0 
+M1011 GND diff_270720_669600# diff_257040_734400# GND efet w=57960 l=6840
++ ad=0 pd=0 as=1.33799e+09 ps=285120 
+M1012 diff_257040_734400# diff_180000_391680# GND GND efet w=32760 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1013 diff_25704_73440# diff_25704_73440# diff_25704_73440# GND efet w=216 l=216
+M1013 diff_257040_734400# diff_257040_734400# diff_257040_734400# GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1014 diff_25704_73440# diff_25704_73440# diff_25704_73440# GND efet w=144 l=324
+M1014 diff_257040_734400# diff_257040_734400# diff_257040_734400# GND efet w=1440 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1015 diff_27072_66960# diff_27072_66960# diff_27072_66960# GND efet w=288 l=288
-+ ad=7.10726e+06 pd=18720 as=0 ps=0 
-M1016 diff_27072_66960# diff_27072_66960# diff_27072_66960# GND efet w=144 l=432
+M1015 diff_270720_669600# diff_270720_669600# diff_270720_669600# GND efet w=2880 l=2880
++ ad=7.10726e+08 pd=187200 as=0 ps=0 
+M1016 diff_270720_669600# diff_270720_669600# diff_270720_669600# GND efet w=1440 l=4320
 + ad=0 pd=0 as=0 ps=0 
-M1017 diff_25704_73440# Vdd Vdd GND efet w=720 l=2160
+M1017 diff_257040_734400# Vdd Vdd GND efet w=7200 l=21600
 + ad=0 pd=0 as=0 ps=0 
-M1018 Vdd Vdd Vdd GND efet w=180 l=612
+M1018 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1019 Vdd Vdd Vdd GND efet w=288 l=324
+M1019 Vdd Vdd Vdd GND efet w=2880 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1020 q3 diff_55944_81504# GND GND efet w=30384 l=648
-+ ad=3.85068e+07 pd=72000 as=0 ps=0 
-M1021 GND diff_47880_66960# diff_46512_73440# GND efet w=5868 l=684
-+ ad=0 pd=0 as=1.3805e+07 ps=28944 
-M1022 diff_46512_73440# diff_18000_39168# GND GND efet w=3384 l=648
+M1020 q3 diff_559440_815040# GND GND efet w=303840 l=6480
++ ad=-4.44292e+08 pd=720000 as=0 ps=0 
+M1021 GND diff_478800_669600# diff_465120_734400# GND efet w=58680 l=6840
++ ad=0 pd=0 as=1.3805e+09 ps=289440 
+M1022 diff_465120_734400# diff_180000_391680# GND GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1023 diff_46512_73440# diff_46512_73440# diff_46512_73440# GND efet w=252 l=252
+M1023 diff_465120_734400# diff_465120_734400# diff_465120_734400# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1024 diff_46512_73440# diff_46512_73440# diff_46512_73440# GND efet w=216 l=360
+M1024 diff_465120_734400# diff_465120_734400# diff_465120_734400# GND efet w=2160 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1025 diff_35064_81432# diff_25704_73440# GND GND efet w=4752 l=648
-+ ad=5.22547e+06 pd=14544 as=0 ps=0 
-M1026 diff_35064_81432# diff_35064_81432# diff_35064_81432# GND efet w=252 l=252
+M1025 diff_350640_814320# diff_257040_734400# GND GND efet w=47520 l=6480
++ ad=5.22547e+08 pd=145440 as=0 ps=0 
+M1026 diff_350640_814320# diff_350640_814320# diff_350640_814320# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1027 diff_35064_81432# diff_35064_81432# diff_35064_81432# GND efet w=180 l=468
+M1027 diff_350640_814320# diff_350640_814320# diff_350640_814320# GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1028 diff_47880_66960# diff_47880_66960# diff_47880_66960# GND efet w=216 l=216
-+ ad=7.66195e+06 pd=18864 as=0 ps=0 
-M1029 diff_47880_66960# diff_47880_66960# diff_47880_66960# GND efet w=180 l=360
+M1028 diff_478800_669600# diff_478800_669600# diff_478800_669600# GND efet w=2160 l=2160
++ ad=7.66195e+08 pd=188640 as=0 ps=0 
+M1029 diff_478800_669600# diff_478800_669600# diff_478800_669600# GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1030 q4 diff_25704_73440# Vdd GND efet w=2160 l=648
+M1030 q4 diff_257040_734400# Vdd GND efet w=21600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1031 diff_35064_81432# Vdd Vdd GND efet w=864 l=1728
+M1031 diff_350640_814320# Vdd Vdd GND efet w=8640 l=17280
 + ad=0 pd=0 as=0 ps=0 
-M1032 diff_46512_73440# Vdd Vdd GND efet w=720 l=2088
+M1032 diff_465120_734400# Vdd Vdd GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1033 Vdd Vdd Vdd GND efet w=180 l=540
+M1033 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1034 Vdd Vdd Vdd GND efet w=360 l=360
+M1034 Vdd Vdd Vdd GND efet w=3600 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1035 Vdd Vdd Vdd GND efet w=180 l=612
+M1035 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1036 Vdd Vdd Vdd GND efet w=288 l=288
+M1036 Vdd Vdd Vdd GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1037 Vdd Vdd Vdd GND efet w=180 l=540
+M1037 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1038 Vdd Vdd Vdd GND efet w=288 l=288
+M1038 Vdd Vdd Vdd GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1039 diff_27072_66960# diff_22392_39168# diff_24120_49248# GND efet w=1224 l=720
-+ ad=0 pd=0 as=1.34888e+07 ps=29952 
-M1040 diff_25416_59112# diff_22392_39168# diff_24120_49248# GND efet w=1224 l=648
-+ ad=1.53446e+06 pd=5616 as=0 ps=0 
-M1041 diff_25416_59112# diff_25416_59112# diff_25416_59112# GND efet w=252 l=252
+M1039 diff_270720_669600# diff_223920_391680# diff_241200_492480# GND efet w=12240 l=7200
++ ad=0 pd=0 as=1.34888e+09 ps=299520 
+M1040 diff_254160_591120# diff_223920_391680# diff_241200_492480# GND efet w=12240 l=6480
++ ad=1.53446e+08 pd=56160 as=0 ps=0 
+M1041 diff_254160_591120# diff_254160_591120# diff_254160_591120# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1042 diff_25416_59112# diff_25416_59112# diff_25416_59112# GND efet w=180 l=396
+M1042 diff_254160_591120# diff_254160_591120# diff_254160_591120# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1043 diff_24120_49248# diff_23760_52704# GND GND efet w=1908 l=684
+M1043 diff_241200_492480# diff_237600_527040# GND GND efet w=19080 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1044 Vdd Vdd diff_24120_49248# GND efet w=720 l=3528
+M1044 Vdd Vdd diff_241200_492480# GND efet w=7200 l=35280
 + ad=0 pd=0 as=0 ps=0 
-M1045 q2 diff_76752_81504# GND GND efet w=30384 l=648
-+ ad=3.88178e+07 pd=72144 as=0 ps=0 
-M1046 GND diff_68760_66960# diff_67392_73440# GND efet w=5904 l=648
-+ ad=0 pd=0 as=1.38672e+07 ps=29088 
-M1047 diff_67392_73440# diff_18000_39168# GND GND efet w=3384 l=648
+M1045 q2 diff_767520_815040# GND GND efet w=303840 l=6480
++ ad=-4.13188e+08 pd=721440 as=0 ps=0 
+M1046 GND diff_687600_669600# diff_673920_734400# GND efet w=59040 l=6480
++ ad=0 pd=0 as=1.38672e+09 ps=290880 
+M1047 diff_673920_734400# diff_180000_391680# GND GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1048 diff_67392_73440# diff_67392_73440# diff_67392_73440# GND efet w=288 l=288
+M1048 diff_673920_734400# diff_673920_734400# diff_673920_734400# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1049 diff_67392_73440# diff_67392_73440# diff_67392_73440# GND efet w=216 l=360
+M1049 diff_673920_734400# diff_673920_734400# diff_673920_734400# GND efet w=2160 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1050 diff_55944_81504# diff_46512_73440# GND GND efet w=4752 l=648
-+ ad=5.16845e+06 pd=14400 as=0 ps=0 
-M1051 diff_55944_81504# diff_55944_81504# diff_55944_81504# GND efet w=252 l=252
+M1050 diff_559440_815040# diff_465120_734400# GND GND efet w=47520 l=6480
++ ad=5.16845e+08 pd=144000 as=0 ps=0 
+M1051 diff_559440_815040# diff_559440_815040# diff_559440_815040# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1052 diff_55944_81504# diff_55944_81504# diff_55944_81504# GND efet w=180 l=468
+M1052 diff_559440_815040# diff_559440_815040# diff_559440_815040# GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1053 diff_68760_66960# diff_68760_66960# diff_68760_66960# GND efet w=216 l=288
-+ ad=7.20576e+06 pd=18864 as=0 ps=0 
-M1054 diff_68760_66960# diff_68760_66960# diff_68760_66960# GND efet w=180 l=324
+M1053 diff_687600_669600# diff_687600_669600# diff_687600_669600# GND efet w=2160 l=2880
++ ad=7.20576e+08 pd=188640 as=0 ps=0 
+M1054 diff_687600_669600# diff_687600_669600# diff_687600_669600# GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1055 q3 diff_46512_73440# Vdd GND efet w=2088 l=648
+M1055 q3 diff_465120_734400# Vdd GND efet w=20880 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1056 diff_55944_81504# Vdd Vdd GND efet w=864 l=1800
+M1056 diff_559440_815040# Vdd Vdd GND efet w=8640 l=18000
 + ad=0 pd=0 as=0 ps=0 
-M1057 diff_67392_73440# Vdd Vdd GND efet w=720 l=2088
+M1057 diff_673920_734400# Vdd Vdd GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1058 Vdd Vdd Vdd GND efet w=180 l=612
+M1058 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1059 Vdd Vdd Vdd GND efet w=288 l=324
+M1059 Vdd Vdd Vdd GND efet w=2880 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1060 Vdd Vdd Vdd GND efet w=144 l=504
+M1060 Vdd Vdd Vdd GND efet w=1440 l=5040
 + ad=0 pd=0 as=0 ps=0 
-M1061 Vdd Vdd Vdd GND efet w=324 l=324
+M1061 Vdd Vdd Vdd GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1062 Vdd Vdd Vdd GND efet w=180 l=612
+M1062 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1063 Vdd Vdd Vdd GND efet w=288 l=324
+M1063 Vdd Vdd Vdd GND efet w=2880 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1064 diff_47880_66960# diff_22392_39168# diff_44280_61848# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.34525e+07 ps=29952 
-M1065 diff_33912_61056# diff_33912_61056# diff_33912_61056# GND efet w=324 l=360
-+ ad=1.77293e+06 pd=7344 as=0 ps=0 
-M1066 diff_33912_61056# diff_33912_61056# diff_33912_61056# GND efet w=360 l=360
+M1064 diff_478800_669600# diff_223920_391680# diff_442800_618480# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.34525e+09 ps=299520 
+M1065 diff_339120_610560# diff_339120_610560# diff_339120_610560# GND efet w=3240 l=3600
++ ad=1.77293e+08 pd=73440 as=0 ps=0 
+M1066 diff_339120_610560# diff_339120_610560# diff_339120_610560# GND efet w=3600 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1067 diff_24120_49248# diff_20160_39168# diff_34272_61704# GND efet w=4248 l=648
-+ ad=0 pd=0 as=5.0233e+06 ps=13104 
-M1068 diff_44280_64080# diff_23760_48600# diff_33912_61056# GND efet w=1224 l=648
-+ ad=1.38931e+07 pd=32400 as=0 ps=0 
-M1069 diff_44280_64080# diff_44280_64080# diff_44280_64080# GND efet w=252 l=288
+M1067 diff_241200_492480# diff_201600_391680# diff_342720_617040# GND efet w=42480 l=6480
++ ad=0 pd=0 as=5.0233e+08 ps=131040 
+M1068 diff_442800_640800# diff_237600_486000# diff_339120_610560# GND efet w=12240 l=6480
++ ad=1.38931e+09 pd=324000 as=0 ps=0 
+M1069 diff_442800_640800# diff_442800_640800# diff_442800_640800# GND efet w=2520 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1070 diff_44280_64080# diff_44280_64080# diff_44280_64080# GND efet w=252 l=360
+M1070 diff_442800_640800# diff_442800_640800# diff_442800_640800# GND efet w=2520 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1071 GND diff_25416_59112# diff_23760_52704# GND efet w=3240 l=648
-+ ad=0 pd=0 as=1.79263e+07 ps=42768 
-M1072 diff_34272_61704# diff_33912_61056# GND GND efet w=6768 l=648
+M1071 GND diff_254160_591120# diff_237600_527040# GND efet w=32400 l=6480
++ ad=0 pd=0 as=1.79263e+09 ps=427680 
+M1072 diff_342720_617040# diff_339120_610560# GND GND efet w=67680 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1073 GND diff_33912_59472# diff_34272_58464# GND efet w=6768 l=648
-+ ad=0 pd=0 as=6.23117e+06 ps=15840 
-M1074 diff_33912_59472# diff_33912_59472# diff_33912_59472# GND efet w=324 l=360
-+ ad=1.80403e+06 pd=7344 as=0 ps=0 
-M1075 diff_33912_59472# diff_33912_59472# diff_33912_59472# GND efet w=324 l=324
+M1073 GND diff_339120_594720# diff_342720_584640# GND efet w=67680 l=6480
++ ad=0 pd=0 as=6.23117e+08 ps=158400 
+M1074 diff_339120_594720# diff_339120_594720# diff_339120_594720# GND efet w=3240 l=3600
++ ad=1.80403e+08 pd=73440 as=0 ps=0 
+M1075 diff_339120_594720# diff_339120_594720# diff_339120_594720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1076 diff_44280_61848# diff_23760_48600# diff_33912_59472# GND efet w=1224 l=648
+M1076 diff_442800_618480# diff_237600_486000# diff_339120_594720# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1077 diff_46224_59112# diff_22392_39168# diff_44280_61848# GND efet w=1224 l=648
-+ ad=1.53446e+06 pd=5616 as=0 ps=0 
-M1078 diff_46224_59112# diff_46224_59112# diff_46224_59112# GND efet w=252 l=252
+M1077 diff_462240_591120# diff_223920_391680# diff_442800_618480# GND efet w=12240 l=6480
++ ad=1.53446e+08 pd=56160 as=0 ps=0 
+M1078 diff_462240_591120# diff_462240_591120# diff_462240_591120# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1079 diff_46224_59112# diff_46224_59112# diff_46224_59112# GND efet w=180 l=396
+M1079 diff_462240_591120# diff_462240_591120# diff_462240_591120# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1080 diff_44280_61848# diff_44280_64080# GND GND efet w=1944 l=648
+M1080 diff_442800_618480# diff_442800_640800# GND GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1081 Vdd Vdd diff_44280_61848# GND efet w=720 l=3456
+M1081 Vdd Vdd diff_442800_618480# GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1082 q1 diff_97632_81504# GND GND efet w=30456 l=648
-+ ad=3.92066e+07 pd=72288 as=0 ps=0 
-M1083 GND diff_89568_66960# diff_88200_73440# GND efet w=5904 l=648
-+ ad=0 pd=0 as=1.37687e+07 ps=29088 
-M1084 diff_88200_73440# diff_18000_39168# GND GND efet w=3384 l=648
+M1082 q1 diff_976320_815040# GND GND efet w=304560 l=6480
++ ad=-3.74308e+08 pd=722880 as=0 ps=0 
+M1083 GND diff_895680_669600# diff_882000_734400# GND efet w=59040 l=6480
++ ad=0 pd=0 as=1.37687e+09 ps=290880 
+M1084 diff_882000_734400# diff_180000_391680# GND GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1085 diff_88200_73440# diff_88200_73440# diff_88200_73440# GND efet w=288 l=288
+M1085 diff_882000_734400# diff_882000_734400# diff_882000_734400# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1086 diff_88200_73440# diff_88200_73440# diff_88200_73440# GND efet w=216 l=360
+M1086 diff_882000_734400# diff_882000_734400# diff_882000_734400# GND efet w=2160 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1087 diff_76752_81504# diff_67392_73440# GND GND efet w=4752 l=648
-+ ad=5.16845e+06 pd=14400 as=0 ps=0 
-M1088 diff_76752_81504# diff_76752_81504# diff_76752_81504# GND efet w=252 l=252
+M1087 diff_767520_815040# diff_673920_734400# GND GND efet w=47520 l=6480
++ ad=5.16845e+08 pd=144000 as=0 ps=0 
+M1088 diff_767520_815040# diff_767520_815040# diff_767520_815040# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1089 diff_76752_81504# diff_76752_81504# diff_76752_81504# GND efet w=180 l=468
+M1089 diff_767520_815040# diff_767520_815040# diff_767520_815040# GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1090 diff_89568_66960# diff_89568_66960# diff_89568_66960# GND efet w=216 l=216
-+ ad=7.60493e+06 pd=19008 as=0 ps=0 
-M1091 diff_89568_66960# diff_89568_66960# diff_89568_66960# GND efet w=216 l=396
+M1090 diff_895680_669600# diff_895680_669600# diff_895680_669600# GND efet w=2160 l=2160
++ ad=7.60493e+08 pd=190080 as=0 ps=0 
+M1091 diff_895680_669600# diff_895680_669600# diff_895680_669600# GND efet w=2160 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1092 q2 diff_67392_73440# Vdd GND efet w=2160 l=648
+M1092 q2 diff_673920_734400# Vdd GND efet w=21600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1093 diff_76752_81504# Vdd Vdd GND efet w=864 l=1728
+M1093 diff_767520_815040# Vdd Vdd GND efet w=8640 l=17280
 + ad=0 pd=0 as=0 ps=0 
-M1094 diff_88200_73440# Vdd Vdd GND efet w=720 l=2088
+M1094 diff_882000_734400# Vdd Vdd GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1095 Vdd Vdd Vdd GND efet w=288 l=324
+M1095 Vdd Vdd Vdd GND efet w=2880 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1096 Vdd Vdd Vdd GND efet w=144 l=576
+M1096 Vdd Vdd Vdd GND efet w=1440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1097 Vdd Vdd Vdd GND efet w=180 l=540
+M1097 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1098 Vdd Vdd Vdd GND efet w=324 l=396
+M1098 Vdd Vdd Vdd GND efet w=3240 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1099 Vdd Vdd Vdd GND efet w=180 l=540
+M1099 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1100 Vdd Vdd Vdd GND efet w=288 l=288
+M1100 Vdd Vdd Vdd GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1101 diff_68760_66960# diff_22392_39168# diff_65160_61848# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.35095e+07 ps=30096 
-M1102 diff_54720_61200# diff_54720_61200# diff_54720_61200# GND efet w=324 l=324
-+ ad=1.73146e+06 pd=7056 as=0 ps=0 
-M1103 diff_54720_61200# diff_54720_61200# diff_54720_61200# GND efet w=324 l=324
+M1101 diff_687600_669600# diff_223920_391680# diff_651600_618480# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.35095e+09 ps=300960 
+M1102 diff_547200_612000# diff_547200_612000# diff_547200_612000# GND efet w=3240 l=3240
++ ad=1.73146e+08 pd=70560 as=0 ps=0 
+M1103 diff_547200_612000# diff_547200_612000# diff_547200_612000# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1104 diff_44280_61848# diff_20160_39168# diff_55080_61776# GND efet w=4320 l=648
-+ ad=0 pd=0 as=4.89888e+06 ps=13104 
-M1105 diff_65160_64080# diff_23760_48600# diff_54720_61200# GND efet w=1224 l=648
-+ ad=1.4059e+07 pd=32400 as=0 ps=0 
-M1106 diff_65160_64080# diff_65160_64080# diff_65160_64080# GND efet w=216 l=252
+M1104 diff_442800_618480# diff_201600_391680# diff_550800_617760# GND efet w=43200 l=6480
++ ad=0 pd=0 as=4.89888e+08 ps=131040 
+M1105 diff_651600_640800# diff_237600_486000# diff_547200_612000# GND efet w=12240 l=6480
++ ad=1.4059e+09 pd=324000 as=0 ps=0 
+M1106 diff_651600_640800# diff_651600_640800# diff_651600_640800# GND efet w=2160 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1107 diff_65160_64080# diff_65160_64080# diff_65160_64080# GND efet w=252 l=324
+M1107 diff_651600_640800# diff_651600_640800# diff_651600_640800# GND efet w=2520 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1108 diff_34272_58464# diff_20160_39168# diff_23760_52704# GND efet w=4248 l=648
+M1108 diff_342720_584640# diff_201600_391680# diff_237600_527040# GND efet w=42480 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1109 GND diff_29592_56592# diff_23760_52704# GND efet w=2376 l=648
+M1109 GND diff_295920_565920# diff_237600_527040# GND efet w=23760 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1110 diff_23760_52704# diff_23760_52704# diff_23760_52704# GND efet w=324 l=324
+M1110 diff_237600_527040# diff_237600_527040# diff_237600_527040# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1111 diff_23760_52704# diff_23760_52704# diff_23760_52704# GND efet w=324 l=324
+M1111 diff_237600_527040# diff_237600_527040# diff_237600_527040# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1112 diff_23760_52704# Vdd Vdd GND efet w=720 l=3744
+M1112 diff_237600_527040# Vdd Vdd GND efet w=7200 l=37440
 + ad=0 pd=0 as=0 ps=0 
-M1113 GND diff_46224_59112# diff_44280_64080# GND efet w=3240 l=648
+M1113 GND diff_462240_591120# diff_442800_640800# GND efet w=32400 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1114 diff_55080_61776# diff_54720_61200# GND GND efet w=6768 l=648
+M1114 diff_550800_617760# diff_547200_612000# GND GND efet w=67680 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1115 GND diff_54720_59544# diff_55080_58464# GND efet w=6840 l=648
-+ ad=0 pd=0 as=6.29338e+06 ps=15984 
-M1116 diff_54720_59544# diff_54720_59544# diff_54720_59544# GND efet w=324 l=324
-+ ad=1.75738e+06 pd=7056 as=0 ps=0 
-M1117 diff_54720_59544# diff_54720_59544# diff_54720_59544# GND efet w=288 l=288
+M1115 GND diff_547200_595440# diff_550800_584640# GND efet w=68400 l=6480
++ ad=0 pd=0 as=6.29338e+08 ps=159840 
+M1116 diff_547200_595440# diff_547200_595440# diff_547200_595440# GND efet w=3240 l=3240
++ ad=1.75738e+08 pd=70560 as=0 ps=0 
+M1117 diff_547200_595440# diff_547200_595440# diff_547200_595440# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1118 diff_65160_61848# diff_23760_48600# diff_54720_59544# GND efet w=1224 l=648
+M1118 diff_651600_618480# diff_237600_486000# diff_547200_595440# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1119 diff_67104_59184# diff_22392_39168# diff_65160_61848# GND efet w=1224 l=576
-+ ad=1.53446e+06 pd=5616 as=0 ps=0 
-M1120 diff_67104_59184# diff_67104_59184# diff_67104_59184# GND efet w=252 l=252
+M1119 diff_671040_591840# diff_223920_391680# diff_651600_618480# GND efet w=12240 l=5760
++ ad=1.53446e+08 pd=56160 as=0 ps=0 
+M1120 diff_671040_591840# diff_671040_591840# diff_671040_591840# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1121 diff_67104_59184# diff_67104_59184# diff_67104_59184# GND efet w=180 l=396
+M1121 diff_671040_591840# diff_671040_591840# diff_671040_591840# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1122 diff_65160_61848# diff_65160_64080# GND GND efet w=1944 l=648
+M1122 diff_651600_618480# diff_651600_640800# GND GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1123 diff_55080_58464# diff_20160_39168# diff_44280_64080# GND efet w=4320 l=648
+M1123 diff_550800_584640# diff_201600_391680# diff_442800_640800# GND efet w=43200 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1124 GND diff_29592_56592# diff_44280_64080# GND efet w=1944 l=648
+M1124 GND diff_295920_565920# diff_442800_640800# GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1125 diff_44280_64080# Vdd Vdd GND efet w=720 l=3672
+M1125 diff_442800_640800# Vdd Vdd GND efet w=7200 l=36720
 + ad=0 pd=0 as=0 ps=0 
-M1126 Vdd Vdd diff_65160_61848# GND efet w=720 l=3456
+M1126 Vdd Vdd diff_651600_618480# GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1127 q0 diff_118440_81504# GND GND efet w=30384 l=648
-+ ad=3.8569e+07 pd=71856 as=0 ps=0 
-M1128 GND diff_110448_66960# diff_109080_73440# GND efet w=5868 l=612
-+ ad=0 pd=0 as=1.38516e+07 ps=29088 
-M1129 diff_109080_73440# diff_18000_39168# GND GND efet w=3384 l=648
+M1127 q0 diff_1184400_815040# GND GND efet w=303840 l=6480
++ ad=-4.38071e+08 pd=718560 as=0 ps=0 
+M1128 GND diff_1104480_669600# diff_1090800_734400# GND efet w=58680 l=6120
++ ad=0 pd=0 as=1.38516e+09 ps=290880 
+M1129 diff_1090800_734400# diff_180000_391680# GND GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1130 diff_109080_73440# diff_109080_73440# diff_109080_73440# GND efet w=252 l=252
+M1130 diff_1090800_734400# diff_1090800_734400# diff_1090800_734400# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1131 diff_109080_73440# diff_109080_73440# diff_109080_73440# GND efet w=216 l=360
+M1131 diff_1090800_734400# diff_1090800_734400# diff_1090800_734400# GND efet w=2160 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1132 diff_97632_81504# diff_88200_73440# GND GND efet w=4788 l=612
-+ ad=5.39136e+06 pd=14400 as=0 ps=0 
-M1133 diff_97632_81504# diff_97632_81504# diff_97632_81504# GND efet w=216 l=216
+M1132 diff_976320_815040# diff_882000_734400# GND GND efet w=47880 l=6120
++ ad=5.39136e+08 pd=144000 as=0 ps=0 
+M1133 diff_976320_815040# diff_976320_815040# diff_976320_815040# GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1134 diff_97632_81504# diff_97632_81504# diff_97632_81504# GND efet w=180 l=396
+M1134 diff_976320_815040# diff_976320_815040# diff_976320_815040# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1135 diff_110448_66960# diff_110448_66960# diff_110448_66960# GND efet w=180 l=180
-+ ad=7.24723e+06 pd=19152 as=0 ps=0 
-M1136 diff_110448_66960# diff_110448_66960# diff_110448_66960# GND efet w=288 l=288
+M1135 diff_1104480_669600# diff_1104480_669600# diff_1104480_669600# GND efet w=1800 l=1800
++ ad=7.24723e+08 pd=191520 as=0 ps=0 
+M1136 diff_1104480_669600# diff_1104480_669600# diff_1104480_669600# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1137 q1 diff_88200_73440# Vdd GND efet w=2160 l=648
+M1137 q1 diff_882000_734400# Vdd GND efet w=21600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1138 diff_97632_81504# Vdd Vdd GND efet w=936 l=1728
+M1138 diff_976320_815040# Vdd Vdd GND efet w=9360 l=17280
 + ad=0 pd=0 as=0 ps=0 
-M1139 diff_109080_73440# Vdd Vdd GND efet w=720 l=2088
+M1139 diff_1090800_734400# Vdd Vdd GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1140 Vdd Vdd Vdd GND efet w=288 l=288
+M1140 Vdd Vdd Vdd GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1141 Vdd Vdd Vdd GND efet w=180 l=468
+M1141 Vdd Vdd Vdd GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1142 Vdd Vdd Vdd GND efet w=180 l=540
+M1142 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1143 Vdd Vdd Vdd GND efet w=252 l=252
+M1143 Vdd Vdd Vdd GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1144 Vdd Vdd Vdd GND efet w=180 l=612
+M1144 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1145 Vdd Vdd Vdd GND efet w=288 l=432
+M1145 Vdd Vdd Vdd GND efet w=2880 l=4320
 + ad=0 pd=0 as=0 ps=0 
-M1146 diff_89568_66960# diff_22392_39168# diff_85968_61848# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.34473e+07 ps=29952 
-M1147 diff_75600_61128# diff_75600_61128# diff_75600_61128# GND efet w=324 l=324
-+ ad=1.73664e+06 pd=7056 as=0 ps=0 
-M1148 diff_75600_61128# diff_75600_61128# diff_75600_61128# GND efet w=324 l=324
+M1146 diff_895680_669600# diff_223920_391680# diff_859680_618480# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.34473e+09 ps=299520 
+M1147 diff_756000_611280# diff_756000_611280# diff_756000_611280# GND efet w=3240 l=3240
++ ad=1.73664e+08 pd=70560 as=0 ps=0 
+M1148 diff_756000_611280# diff_756000_611280# diff_756000_611280# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1149 diff_65160_61848# diff_20160_39168# diff_75960_61776# GND efet w=4248 l=648
-+ ad=0 pd=0 as=4.85222e+06 ps=12960 
-M1150 diff_85968_64080# diff_23760_48600# diff_75600_61128# GND efet w=1224 l=648
-+ ad=1.4142e+07 pd=32400 as=0 ps=0 
-M1151 diff_85968_64080# diff_85968_64080# diff_85968_64080# GND efet w=216 l=252
+M1149 diff_651600_618480# diff_201600_391680# diff_759600_617760# GND efet w=42480 l=6480
++ ad=0 pd=0 as=4.85222e+08 ps=129600 
+M1150 diff_859680_640800# diff_237600_486000# diff_756000_611280# GND efet w=12240 l=6480
++ ad=1.4142e+09 pd=324000 as=0 ps=0 
+M1151 diff_859680_640800# diff_859680_640800# diff_859680_640800# GND efet w=2160 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1152 diff_85968_64080# diff_85968_64080# diff_85968_64080# GND efet w=252 l=324
+M1152 diff_859680_640800# diff_859680_640800# diff_859680_640800# GND efet w=2520 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1153 GND diff_67104_59184# diff_65160_64080# GND efet w=3312 l=648
+M1153 GND diff_671040_591840# diff_651600_640800# GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1154 diff_75960_61776# diff_75600_61128# GND GND efet w=6696 l=648
+M1154 diff_759600_617760# diff_756000_611280# GND GND efet w=66960 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1155 GND diff_75600_59472# diff_75960_58536# GND efet w=6732 l=612
-+ ad=0 pd=0 as=6.29338e+06 ps=15840 
-M1156 diff_75600_59472# diff_75600_59472# diff_75600_59472# GND efet w=324 l=360
-+ ad=1.83514e+06 pd=7344 as=0 ps=0 
-M1157 diff_75600_59472# diff_75600_59472# diff_75600_59472# GND efet w=288 l=288
+M1155 GND diff_756000_594720# diff_759600_585360# GND efet w=67320 l=6120
++ ad=0 pd=0 as=6.29338e+08 ps=158400 
+M1156 diff_756000_594720# diff_756000_594720# diff_756000_594720# GND efet w=3240 l=3600
++ ad=1.83514e+08 pd=73440 as=0 ps=0 
+M1157 diff_756000_594720# diff_756000_594720# diff_756000_594720# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1158 diff_85968_61848# diff_23760_48600# diff_75600_59472# GND efet w=1224 l=648
+M1158 diff_859680_618480# diff_237600_486000# diff_756000_594720# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1159 diff_87912_59184# diff_22392_39168# diff_85968_61848# GND efet w=1224 l=648
-+ ad=1.53446e+06 pd=5616 as=0 ps=0 
-M1160 diff_87912_59184# diff_87912_59184# diff_87912_59184# GND efet w=252 l=252
+M1159 diff_879120_591840# diff_223920_391680# diff_859680_618480# GND efet w=12240 l=6480
++ ad=1.53446e+08 pd=56160 as=0 ps=0 
+M1160 diff_879120_591840# diff_879120_591840# diff_879120_591840# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1161 diff_87912_59184# diff_87912_59184# diff_87912_59184# GND efet w=180 l=468
+M1161 diff_879120_591840# diff_879120_591840# diff_879120_591840# GND efet w=1800 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1162 diff_85968_61848# diff_85968_64080# GND GND efet w=1944 l=576
+M1162 diff_859680_618480# diff_859680_640800# GND GND efet w=19440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1163 Vdd Vdd diff_85968_61848# GND efet w=720 l=3456
+M1163 Vdd Vdd diff_859680_618480# GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1164 diff_118440_81504# diff_109080_73440# GND GND efet w=4824 l=648
-+ ad=5.42765e+06 pd=14400 as=0 ps=0 
-M1165 diff_118440_81504# diff_118440_81504# diff_118440_81504# GND efet w=180 l=180
+M1164 diff_1184400_815040# diff_1090800_734400# GND GND efet w=48240 l=6480
++ ad=5.42765e+08 pd=144000 as=0 ps=0 
+M1165 diff_1184400_815040# diff_1184400_815040# diff_1184400_815040# GND efet w=1800 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1166 diff_118440_81504# diff_118440_81504# diff_118440_81504# GND efet w=180 l=288
+M1166 diff_1184400_815040# diff_1184400_815040# diff_1184400_815040# GND efet w=1800 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1167 q0 diff_109080_73440# Vdd GND efet w=2160 l=648
+M1167 q0 diff_1090800_734400# Vdd GND efet w=21600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1168 diff_118440_81504# Vdd Vdd GND efet w=900 l=1764
+M1168 diff_1184400_815040# Vdd Vdd GND efet w=9000 l=17640
 + ad=0 pd=0 as=0 ps=0 
-M1169 Vdd Vdd Vdd GND efet w=216 l=396
+M1169 Vdd Vdd Vdd GND efet w=2160 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1170 Vdd Vdd Vdd GND efet w=180 l=540
+M1170 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1171 Vdd Vdd Vdd GND efet w=180 l=612
+M1171 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1172 Vdd Vdd Vdd GND efet w=216 l=648
+M1172 Vdd Vdd Vdd GND efet w=2160 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1173 GND diff_140688_76320# diff_20160_39168# GND efet w=12960 l=648
+M1173 GND diff_1406880_763200# diff_201600_391680# GND efet w=129600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1174 GND diff_130608_80784# diff_23760_48600# GND efet w=5616 l=648
+M1174 GND diff_1306080_807840# diff_237600_486000# GND efet w=56160 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1175 diff_23760_48600# Vdd Vdd GND efet w=936 l=1800
+M1175 diff_237600_486000# Vdd Vdd GND efet w=9360 l=18000
 + ad=0 pd=0 as=0 ps=0 
-M1176 diff_20160_39168# Vdd Vdd GND efet w=936 l=864
+M1176 diff_201600_391680# Vdd Vdd GND efet w=9360 l=8640
 + ad=0 pd=0 as=0 ps=0 
-M1177 diff_140688_76320# diff_140688_76320# diff_140688_76320# GND efet w=180 l=540
-+ ad=5.09069e+06 pd=11520 as=0 ps=0 
-M1178 diff_140688_76320# diff_140688_76320# diff_140688_76320# GND efet w=288 l=288
+M1177 diff_1406880_763200# diff_1406880_763200# diff_1406880_763200# GND efet w=1800 l=5400
++ ad=5.09069e+08 pd=115200 as=0 ps=0 
+M1178 diff_1406880_763200# diff_1406880_763200# diff_1406880_763200# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1179 diff_140688_76320# Vdd Vdd GND efet w=720 l=2088
+M1179 diff_1406880_763200# Vdd Vdd GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1180 GND diff_130608_80784# diff_140688_76320# GND efet w=2952 l=648
+M1180 GND diff_1306080_807840# diff_1406880_763200# GND efet w=29520 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1181 Vdd Vdd Vdd GND efet w=252 l=324
+M1181 Vdd Vdd Vdd GND efet w=2520 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1182 Vdd Vdd Vdd GND efet w=216 l=576
+M1182 Vdd Vdd Vdd GND efet w=2160 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1183 GND diff_137808_70488# diff_130608_80784# GND efet w=2952 l=720
-+ ad=0 pd=0 as=3.888e+06 ps=9792 
-M1184 diff_137808_70488# diff_135864_68472# GND GND efet w=14760 l=1944
-+ ad=8.2633e+06 pd=16848 as=0 ps=0 
-M1185 diff_110448_66960# diff_22392_39168# diff_106848_61848# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.30844e+07 ps=29808 
-M1186 diff_96408_61128# diff_96408_61128# diff_96408_61128# GND efet w=324 l=324
-+ ad=1.75738e+06 pd=7056 as=0 ps=0 
-M1187 diff_96408_61128# diff_96408_61128# diff_96408_61128# GND efet w=288 l=288
+M1183 GND diff_1378080_704880# diff_1306080_807840# GND efet w=29520 l=7200
++ ad=0 pd=0 as=3.888e+08 ps=97920 
+M1184 diff_1378080_704880# diff_1358640_684720# GND GND efet w=147600 l=19440
++ ad=8.2633e+08 pd=168480 as=0 ps=0 
+M1185 diff_1104480_669600# diff_223920_391680# diff_1068480_618480# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.30844e+09 ps=298080 
+M1186 diff_964080_611280# diff_964080_611280# diff_964080_611280# GND efet w=3240 l=3240
++ ad=1.75738e+08 pd=70560 as=0 ps=0 
+M1187 diff_964080_611280# diff_964080_611280# diff_964080_611280# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1188 diff_85968_61848# diff_20160_39168# diff_96768_61776# GND efet w=4284 l=612
-+ ad=0 pd=0 as=4.9559e+06 ps=13248 
-M1189 diff_106848_64080# diff_23760_48600# diff_96408_61128# GND efet w=1224 l=648
-+ ad=1.45411e+07 pd=32832 as=0 ps=0 
-M1190 diff_106848_64080# diff_106848_64080# diff_106848_64080# GND efet w=252 l=252
+M1188 diff_859680_618480# diff_201600_391680# diff_967680_617760# GND efet w=42840 l=6120
++ ad=0 pd=0 as=4.9559e+08 ps=132480 
+M1189 diff_1068480_640800# diff_237600_486000# diff_964080_611280# GND efet w=12240 l=6480
++ ad=1.45411e+09 pd=328320 as=0 ps=0 
+M1190 diff_1068480_640800# diff_1068480_640800# diff_1068480_640800# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1191 diff_106848_64080# diff_106848_64080# diff_106848_64080# GND efet w=252 l=324
+M1191 diff_1068480_640800# diff_1068480_640800# diff_1068480_640800# GND efet w=2520 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1192 diff_75960_58536# diff_20160_39168# diff_65160_64080# GND efet w=4284 l=612
+M1192 diff_759600_585360# diff_201600_391680# diff_651600_640800# GND efet w=42840 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1193 GND diff_29592_56592# diff_65160_64080# GND efet w=1944 l=648
+M1193 GND diff_295920_565920# diff_651600_640800# GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1194 diff_65160_64080# Vdd Vdd GND efet w=720 l=3600
+M1194 diff_651600_640800# Vdd Vdd GND efet w=7200 l=36000
 + ad=0 pd=0 as=0 ps=0 
-M1195 GND diff_87912_59184# diff_85968_64080# GND efet w=3312 l=648
+M1195 GND diff_879120_591840# diff_859680_640800# GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1196 diff_96768_61776# diff_96408_61128# GND GND efet w=6768 l=648
+M1196 diff_967680_617760# diff_964080_611280# GND GND efet w=67680 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1197 GND diff_96408_59472# diff_96768_58536# GND efet w=6804 l=684
-+ ad=0 pd=0 as=6.17933e+06 ps=15984 
-M1198 diff_96408_59472# diff_96408_59472# diff_96408_59472# GND efet w=216 l=360
-+ ad=1.76774e+06 pd=6480 as=0 ps=0 
-M1199 diff_96408_59472# diff_96408_59472# diff_96408_59472# GND efet w=252 l=252
+M1197 GND diff_964080_594720# diff_967680_585360# GND efet w=68040 l=6840
++ ad=0 pd=0 as=6.17933e+08 ps=159840 
+M1198 diff_964080_594720# diff_964080_594720# diff_964080_594720# GND efet w=2160 l=3600
++ ad=1.76774e+08 pd=64800 as=0 ps=0 
+M1199 diff_964080_594720# diff_964080_594720# diff_964080_594720# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1200 diff_106848_61848# diff_23760_48600# diff_96408_59472# GND efet w=1224 l=648
+M1200 diff_1068480_618480# diff_237600_486000# diff_964080_594720# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1201 diff_108864_59184# diff_22392_39168# diff_106848_61848# GND efet w=1224 l=648
-+ ad=1.51891e+06 pd=5184 as=0 ps=0 
-M1202 diff_108864_59184# diff_108864_59184# diff_108864_59184# GND efet w=180 l=288
+M1201 diff_1088640_591840# diff_223920_391680# diff_1068480_618480# GND efet w=12240 l=6480
++ ad=1.51891e+08 pd=51840 as=0 ps=0 
+M1202 diff_1088640_591840# diff_1088640_591840# diff_1088640_591840# GND efet w=1800 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1203 diff_108864_59184# diff_108864_59184# diff_108864_59184# GND efet w=180 l=396
+M1203 diff_1088640_591840# diff_1088640_591840# diff_1088640_591840# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1204 diff_106848_61848# diff_106848_64080# GND GND efet w=1944 l=648
+M1204 diff_1068480_618480# diff_1068480_640800# GND GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1205 Vdd Vdd diff_106848_61848# GND efet w=720 l=3456
+M1205 Vdd Vdd diff_1068480_618480# GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1206 diff_128160_64224# Vdd Vdd GND efet w=576 l=15696
-+ ad=3.01709e+06 pd=9360 as=0 ps=0 
-M1207 diff_130608_80784# Vdd Vdd GND efet w=720 l=2160
+M1206 diff_1281600_642240# Vdd Vdd GND efet w=5760 l=156960
++ ad=3.01709e+08 pd=93600 as=0 ps=0 
+M1207 diff_1306080_807840# Vdd Vdd GND efet w=7200 l=21600
 + ad=0 pd=0 as=0 ps=0 
-M1208 Vdd Vdd diff_137808_70488# GND efet w=720 l=2088
+M1208 Vdd Vdd diff_1378080_704880# GND efet w=7200 l=20880
 + ad=0 pd=0 as=0 ps=0 
-M1209 Vdd Vdd Vdd GND efet w=144 l=504
+M1209 Vdd Vdd Vdd GND efet w=1440 l=5040
 + ad=0 pd=0 as=0 ps=0 
-M1210 Vdd Vdd Vdd GND efet w=180 l=360
+M1210 Vdd Vdd Vdd GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1211 data_in GND GND GND efet w=9792 l=720
-+ ad=2.747e+07 pd=56880 as=0 ps=0 
-M1212 cp GND GND GND efet w=9792 l=720
-+ ad=2.27629e+07 pd=52992 as=0 ps=0 
-M1213 diff_106848_61848# diff_20160_39168# diff_117576_61776# GND efet w=4356 l=684
-+ ad=0 pd=0 as=5.78016e+06 ps=16128 
-M1214 diff_96768_58536# diff_20160_39168# diff_85968_64080# GND efet w=4284 l=612
+M1211 data_in GND GND GND efet w=97920 l=7200
++ ad=-1.54797e+09 pd=568800 as=0 ps=0 
+M1212 cp GND GND GND efet w=97920 l=7200
++ ad=-2.01867e+09 pd=529920 as=0 ps=0 
+M1213 diff_1068480_618480# diff_201600_391680# diff_1175760_617760# GND efet w=43560 l=6840
++ ad=0 pd=0 as=5.78016e+08 ps=161280 
+M1214 diff_967680_585360# diff_201600_391680# diff_859680_640800# GND efet w=42840 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1215 GND diff_29592_56592# diff_85968_64080# GND efet w=1944 l=648
+M1215 GND diff_295920_565920# diff_859680_640800# GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1216 diff_85968_64080# Vdd Vdd GND efet w=720 l=3600
+M1216 diff_859680_640800# Vdd Vdd GND efet w=7200 l=36000
 + ad=0 pd=0 as=0 ps=0 
-M1217 GND diff_108864_59184# diff_106848_64080# GND efet w=3312 l=648
+M1217 GND diff_1088640_591840# diff_1068480_640800# GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1218 diff_117576_61776# diff_117288_61128# GND GND efet w=6912 l=648
+M1218 diff_1175760_617760# diff_1172880_611280# GND GND efet w=69120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1219 diff_135864_68472# diff_128160_64224# GND GND efet w=14256 l=2016
-+ ad=2.47121e+07 pd=50832 as=0 ps=0 
-M1220 GND cp diff_128160_64224# GND efet w=1224 l=648
+M1219 diff_1358640_684720# diff_1281600_642240# GND GND efet w=142560 l=20160
++ ad=-1.82375e+09 pd=508320 as=0 ps=0 
+M1220 GND cp diff_1281600_642240# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1221 GND diff_117288_59472# diff_117576_58536# GND efet w=7020 l=684
-+ ad=0 pd=0 as=5.16845e+06 ps=13248 
-M1222 diff_117576_58536# diff_20160_39168# diff_106848_64080# GND efet w=4320 l=648
+M1221 GND diff_1172880_594720# diff_1175760_585360# GND efet w=70200 l=6840
++ ad=0 pd=0 as=5.16845e+08 ps=132480 
+M1222 diff_1175760_585360# diff_201600_391680# diff_1068480_640800# GND efet w=43200 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1223 GND diff_29592_56592# diff_106848_64080# GND efet w=1872 l=648
+M1223 GND diff_295920_565920# diff_1068480_640800# GND efet w=18720 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1224 diff_127224_56880# Vdd Vdd GND efet w=720 l=1944
-+ ad=6.86362e+06 pd=15552 as=0 ps=0 
-M1225 GND data_in diff_127224_54648# GND efet w=14148 l=684
-+ ad=0 pd=0 as=1.29393e+07 ps=27504 
-M1226 GND diff_127224_54648# diff_127224_56880# GND efet w=4392 l=720
+M1224 diff_1272240_568800# Vdd Vdd GND efet w=7200 l=19440
++ ad=6.86362e+08 pd=155520 as=0 ps=0 
+M1225 GND data_in diff_1272240_546480# GND efet w=141480 l=6840
++ ad=0 pd=0 as=1.29393e+09 ps=275040 
+M1226 GND diff_1272240_546480# diff_1272240_568800# GND efet w=43920 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1227 diff_117288_61128# diff_117288_61128# diff_117288_61128# GND efet w=180 l=432
-+ ad=1.64333e+06 pd=6192 as=0 ps=0 
-M1228 diff_117288_61128# diff_117288_61128# diff_117288_61128# GND efet w=288 l=288
+M1227 diff_1172880_611280# diff_1172880_611280# diff_1172880_611280# GND efet w=1800 l=4320
++ ad=1.64333e+08 pd=61920 as=0 ps=0 
+M1228 diff_1172880_611280# diff_1172880_611280# diff_1172880_611280# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1229 diff_127224_56880# diff_23760_48600# diff_117288_61128# GND efet w=1224 l=648
+M1229 diff_1272240_568800# diff_237600_486000# diff_1172880_611280# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1230 diff_106848_64080# Vdd Vdd GND efet w=720 l=3600
+M1230 diff_1068480_640800# Vdd Vdd GND efet w=7200 l=36000
 + ad=0 pd=0 as=0 ps=0 
-M1231 diff_117288_59472# diff_117288_59472# diff_117288_59472# GND efet w=180 l=360
-+ ad=1.64333e+06 pd=6192 as=0 ps=0 
-M1232 diff_117288_59472# diff_117288_59472# diff_117288_59472# GND efet w=288 l=288
+M1231 diff_1172880_594720# diff_1172880_594720# diff_1172880_594720# GND efet w=1800 l=3600
++ ad=1.64333e+08 pd=61920 as=0 ps=0 
+M1232 diff_1172880_594720# diff_1172880_594720# diff_1172880_594720# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1233 diff_127224_54648# diff_23760_48600# diff_117288_59472# GND efet w=1224 l=648
+M1233 diff_1272240_546480# diff_237600_486000# diff_1172880_594720# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1234 diff_127224_54648# diff_127224_54648# diff_127224_54648# GND efet w=180 l=324
+M1234 diff_1272240_546480# diff_1272240_546480# diff_1272240_546480# GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1235 diff_127224_54648# diff_127224_54648# diff_127224_54648# GND efet w=216 l=216
+M1235 diff_1272240_546480# diff_1272240_546480# diff_1272240_546480# GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1236 diff_127224_54648# Vdd Vdd GND efet w=936 l=1728
+M1236 diff_1272240_546480# Vdd Vdd GND efet w=9360 l=17280
 + ad=0 pd=0 as=0 ps=0 
-M1237 Vdd Vdd Vdd GND efet w=216 l=432
+M1237 Vdd Vdd Vdd GND efet w=2160 l=4320
 + ad=0 pd=0 as=0 ps=0 
-M1238 Vdd Vdd diff_29160_45072# GND efet w=684 l=3708
-+ ad=0 pd=0 as=1.67962e+07 ps=44064 
-M1239 Vdd Vdd Vdd GND efet w=180 l=396
+M1238 Vdd Vdd diff_291600_450720# GND efet w=6840 l=37080
++ ad=0 pd=0 as=1.67962e+09 ps=440640 
+M1239 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1240 Vdd Vdd Vdd GND efet w=180 l=396
+M1240 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1241 Vdd Vdd Vdd GND efet w=180 l=612
+M1241 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1242 Vdd Vdd Vdd GND efet w=180 l=396
+M1242 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1243 Vdd Vdd Vdd GND efet w=216 l=216
+M1243 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1244 Vdd Vdd Vdd GND efet w=324 l=360
+M1244 Vdd Vdd Vdd GND efet w=3240 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1245 Vdd Vdd Vdd GND efet w=180 l=540
+M1245 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1246 Vdd Vdd Vdd GND efet w=180 l=396
+M1246 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1247 Vdd Vdd Vdd GND efet w=216 l=216
+M1247 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1248 Vdd Vdd Vdd GND efet w=180 l=360
+M1248 Vdd Vdd Vdd GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1249 Vdd Vdd Vdd GND efet w=180 l=540
+M1249 Vdd Vdd Vdd GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1250 Vdd Vdd Vdd GND efet w=180 l=396
+M1250 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1251 Vdd Vdd Vdd GND efet w=216 l=216
+M1251 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1252 Vdd Vdd Vdd GND efet w=180 l=432
+M1252 Vdd Vdd Vdd GND efet w=1800 l=4320
 + ad=0 pd=0 as=0 ps=0 
-M1253 Vdd Vdd Vdd GND efet w=180 l=612
+M1253 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1254 Vdd Vdd Vdd GND efet w=180 l=396
+M1254 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1255 Vdd Vdd Vdd GND efet w=216 l=216
+M1255 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1256 diff_24120_49248# diff_23760_48600# diff_24120_47160# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.75738e+06 ps=5328 
-M1257 diff_23760_52704# diff_23760_48600# diff_25128_40320# GND efet w=1224 l=648
-+ ad=0 pd=0 as=1.57075e+06 ps=5616 
-M1258 diff_25128_40320# diff_25128_40320# diff_25128_40320# GND efet w=252 l=396
+M1256 diff_241200_492480# diff_237600_486000# diff_241200_471600# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.75738e+08 ps=53280 
+M1257 diff_237600_527040# diff_237600_486000# diff_251280_403200# GND efet w=12240 l=6480
++ ad=0 pd=0 as=1.57075e+08 ps=56160 
+M1258 diff_251280_403200# diff_251280_403200# diff_251280_403200# GND efet w=2520 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1259 diff_25128_40320# diff_25128_40320# diff_25128_40320# GND efet w=180 l=360
+M1259 diff_251280_403200# diff_251280_403200# diff_251280_403200# GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1260 diff_29160_45072# diff_20160_39168# diff_27936_43560# GND efet w=4248 l=648
-+ ad=0 pd=0 as=4.85741e+06 ps=12816 
-M1261 diff_29160_45072# diff_29592_56592# GND GND efet w=1872 l=720
+M1260 diff_291600_450720# diff_201600_391680# diff_279360_435600# GND efet w=42480 l=6480
++ ad=0 pd=0 as=4.85741e+08 ps=128160 
+M1261 diff_291600_450720# diff_295920_565920# GND GND efet w=18720 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1262 diff_27936_43560# diff_24120_47160# GND GND efet w=6732 l=684
+M1262 diff_279360_435600# diff_241200_471600# GND GND efet w=67320 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1263 GND diff_25128_40320# diff_26496_39600# GND efet w=6768 l=648
-+ ad=0 pd=0 as=5.76461e+06 ps=15696 
-M1264 diff_29160_45072# diff_36072_37512# GND GND efet w=3240 l=720
+M1263 GND diff_251280_403200# diff_264960_396000# GND efet w=67680 l=6480
++ ad=0 pd=0 as=5.76461e+08 ps=156960 
+M1264 diff_291600_450720# diff_360720_375120# GND GND efet w=32400 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1265 diff_29160_37080# diff_20160_39168# diff_26496_39600# GND efet w=4284 l=684
-+ ad=1.29963e+07 pd=29376 as=0 ps=0 
-M1266 diff_29160_37080# Vdd Vdd GND efet w=720 l=3456
+M1265 diff_291600_370800# diff_201600_391680# diff_264960_396000# GND efet w=42840 l=6840
++ ad=1.29963e+09 pd=293760 as=0 ps=0 
+M1266 diff_291600_370800# Vdd Vdd GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1267 Vdd Vdd diff_49968_45072# GND efet w=720 l=3672
-+ ad=0 pd=0 as=1.3271e+07 ps=32544 
-M1268 diff_49968_45072# diff_20160_39168# diff_47232_43344# GND efet w=4320 l=648
-+ ad=0 pd=0 as=5.87866e+06 ps=15984 
-M1269 diff_49968_45072# diff_29592_56592# GND GND efet w=1944 l=648
+M1267 Vdd Vdd diff_499680_450720# GND efet w=7200 l=36720
++ ad=0 pd=0 as=1.3271e+09 ps=325440 
+M1268 diff_499680_450720# diff_201600_391680# diff_472320_433440# GND efet w=43200 l=6480
++ ad=0 pd=0 as=5.87866e+08 ps=159840 
+M1269 diff_499680_450720# diff_295920_565920# GND GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1270 diff_47232_43344# diff_44496_39456# GND GND efet w=6912 l=648
+M1270 diff_472320_433440# diff_444960_394560# GND GND efet w=69120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1271 GND diff_29160_45072# diff_29160_37080# GND efet w=1872 l=720
+M1271 GND diff_291600_450720# diff_291600_370800# GND efet w=18720 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1272 diff_36072_37512# diff_36072_37512# diff_36072_37512# GND efet w=180 l=612
-+ ad=1.60704e+06 pd=6336 as=0 ps=0 
-M1273 diff_36072_37512# diff_36072_37512# diff_36072_37512# GND efet w=324 l=324
+M1272 diff_360720_375120# diff_360720_375120# diff_360720_375120# GND efet w=1800 l=6120
++ ad=1.60704e+08 pd=63360 as=0 ps=0 
+M1273 diff_360720_375120# diff_360720_375120# diff_360720_375120# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1274 diff_29160_37080# diff_22392_39168# diff_36072_37512# GND efet w=1224 l=648
+M1274 diff_291600_370800# diff_223920_391680# diff_360720_375120# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1275 diff_44496_39456# diff_23760_48600# diff_29160_37080# GND efet w=1080 l=648
-+ ad=1.46189e+06 pd=5472 as=0 ps=0 
-M1276 diff_44496_39456# diff_44496_39456# diff_44496_39456# GND efet w=252 l=252
+M1275 diff_444960_394560# diff_237600_486000# diff_291600_370800# GND efet w=10800 l=6480
++ ad=1.46189e+08 pd=54720 as=0 ps=0 
+M1276 diff_444960_394560# diff_444960_394560# diff_444960_394560# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1277 diff_48888_39600# diff_44496_37296# GND GND efet w=6660 l=684
-+ ad=4.81594e+06 pd=12672 as=0 ps=0 
-M1278 diff_49968_45072# diff_56952_37512# GND GND efet w=3348 l=684
+M1277 diff_488880_396000# diff_444960_372960# GND GND efet w=66600 l=6840
++ ad=4.81594e+08 pd=126720 as=0 ps=0 
+M1278 diff_499680_450720# diff_569520_375120# GND GND efet w=33480 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1279 diff_49968_37080# diff_20160_39168# diff_48888_39600# GND efet w=4320 l=648
-+ ad=1.3551e+07 pd=29952 as=0 ps=0 
-M1280 diff_44496_39456# diff_44496_39456# diff_44496_39456# GND efet w=72 l=252
+M1279 diff_499680_370800# diff_201600_391680# diff_488880_396000# GND efet w=43200 l=6480
++ ad=1.3551e+09 pd=299520 as=0 ps=0 
+M1280 diff_444960_394560# diff_444960_394560# diff_444960_394560# GND efet w=720 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1281 diff_29160_45072# diff_29160_45072# diff_29160_45072# GND efet w=144 l=576
+M1281 diff_291600_450720# diff_291600_450720# diff_291600_450720# GND efet w=1440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1282 diff_29160_45072# diff_29160_45072# diff_29160_45072# GND efet w=324 l=324
+M1282 diff_291600_450720# diff_291600_450720# diff_291600_450720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1283 diff_44496_37296# diff_23760_48600# diff_29160_45072# GND efet w=1080 l=648
-+ ad=1.44634e+06 pd=5472 as=0 ps=0 
-M1284 diff_44496_37296# diff_44496_37296# diff_44496_37296# GND efet w=144 l=360
+M1283 diff_444960_372960# diff_237600_486000# diff_291600_450720# GND efet w=10800 l=6480
++ ad=1.44634e+08 pd=54720 as=0 ps=0 
+M1284 diff_444960_372960# diff_444960_372960# diff_444960_372960# GND efet w=1440 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1285 diff_44496_37296# diff_44496_37296# diff_44496_37296# GND efet w=216 l=216
+M1285 diff_444960_372960# diff_444960_372960# diff_444960_372960# GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1286 diff_29160_37080# diff_22392_39168# diff_38520_27936# GND efet w=1224 l=648
-+ ad=0 pd=0 as=7.26278e+06 ps=19152 
-M1287 Vdd Vdd Vdd GND efet w=180 l=252
+M1286 diff_291600_370800# diff_223920_391680# diff_385200_279360# GND efet w=12240 l=6480
++ ad=0 pd=0 as=7.26278e+08 ps=191520 
+M1287 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1288 Vdd Vdd Vdd GND efet w=180 l=324
+M1288 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1289 Vdd Vdd Vdd GND efet w=180 l=324
+M1289 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1290 Vdd Vdd Vdd GND efet w=180 l=180
+M1290 Vdd Vdd Vdd GND efet w=1800 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1291 Vdd Vdd diff_23904_20304# GND efet w=900 l=1728
-+ ad=0 pd=0 as=5.17882e+06 ps=13968 
-M1292 Vdd diff_27288_27000# q5 GND efet w=2160 l=720
-+ ad=0 pd=0 as=3.98028e+07 ps=72144 
-M1293 diff_23904_20304# diff_23904_20304# diff_23904_20304# GND efet w=180 l=540
+M1291 Vdd Vdd diff_239040_203040# GND efet w=9000 l=17280
++ ad=0 pd=0 as=5.17882e+08 ps=139680 
+M1292 Vdd diff_272880_270000# q5 GND efet w=21600 l=7200
++ ad=0 pd=0 as=-3.14692e+08 ps=721440 
+M1293 diff_239040_203040# diff_239040_203040# diff_239040_203040# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1294 diff_23904_20304# diff_23904_20304# diff_23904_20304# GND efet w=144 l=504
+M1294 diff_239040_203040# diff_239040_203040# diff_239040_203040# GND efet w=1440 l=5040
 + ad=0 pd=0 as=0 ps=0 
-M1295 diff_23904_20304# diff_27288_27000# GND GND efet w=4860 l=684
+M1295 diff_239040_203040# diff_272880_270000# GND GND efet w=48600 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1296 GND diff_23904_20304# q5 GND efet w=30132 l=684
+M1296 GND diff_239040_203040# q5 GND efet w=301320 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1297 diff_49968_37080# Vdd Vdd GND efet w=720 l=3456
+M1297 diff_499680_370800# Vdd Vdd GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1298 Vdd Vdd diff_70848_45144# GND efet w=792 l=3672
-+ ad=0 pd=0 as=1.30222e+07 ps=32400 
-M1299 diff_70848_45144# diff_20160_39168# diff_68184_43344# GND efet w=4320 l=648
-+ ad=0 pd=0 as=6.07565e+06 ps=15984 
-M1300 diff_70848_45144# diff_29592_56592# GND GND efet w=1944 l=576
+M1298 Vdd Vdd diff_708480_451440# GND efet w=7920 l=36720
++ ad=0 pd=0 as=1.30222e+09 ps=324000 
+M1299 diff_708480_451440# diff_201600_391680# diff_681840_433440# GND efet w=43200 l=6480
++ ad=0 pd=0 as=6.07565e+08 ps=159840 
+M1300 diff_708480_451440# diff_295920_565920# GND GND efet w=19440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1301 diff_68184_43344# diff_65448_39384# GND GND efet w=6840 l=648
+M1301 diff_681840_433440# diff_654480_393840# GND GND efet w=68400 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1302 GND diff_49968_45072# diff_49968_37080# GND efet w=1872 l=648
+M1302 GND diff_499680_450720# diff_499680_370800# GND efet w=18720 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1303 diff_56952_37512# diff_56952_37512# diff_56952_37512# GND efet w=180 l=540
-+ ad=1.64333e+06 pd=6192 as=0 ps=0 
-M1304 diff_56952_37512# diff_56952_37512# diff_56952_37512# GND efet w=288 l=288
+M1303 diff_569520_375120# diff_569520_375120# diff_569520_375120# GND efet w=1800 l=5400
++ ad=1.64333e+08 pd=61920 as=0 ps=0 
+M1304 diff_569520_375120# diff_569520_375120# diff_569520_375120# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1305 diff_49968_37080# diff_22392_39168# diff_56952_37512# GND efet w=1224 l=648
+M1305 diff_499680_370800# diff_223920_391680# diff_569520_375120# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1306 diff_65448_39384# diff_23760_48600# diff_49968_37080# GND efet w=1152 l=648
-+ ad=1.49818e+06 pd=5184 as=0 ps=0 
-M1307 diff_65448_39384# diff_65448_39384# diff_65448_39384# GND efet w=180 l=252
+M1306 diff_654480_393840# diff_237600_486000# diff_499680_370800# GND efet w=11520 l=6480
++ ad=1.49818e+08 pd=51840 as=0 ps=0 
+M1307 diff_654480_393840# diff_654480_393840# diff_654480_393840# GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1308 diff_69768_39600# diff_65448_37224# GND GND efet w=6696 l=648
-+ ad=4.98701e+06 pd=12816 as=0 ps=0 
-M1309 diff_70848_45144# diff_77760_37656# GND GND efet w=3312 l=648
+M1308 diff_697680_396000# diff_654480_372240# GND GND efet w=66960 l=6480
++ ad=4.98701e+08 pd=128160 as=0 ps=0 
+M1309 diff_708480_451440# diff_777600_376560# GND GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1310 diff_70848_37080# diff_20160_39168# diff_69768_39600# GND efet w=4320 l=648
-+ ad=1.35821e+07 pd=29952 as=0 ps=0 
-M1311 diff_65448_39384# diff_65448_39384# diff_65448_39384# GND efet w=108 l=144
+M1310 diff_708480_370800# diff_201600_391680# diff_697680_396000# GND efet w=43200 l=6480
++ ad=1.35821e+09 pd=299520 as=0 ps=0 
+M1311 diff_654480_393840# diff_654480_393840# diff_654480_393840# GND efet w=1080 l=1440
 + ad=0 pd=0 as=0 ps=0 
-M1312 diff_49968_45072# diff_49968_45072# diff_49968_45072# GND efet w=144 l=576
+M1312 diff_499680_450720# diff_499680_450720# diff_499680_450720# GND efet w=1440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1313 diff_49968_45072# diff_49968_45072# diff_49968_45072# GND efet w=324 l=324
+M1313 diff_499680_450720# diff_499680_450720# diff_499680_450720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1314 diff_65448_37224# diff_23760_48600# diff_49968_45072# GND efet w=1152 l=648
-+ ad=1.49818e+06 pd=5328 as=0 ps=0 
-M1315 diff_65448_37224# diff_65448_37224# diff_65448_37224# GND efet w=144 l=288
+M1314 diff_654480_372240# diff_237600_486000# diff_499680_450720# GND efet w=11520 l=6480
++ ad=1.49818e+08 pd=53280 as=0 ps=0 
+M1315 diff_654480_372240# diff_654480_372240# diff_654480_372240# GND efet w=1440 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1316 diff_65448_37224# diff_65448_37224# diff_65448_37224# GND efet w=180 l=180
+M1316 diff_654480_372240# diff_654480_372240# diff_654480_372240# GND efet w=1800 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1317 diff_49968_37080# diff_22392_39168# diff_59400_27864# GND efet w=1224 l=648
-+ ad=0 pd=0 as=7.26797e+06 ps=19152 
-M1318 Vdd Vdd Vdd GND efet w=180 l=252
+M1317 diff_499680_370800# diff_223920_391680# diff_594000_278640# GND efet w=12240 l=6480
++ ad=0 pd=0 as=7.26797e+08 ps=191520 
+M1318 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1319 Vdd Vdd Vdd GND efet w=180 l=324
+M1319 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1320 Vdd Vdd Vdd GND efet w=180 l=252
+M1320 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1321 Vdd Vdd Vdd GND efet w=180 l=324
+M1321 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1322 Vdd Vdd Vdd GND efet w=180 l=396
+M1322 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1323 Vdd Vdd Vdd GND efet w=216 l=216
+M1323 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1324 Vdd Vdd diff_27288_27000# GND efet w=684 l=2124
-+ ad=0 pd=0 as=1.29496e+07 ps=29232 
-M1325 Vdd Vdd diff_44856_20304# GND efet w=936 l=1728
-+ ad=0 pd=0 as=5.42246e+06 ps=14400 
-M1326 Vdd diff_48240_27072# q6 GND efet w=2160 l=648
-+ ad=0 pd=0 as=4.02641e+07 ps=72288 
-M1327 diff_38520_27936# diff_38520_27936# diff_38520_27936# GND efet w=252 l=252
+M1324 Vdd Vdd diff_272880_270000# GND efet w=6840 l=21240
++ ad=0 pd=0 as=1.29496e+09 ps=292320 
+M1325 Vdd Vdd diff_448560_203040# GND efet w=9360 l=17280
++ ad=0 pd=0 as=5.42246e+08 ps=144000 
+M1326 Vdd diff_482400_270720# q6 GND efet w=21600 l=6480
++ ad=0 pd=0 as=-2.68554e+08 ps=722880 
+M1327 diff_385200_279360# diff_385200_279360# diff_385200_279360# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1328 diff_38520_27936# diff_38520_27936# diff_38520_27936# GND efet w=180 l=540
+M1328 diff_385200_279360# diff_385200_279360# diff_385200_279360# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1329 diff_44856_20304# diff_44856_20304# diff_44856_20304# GND efet w=216 l=576
+M1329 diff_448560_203040# diff_448560_203040# diff_448560_203040# GND efet w=2160 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1330 diff_44856_20304# diff_44856_20304# diff_44856_20304# GND efet w=180 l=396
+M1330 diff_448560_203040# diff_448560_203040# diff_448560_203040# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1331 diff_44856_20304# diff_48240_27072# GND GND efet w=4896 l=648
+M1331 diff_448560_203040# diff_482400_270720# GND GND efet w=48960 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1332 diff_27288_27000# diff_27288_27000# diff_27288_27000# GND efet w=216 l=612
+M1332 diff_272880_270000# diff_272880_270000# diff_272880_270000# GND efet w=2160 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1333 diff_27288_27000# diff_27288_27000# diff_27288_27000# GND efet w=324 l=324
+M1333 diff_272880_270000# diff_272880_270000# diff_272880_270000# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1334 GND diff_18000_39168# diff_27288_27000# GND efet w=3384 l=720
+M1334 GND diff_180000_391680# diff_272880_270000# GND efet w=33840 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1335 diff_27288_27000# diff_38520_27936# GND GND efet w=5832 l=648
+M1335 diff_272880_270000# diff_385200_279360# GND GND efet w=58320 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1336 GND diff_44856_20304# q6 GND efet w=30132 l=684
+M1336 GND diff_448560_203040# q6 GND efet w=301320 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1337 diff_70848_37080# Vdd Vdd GND efet w=720 l=3456
+M1337 diff_708480_370800# Vdd Vdd GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1338 Vdd Vdd diff_91656_45144# GND efet w=792 l=3672
-+ ad=0 pd=0 as=1.30585e+07 ps=32400 
-M1339 diff_91656_45144# diff_20160_39168# diff_88920_43344# GND efet w=4320 l=648
-+ ad=0 pd=0 as=6.16896e+06 ps=16128 
-M1340 diff_91656_45144# diff_29592_56592# GND GND efet w=1944 l=648
+M1338 Vdd Vdd diff_916560_451440# GND efet w=7920 l=36720
++ ad=0 pd=0 as=1.30585e+09 ps=324000 
+M1339 diff_916560_451440# diff_201600_391680# diff_889200_433440# GND efet w=43200 l=6480
++ ad=0 pd=0 as=6.16896e+08 ps=161280 
+M1340 diff_916560_451440# diff_295920_565920# GND GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1341 diff_88920_43344# diff_86184_39384# GND GND efet w=6912 l=648
+M1341 diff_889200_433440# diff_861840_393840# GND GND efet w=69120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1342 GND diff_70848_45144# diff_70848_37080# GND efet w=1872 l=648
+M1342 GND diff_708480_451440# diff_708480_370800# GND efet w=18720 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1343 diff_77760_37656# diff_77760_37656# diff_77760_37656# GND efet w=180 l=612
-+ ad=1.63296e+06 pd=6336 as=0 ps=0 
-M1344 diff_77760_37656# diff_77760_37656# diff_77760_37656# GND efet w=288 l=288
+M1343 diff_777600_376560# diff_777600_376560# diff_777600_376560# GND efet w=1800 l=6120
++ ad=1.63296e+08 pd=63360 as=0 ps=0 
+M1344 diff_777600_376560# diff_777600_376560# diff_777600_376560# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1345 diff_70848_37080# diff_22392_39168# diff_77760_37656# GND efet w=1224 l=648
+M1345 diff_708480_370800# diff_223920_391680# diff_777600_376560# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1346 diff_86184_39384# diff_23760_48600# diff_70848_37080# GND efet w=1152 l=576
-+ ad=1.55002e+06 pd=5472 as=0 ps=0 
-M1347 diff_86184_39384# diff_86184_39384# diff_86184_39384# GND efet w=216 l=288
+M1346 diff_861840_393840# diff_237600_486000# diff_708480_370800# GND efet w=11520 l=5760
++ ad=1.55002e+08 pd=54720 as=0 ps=0 
+M1347 diff_861840_393840# diff_861840_393840# diff_861840_393840# GND efet w=2160 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1348 diff_90504_39600# diff_86184_37224# GND GND efet w=6732 l=612
-+ ad=5.09069e+06 pd=12960 as=0 ps=0 
-M1349 diff_91656_45144# diff_98640_37584# GND GND efet w=3312 l=648
+M1348 diff_905040_396000# diff_861840_372240# GND GND efet w=67320 l=6120
++ ad=5.09069e+08 pd=129600 as=0 ps=0 
+M1349 diff_916560_451440# diff_986400_375840# GND GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1350 diff_91656_37080# diff_20160_39168# diff_90504_39600# GND efet w=4320 l=648
-+ ad=1.37272e+07 pd=30096 as=0 ps=0 
-M1351 diff_86184_39384# diff_86184_39384# diff_86184_39384# GND efet w=108 l=180
+M1350 diff_916560_370800# diff_201600_391680# diff_905040_396000# GND efet w=43200 l=6480
++ ad=1.37272e+09 pd=300960 as=0 ps=0 
+M1351 diff_861840_393840# diff_861840_393840# diff_861840_393840# GND efet w=1080 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1352 diff_70848_45144# diff_70848_45144# diff_70848_45144# GND efet w=144 l=576
+M1352 diff_708480_451440# diff_708480_451440# diff_708480_451440# GND efet w=1440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1353 diff_70848_45144# diff_70848_45144# diff_70848_45144# GND efet w=324 l=324
+M1353 diff_708480_451440# diff_708480_451440# diff_708480_451440# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1354 diff_86184_37224# diff_23760_48600# diff_70848_45144# GND efet w=1152 l=576
-+ ad=1.58112e+06 pd=5472 as=0 ps=0 
-M1355 diff_86184_37224# diff_86184_37224# diff_86184_37224# GND efet w=144 l=288
+M1354 diff_861840_372240# diff_237600_486000# diff_708480_451440# GND efet w=11520 l=5760
++ ad=1.58112e+08 pd=54720 as=0 ps=0 
+M1355 diff_861840_372240# diff_861840_372240# diff_861840_372240# GND efet w=1440 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1356 diff_86184_37224# diff_86184_37224# diff_86184_37224# GND efet w=180 l=180
+M1356 diff_861840_372240# diff_861840_372240# diff_861840_372240# GND efet w=1800 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1357 diff_70848_37080# diff_22392_39168# diff_80208_27864# GND efet w=1224 l=648
-+ ad=0 pd=0 as=7.26797e+06 ps=19152 
-M1358 Vdd Vdd Vdd GND efet w=180 l=324
+M1357 diff_708480_370800# diff_223920_391680# diff_802080_278640# GND efet w=12240 l=6480
++ ad=0 pd=0 as=7.26797e+08 ps=191520 
+M1358 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1359 Vdd Vdd Vdd GND efet w=180 l=396
+M1359 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1360 Vdd Vdd Vdd GND efet w=180 l=288
+M1360 Vdd Vdd Vdd GND efet w=1800 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1361 Vdd Vdd Vdd GND efet w=180 l=396
+M1361 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1362 Vdd Vdd Vdd GND efet w=180 l=396
+M1362 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1363 Vdd Vdd Vdd GND efet w=216 l=216
+M1363 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1364 Vdd Vdd diff_48240_27072# GND efet w=684 l=2196
-+ ad=0 pd=0 as=1.32503e+07 ps=30096 
-M1365 Vdd Vdd diff_65592_20376# GND efet w=936 l=1800
-+ ad=0 pd=0 as=5.25658e+06 ps=14112 
-M1366 Vdd diff_68976_27072# q7 GND efet w=2160 l=648
-+ ad=0 pd=0 as=4.02693e+07 ps=72288 
-M1367 diff_59400_27864# diff_59400_27864# diff_59400_27864# GND efet w=252 l=252
+M1364 Vdd Vdd diff_482400_270720# GND efet w=6840 l=21960
++ ad=0 pd=0 as=1.32503e+09 ps=300960 
+M1365 Vdd Vdd diff_655920_203760# GND efet w=9360 l=18000
++ ad=0 pd=0 as=5.25658e+08 ps=141120 
+M1366 Vdd diff_689760_270720# q7 GND efet w=21600 l=6480
++ ad=0 pd=0 as=-2.68036e+08 ps=722880 
+M1367 diff_594000_278640# diff_594000_278640# diff_594000_278640# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1368 diff_59400_27864# diff_59400_27864# diff_59400_27864# GND efet w=180 l=540
+M1368 diff_594000_278640# diff_594000_278640# diff_594000_278640# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1369 diff_65592_20376# diff_65592_20376# diff_65592_20376# GND efet w=180 l=540
+M1369 diff_655920_203760# diff_655920_203760# diff_655920_203760# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1370 diff_65592_20376# diff_65592_20376# diff_65592_20376# GND efet w=180 l=396
+M1370 diff_655920_203760# diff_655920_203760# diff_655920_203760# GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1371 diff_65592_20376# diff_68976_27072# GND GND efet w=4860 l=684
+M1371 diff_655920_203760# diff_689760_270720# GND GND efet w=48600 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1372 diff_48240_27072# diff_48240_27072# diff_48240_27072# GND efet w=396 l=468
+M1372 diff_482400_270720# diff_482400_270720# diff_482400_270720# GND efet w=3960 l=4680
 + ad=0 pd=0 as=0 ps=0 
-M1373 diff_48240_27072# diff_48240_27072# diff_48240_27072# GND efet w=324 l=324
+M1373 diff_482400_270720# diff_482400_270720# diff_482400_270720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1374 GND diff_18000_39168# diff_48240_27072# GND efet w=3384 l=648
+M1374 GND diff_180000_391680# diff_482400_270720# GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1375 diff_48240_27072# diff_59400_27864# GND GND efet w=5796 l=684
+M1375 diff_482400_270720# diff_594000_278640# GND GND efet w=57960 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1376 GND diff_65592_20376# q7 GND efet w=30132 l=684
+M1376 GND diff_655920_203760# q7 GND efet w=301320 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1377 diff_91656_37080# Vdd Vdd GND efet w=720 l=3456
+M1377 diff_916560_370800# Vdd Vdd GND efet w=7200 l=34560
 + ad=0 pd=0 as=0 ps=0 
-M1378 Vdd Vdd diff_112536_45144# GND efet w=720 l=3672
-+ ad=0 pd=0 as=9.70445e+06 ps=22176 
-M1379 diff_29592_56592# Vdd Vdd GND efet w=720 l=1440
-+ ad=5.51059e+06 pd=13104 as=0 ps=0 
-M1380 GND diff_128664_43272# diff_29592_56592# GND efet w=5364 l=684
+M1378 Vdd Vdd diff_1125360_451440# GND efet w=7200 l=36720
++ ad=0 pd=0 as=9.70445e+08 ps=221760 
+M1379 diff_295920_565920# Vdd Vdd GND efet w=7200 l=14400
++ ad=5.51059e+08 pd=131040 as=0 ps=0 
+M1380 GND diff_1286640_432720# diff_295920_565920# GND efet w=53640 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1381 Vdd Vdd diff_130968_44784# GND efet w=720 l=5400
-+ ad=0 pd=0 as=8.05075e+06 ps=16416 
-M1382 Vdd Vdd diff_128664_43272# GND efet w=756 l=2052
-+ ad=0 pd=0 as=3.64435e+06 ps=9936 
-M1383 diff_112536_45144# diff_20160_39168# diff_109872_43344# GND efet w=4248 l=648
-+ ad=0 pd=0 as=6.00307e+06 ps=15840 
-M1384 diff_112536_45144# diff_29592_56592# GND GND efet w=1944 l=720
+M1381 Vdd Vdd diff_1309680_447840# GND efet w=7200 l=54000
++ ad=0 pd=0 as=8.05075e+08 ps=164160 
+M1382 Vdd Vdd diff_1286640_432720# GND efet w=7560 l=20520
++ ad=0 pd=0 as=3.64435e+08 ps=99360 
+M1383 diff_1125360_451440# diff_201600_391680# diff_1098720_433440# GND efet w=42480 l=6480
++ ad=0 pd=0 as=6.00307e+08 ps=158400 
+M1384 diff_1125360_451440# diff_295920_565920# GND GND efet w=19440 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1385 diff_109872_43344# diff_107136_39384# GND GND efet w=6768 l=648
+M1385 diff_1098720_433440# diff_1071360_393840# GND GND efet w=67680 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1386 GND diff_91656_45144# diff_91656_37080# GND efet w=1944 l=648
+M1386 GND diff_916560_451440# diff_916560_370800# GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1387 diff_98640_37584# diff_98640_37584# diff_98640_37584# GND efet w=180 l=684
-+ ad=1.71072e+06 pd=6624 as=0 ps=0 
-M1388 diff_98640_37584# diff_98640_37584# diff_98640_37584# GND efet w=288 l=288
+M1387 diff_986400_375840# diff_986400_375840# diff_986400_375840# GND efet w=1800 l=6840
++ ad=1.71072e+08 pd=66240 as=0 ps=0 
+M1388 diff_986400_375840# diff_986400_375840# diff_986400_375840# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1389 diff_91656_37080# diff_22392_39168# diff_98640_37584# GND efet w=1224 l=648
+M1389 diff_916560_370800# diff_223920_391680# diff_986400_375840# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1390 diff_107136_39384# diff_23760_48600# diff_91656_37080# GND efet w=1152 l=648
-+ ad=1.54483e+06 pd=5472 as=0 ps=0 
-M1391 diff_107136_39384# diff_107136_39384# diff_107136_39384# GND efet w=180 l=324
+M1390 diff_1071360_393840# diff_237600_486000# diff_916560_370800# GND efet w=11520 l=6480
++ ad=1.54483e+08 pd=54720 as=0 ps=0 
+M1391 diff_1071360_393840# diff_1071360_393840# diff_1071360_393840# GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1392 diff_111456_39600# diff_107136_37224# GND GND efet w=6624 l=648
-+ ad=4.93517e+06 pd=12672 as=0 ps=0 
-M1393 diff_112536_45144# diff_119448_37584# GND GND efet w=3456 l=648
+M1392 diff_1114560_396000# diff_1071360_372240# GND GND efet w=66240 l=6480
++ ad=4.93517e+08 pd=126720 as=0 ps=0 
+M1393 diff_1125360_451440# diff_1194480_375840# GND GND efet w=34560 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1394 diff_112536_37152# diff_20160_39168# diff_111456_39600# GND efet w=4248 l=648
-+ ad=1.17107e+07 pd=24192 as=0 ps=0 
-M1395 diff_107136_39384# diff_107136_39384# diff_107136_39384# GND efet w=144 l=180
+M1394 diff_1125360_371520# diff_201600_391680# diff_1114560_396000# GND efet w=42480 l=6480
++ ad=1.17107e+09 pd=241920 as=0 ps=0 
+M1395 diff_1071360_393840# diff_1071360_393840# diff_1071360_393840# GND efet w=1440 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1396 diff_91656_45144# diff_91656_45144# diff_91656_45144# GND efet w=144 l=576
+M1396 diff_916560_451440# diff_916560_451440# diff_916560_451440# GND efet w=1440 l=5760
 + ad=0 pd=0 as=0 ps=0 
-M1397 diff_91656_45144# diff_91656_45144# diff_91656_45144# GND efet w=288 l=288
+M1397 diff_916560_451440# diff_916560_451440# diff_916560_451440# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1398 diff_107136_37224# diff_23760_48600# diff_91656_45144# GND efet w=1152 l=648
-+ ad=1.56557e+06 pd=5616 as=0 ps=0 
-M1399 diff_107136_37224# diff_107136_37224# diff_107136_37224# GND efet w=144 l=360
+M1398 diff_1071360_372240# diff_237600_486000# diff_916560_451440# GND efet w=11520 l=6480
++ ad=1.56557e+08 pd=56160 as=0 ps=0 
+M1399 diff_1071360_372240# diff_1071360_372240# diff_1071360_372240# GND efet w=1440 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1400 diff_107136_37224# diff_107136_37224# diff_107136_37224# GND efet w=180 l=180
+M1400 diff_1071360_372240# diff_1071360_372240# diff_1071360_372240# GND efet w=1800 l=1800
 + ad=0 pd=0 as=0 ps=0 
-M1401 diff_91656_37080# diff_22392_39168# diff_101088_27864# GND efet w=1224 l=648
-+ ad=0 pd=0 as=7.27315e+06 ps=19152 
-M1402 Vdd Vdd Vdd GND efet w=180 l=252
+M1401 diff_916560_370800# diff_223920_391680# diff_1010880_278640# GND efet w=12240 l=6480
++ ad=0 pd=0 as=7.27315e+08 ps=191520 
+M1402 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1403 Vdd Vdd Vdd GND efet w=180 l=324
+M1403 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1404 Vdd Vdd Vdd GND efet w=180 l=288
+M1404 Vdd Vdd Vdd GND efet w=1800 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1405 Vdd Vdd Vdd GND efet w=180 l=396
+M1405 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1406 Vdd Vdd Vdd GND efet w=180 l=396
+M1406 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1407 Vdd Vdd Vdd GND efet w=216 l=216
+M1407 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1408 Vdd Vdd diff_68976_27072# GND efet w=720 l=2160
-+ ad=0 pd=0 as=1.32192e+07 ps=29376 
-M1409 Vdd Vdd diff_86256_20304# GND efet w=864 l=1800
-+ ad=0 pd=0 as=5.24102e+06 ps=14112 
-M1410 Vdd diff_89640_27072# q8 GND efet w=2160 l=648
-+ ad=0 pd=0 as=4.06788e+07 ps=72576 
-M1411 diff_80208_27864# diff_80208_27864# diff_80208_27864# GND efet w=252 l=252
+M1408 Vdd Vdd diff_689760_270720# GND efet w=7200 l=21600
++ ad=0 pd=0 as=1.32192e+09 ps=293760 
+M1409 Vdd Vdd diff_862560_203040# GND efet w=8640 l=18000
++ ad=0 pd=0 as=5.24102e+08 ps=141120 
+M1410 Vdd diff_896400_270720# q8 GND efet w=21600 l=6480
++ ad=0 pd=0 as=-2.27082e+08 ps=725760 
+M1411 diff_802080_278640# diff_802080_278640# diff_802080_278640# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1412 diff_80208_27864# diff_80208_27864# diff_80208_27864# GND efet w=180 l=360
+M1412 diff_802080_278640# diff_802080_278640# diff_802080_278640# GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1413 diff_86256_20304# diff_86256_20304# diff_86256_20304# GND efet w=180 l=540
+M1413 diff_862560_203040# diff_862560_203040# diff_862560_203040# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1414 diff_86256_20304# diff_86256_20304# diff_86256_20304# GND efet w=180 l=540
+M1414 diff_862560_203040# diff_862560_203040# diff_862560_203040# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1415 diff_86256_20304# diff_89640_27072# GND GND efet w=4824 l=648
+M1415 diff_862560_203040# diff_896400_270720# GND GND efet w=48240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1416 diff_68976_27072# diff_68976_27072# diff_68976_27072# GND efet w=216 l=684
+M1416 diff_689760_270720# diff_689760_270720# diff_689760_270720# GND efet w=2160 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1417 diff_68976_27072# diff_68976_27072# diff_68976_27072# GND efet w=324 l=324
+M1417 diff_689760_270720# diff_689760_270720# diff_689760_270720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1418 GND diff_18000_39168# diff_68976_27072# GND efet w=3348 l=684
+M1418 GND diff_180000_391680# diff_689760_270720# GND efet w=33480 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1419 diff_68976_27072# diff_80208_27864# GND GND efet w=5832 l=648
+M1419 diff_689760_270720# diff_802080_278640# GND GND efet w=58320 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1420 GND diff_86256_20304# q8 GND efet w=30168 l=648
+M1420 GND diff_862560_203040# q8 GND efet w=301680 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1421 diff_112536_37152# Vdd Vdd GND efet w=720 l=3528
+M1421 diff_1125360_371520# Vdd Vdd GND efet w=7200 l=35280
 + ad=0 pd=0 as=0 ps=0 
-M1422 GND diff_112536_45144# diff_112536_37152# GND efet w=1944 l=648
+M1422 GND diff_1125360_451440# diff_1125360_371520# GND efet w=19440 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1423 diff_128664_43272# diff_130968_44784# GND GND efet w=3312 l=648
+M1423 diff_1286640_432720# diff_1309680_447840# GND GND efet w=33120 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1424 Vdd Vdd diff_135864_68472# GND efet w=684 l=15660
+M1424 Vdd Vdd diff_1358640_684720# GND efet w=6840 l=156600
 + ad=0 pd=0 as=0 ps=0 
-M1425 GND diff_130608_80784# diff_130968_44784# GND efet w=1764 l=684
+M1425 GND diff_1306080_807840# diff_1309680_447840# GND efet w=17640 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1426 diff_130968_44784# diff_128664_43272# diff_134640_43560# GND efet w=2448 l=648
-+ ad=0 pd=0 as=2.29133e+06 ps=6768 
-M1427 diff_134640_43560# diff_134352_42912# GND GND efet w=2448 l=720
+M1426 diff_1309680_447840# diff_1286640_432720# diff_1346400_435600# GND efet w=24480 l=6480
++ ad=0 pd=0 as=2.29133e+08 ps=67680 
+M1427 diff_1346400_435600# diff_1343520_429120# GND GND efet w=24480 l=7200
 + ad=0 pd=0 as=0 ps=0 
-M1428 GND diff_130608_30600# diff_127728_36792# GND efet w=2412 l=684
-+ ad=0 pd=0 as=1.00621e+07 ps=23184 
-M1429 GND diff_23760_48600# diff_127728_39024# GND efet w=5976 l=648
-+ ad=0 pd=0 as=1.30844e+07 ps=24912 
-M1430 GND diff_127728_36792# diff_130608_30600# GND efet w=2952 l=648
-+ ad=0 pd=0 as=1.74701e+07 ps=38880 
-M1431 diff_127728_36792# diff_127728_36792# diff_127728_36792# GND efet w=180 l=612
+M1428 GND diff_1306080_306000# diff_1277280_367920# GND efet w=24120 l=6840
++ ad=0 pd=0 as=1.00621e+09 ps=231840 
+M1429 GND diff_237600_486000# diff_1277280_390240# GND efet w=59760 l=6480
++ ad=0 pd=0 as=1.30844e+09 ps=249120 
+M1430 GND diff_1277280_367920# diff_1306080_306000# GND efet w=29520 l=6480
++ ad=0 pd=0 as=1.74701e+09 ps=388800 
+M1431 diff_1277280_367920# diff_1277280_367920# diff_1277280_367920# GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1432 diff_119448_37584# diff_119448_37584# diff_119448_37584# GND efet w=180 l=612
-+ ad=1.66406e+06 pd=6336 as=0 ps=0 
-M1433 diff_119448_37584# diff_119448_37584# diff_119448_37584# GND efet w=252 l=252
+M1432 diff_1194480_375840# diff_1194480_375840# diff_1194480_375840# GND efet w=1800 l=6120
++ ad=1.66406e+08 pd=63360 as=0 ps=0 
+M1433 diff_1194480_375840# diff_1194480_375840# diff_1194480_375840# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1434 diff_112536_37152# diff_22392_39168# diff_119448_37584# GND efet w=1224 l=648
+M1434 diff_1125360_371520# diff_223920_391680# diff_1194480_375840# GND efet w=12240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1435 diff_127728_39024# diff_112536_45144# diff_127728_36792# GND efet w=3816 l=648
+M1435 diff_1277280_390240# diff_1125360_451440# diff_1277280_367920# GND efet w=38160 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1436 diff_127728_39024# diff_112536_37152# diff_130608_30600# GND efet w=6624 l=648
+M1436 diff_1277280_390240# diff_1125360_371520# diff_1306080_306000# GND efet w=66240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1437 diff_127728_36792# diff_127728_36792# diff_127728_36792# GND efet w=288 l=288
+M1437 diff_1277280_367920# diff_1277280_367920# diff_1277280_367920# GND efet w=2880 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1438 diff_112536_37152# diff_22392_39168# diff_121896_27864# GND efet w=1224 l=648
-+ ad=0 pd=0 as=7.3561e+06 ps=19296 
-M1439 Vdd Vdd diff_130608_30600# GND efet w=756 l=1908
+M1438 diff_1125360_371520# diff_223920_391680# diff_1218960_278640# GND efet w=12240 l=6480
++ ad=0 pd=0 as=7.3561e+08 ps=192960 
+M1439 Vdd Vdd diff_1306080_306000# GND efet w=7560 l=19080
 + ad=0 pd=0 as=0 ps=0 
-M1440 diff_127728_36792# Vdd Vdd GND efet w=756 l=3492
+M1440 diff_1277280_367920# Vdd Vdd GND efet w=7560 l=34920
 + ad=0 pd=0 as=0 ps=0 
-M1441 Vdd Vdd Vdd GND efet w=180 l=252
+M1441 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1442 Vdd Vdd Vdd GND efet w=180 l=324
+M1442 Vdd Vdd Vdd GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1443 Vdd Vdd Vdd GND efet w=180 l=288
+M1443 Vdd Vdd Vdd GND efet w=1800 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1444 Vdd Vdd Vdd GND efet w=144 l=432
+M1444 Vdd Vdd Vdd GND efet w=1440 l=4320
 + ad=0 pd=0 as=0 ps=0 
-M1445 Vdd Vdd Vdd GND efet w=180 l=396
+M1445 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1446 Vdd Vdd Vdd GND efet w=216 l=216
+M1446 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1447 Vdd Vdd diff_89640_27072# GND efet w=720 l=2160
-+ ad=0 pd=0 as=1.34473e+07 ps=29520 
-M1448 Vdd Vdd diff_107280_20376# GND efet w=936 l=1800
-+ ad=0 pd=0 as=5.28768e+06 ps=14112 
-M1449 Vdd diff_110736_27072# q9 GND efet w=2160 l=648
-+ ad=0 pd=0 as=4.07929e+07 ps=72720 
-M1450 diff_101088_27864# diff_101088_27864# diff_101088_27864# GND efet w=252 l=252
+M1447 Vdd Vdd diff_896400_270720# GND efet w=7200 l=21600
++ ad=0 pd=0 as=1.34473e+09 ps=295200 
+M1448 Vdd Vdd diff_1072800_203760# GND efet w=9360 l=18000
++ ad=0 pd=0 as=5.28768e+08 ps=141120 
+M1449 Vdd diff_1107360_270720# q9 GND efet w=21600 l=6480
++ ad=0 pd=0 as=-2.15678e+08 ps=727200 
+M1450 diff_1010880_278640# diff_1010880_278640# diff_1010880_278640# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1451 diff_101088_27864# diff_101088_27864# diff_101088_27864# GND efet w=180 l=540
+M1451 diff_1010880_278640# diff_1010880_278640# diff_1010880_278640# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1452 diff_107280_20376# diff_107280_20376# diff_107280_20376# GND efet w=144 l=504
+M1452 diff_1072800_203760# diff_1072800_203760# diff_1072800_203760# GND efet w=1440 l=5040
 + ad=0 pd=0 as=0 ps=0 
-M1453 diff_107280_20376# diff_107280_20376# diff_107280_20376# GND efet w=180 l=360
+M1453 diff_1072800_203760# diff_1072800_203760# diff_1072800_203760# GND efet w=1800 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1454 diff_107280_20376# diff_110736_27072# GND GND efet w=4824 l=648
+M1454 diff_1072800_203760# diff_1107360_270720# GND GND efet w=48240 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1455 diff_89640_27072# diff_89640_27072# diff_89640_27072# GND efet w=180 l=612
+M1455 diff_896400_270720# diff_896400_270720# diff_896400_270720# GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1456 diff_89640_27072# diff_89640_27072# diff_89640_27072# GND efet w=324 l=324
+M1456 diff_896400_270720# diff_896400_270720# diff_896400_270720# GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1457 GND diff_18000_39168# diff_89640_27072# GND efet w=3384 l=648
+M1457 GND diff_180000_391680# diff_896400_270720# GND efet w=33840 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1458 diff_89640_27072# diff_101088_27864# GND GND efet w=5760 l=648
+M1458 diff_896400_270720# diff_1010880_278640# GND GND efet w=57600 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1459 GND diff_107280_20376# q9 GND efet w=30276 l=684
+M1459 GND diff_1072800_203760# q9 GND efet w=302760 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1460 Vdd Vdd Vdd GND efet w=216 l=360
+M1460 Vdd Vdd Vdd GND efet w=2160 l=3600
 + ad=0 pd=0 as=0 ps=0 
-M1461 Vdd Vdd Vdd GND efet w=180 l=252
+M1461 Vdd Vdd Vdd GND efet w=1800 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1462 Vdd Vdd Vdd GND efet w=144 l=288
+M1462 Vdd Vdd Vdd GND efet w=1440 l=2880
 + ad=0 pd=0 as=0 ps=0 
-M1463 Vdd Vdd Vdd GND efet w=180 l=396
+M1463 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1464 diff_134352_42912# Vdd Vdd GND efet w=576 l=10440
-+ ad=1.73664e+06 pd=5616 as=0 ps=0 
-M1465 Vdd Vdd Vdd GND efet w=180 l=612
+M1464 diff_1343520_429120# Vdd Vdd GND efet w=5760 l=104400
++ ad=1.73664e+08 pd=56160 as=0 ps=0 
+M1465 Vdd Vdd Vdd GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1466 Vdd Vdd Vdd GND efet w=180 l=396
+M1466 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1467 Vdd Vdd Vdd GND efet w=216 l=216
+M1467 Vdd Vdd Vdd GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1468 Vdd Vdd Vdd GND efet w=324 l=324
+M1468 Vdd Vdd Vdd GND efet w=3240 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1469 Vdd Vdd diff_110736_27072# GND efet w=720 l=2160
-+ ad=0 pd=0 as=1.33021e+07 ps=29376 
-M1470 Vdd Vdd diff_18000_39168# GND efet w=864 l=1584
-+ ad=0 pd=0 as=1.74027e+07 ps=35424 
-M1471 diff_130608_30600# diff_130608_30600# diff_130608_30600# GND efet w=216 l=216
+M1469 Vdd Vdd diff_1107360_270720# GND efet w=7200 l=21600
++ ad=0 pd=0 as=1.33021e+09 ps=293760 
+M1470 Vdd Vdd diff_180000_391680# GND efet w=8640 l=15840
++ ad=0 pd=0 as=1.74027e+09 ps=354240 
+M1471 diff_1306080_306000# diff_1306080_306000# diff_1306080_306000# GND efet w=2160 l=2160
 + ad=0 pd=0 as=0 ps=0 
-M1472 diff_130608_30600# diff_130608_30600# diff_130608_30600# GND efet w=180 l=540
+M1472 diff_1306080_306000# diff_1306080_306000# diff_1306080_306000# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1473 Vdd diff_130608_30600# serial_out GND efet w=4320 l=648
-+ ad=0 pd=0 as=3.74855e+07 ps=56736 
-M1474 diff_121896_27864# diff_121896_27864# diff_121896_27864# GND efet w=252 l=252
+M1473 Vdd diff_1306080_306000# serial_out GND efet w=43200 l=6480
++ ad=0 pd=0 as=-5.46417e+08 ps=567360 
+M1474 diff_1218960_278640# diff_1218960_278640# diff_1218960_278640# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1475 diff_121896_27864# diff_121896_27864# diff_121896_27864# GND efet w=180 l=540
+M1475 diff_1218960_278640# diff_1218960_278640# diff_1218960_278640# GND efet w=1800 l=5400
 + ad=0 pd=0 as=0 ps=0 
-M1476 diff_18000_39168# e GND GND efet w=14472 l=648
+M1476 diff_180000_391680# e GND GND efet w=144720 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1477 diff_110736_27072# diff_110736_27072# diff_110736_27072# GND efet w=180 l=612
+M1477 diff_1107360_270720# diff_1107360_270720# diff_1107360_270720# GND efet w=1800 l=6120
 + ad=0 pd=0 as=0 ps=0 
-M1478 diff_110736_27072# diff_110736_27072# diff_110736_27072# GND efet w=252 l=252
+M1478 diff_1107360_270720# diff_1107360_270720# diff_1107360_270720# GND efet w=2520 l=2520
 + ad=0 pd=0 as=0 ps=0 
-M1479 GND diff_18000_39168# diff_110736_27072# GND efet w=3420 l=684
+M1479 GND diff_180000_391680# diff_1107360_270720# GND efet w=34200 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1480 diff_110736_27072# diff_121896_27864# GND GND efet w=5832 l=648
+M1480 diff_1107360_270720# diff_1218960_278640# GND GND efet w=58320 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1481 Vdd Vdd Vdd GND efet w=144 l=144
+M1481 Vdd Vdd Vdd GND efet w=1440 l=1440
 + ad=0 pd=0 as=0 ps=0 
-M1482 Vdd Vdd Vdd GND efet w=180 l=396
+M1482 Vdd Vdd Vdd GND efet w=1800 l=3960
 + ad=0 pd=0 as=0 ps=0 
-M1483 diff_133128_24480# Vdd Vdd GND efet w=720 l=1440
-+ ad=8.12333e+06 pd=16128 as=0 ps=0 
-M1484 diff_133128_24480# diff_133128_24480# diff_133128_24480# GND efet w=180 l=324
+M1483 diff_1331280_244800# Vdd Vdd GND efet w=7200 l=14400
++ ad=8.12333e+08 pd=161280 as=0 ps=0 
+M1484 diff_1331280_244800# diff_1331280_244800# diff_1331280_244800# GND efet w=1800 l=3240
 + ad=0 pd=0 as=0 ps=0 
-M1485 serial_out diff_133128_24480# GND GND efet w=19836 l=684
+M1485 serial_out diff_1331280_244800# GND GND efet w=198360 l=6840
 + ad=0 pd=0 as=0 ps=0 
-M1486 diff_133128_24480# diff_133128_24480# diff_133128_24480# GND efet w=144 l=144
+M1486 diff_1331280_244800# diff_1331280_244800# diff_1331280_244800# GND efet w=1440 l=1440
 + ad=0 pd=0 as=0 ps=0 
-M1487 diff_133128_24480# diff_130608_30600# GND GND efet w=4608 l=648
+M1487 diff_1331280_244800# diff_1306080_306000# GND GND efet w=46080 l=6480
 + ad=0 pd=0 as=0 ps=0 
-M1488 e GND GND GND efet w=9648 l=792
-+ ad=2.10263e+07 pd=45936 as=0 ps=0 
-C0 metal_49248_2232# gnd! 10.3fF ;**FLOATING
-C1 metal_46008_3888# gnd! 5.7fF ;**FLOATING
-C2 metal_46008_5544# gnd! 49.3fF ;**FLOATING
-C3 metal_43848_5616# gnd! 20.7fF ;**FLOATING
-C4 metal_52560_10872# gnd! 132.3fF ;**FLOATING
-C5 metal_43848_13104# gnd! 3.4fF ;**FLOATING
-C6 metal_56304_92520# gnd! 41.3fF ;**FLOATING
-C7 metal_51840_92376# gnd! 41.9fF ;**FLOATING
-C8 metal_47376_93888# gnd! 35.3fF ;**FLOATING
-C9 metal_60768_96768# gnd! 35.0fF ;**FLOATING
-C10 metal_24408_96768# gnd! 6.5fF ;**FLOATING
-C11 metal_26208_99288# gnd! 6.7fF ;**FLOATING
-C12 diff_133488_1872# gnd! 2463.7fF ;**FLOATING
-C13 diff_133128_24480# gnd! 195.7fF
-C14 serial_out gnd! 896.8fF
-C15 e gnd! 804.7fF
-C16 q9 gnd! 974.1fF
-C17 diff_107280_20376# gnd! 193.3fF
-C18 diff_110736_27072# gnd! 239.9fF
-C19 diff_121896_27864# gnd! 123.8fF
-C20 diff_127728_39024# gnd! 155.8fF
-C21 diff_127728_36792# gnd! 186.3fF
-C22 diff_130608_30600# gnd! 339.7fF
-C23 diff_134640_43560# gnd! 29.7fF
-C24 diff_134352_42912# gnd! 71.6fF
-C25 q8 gnd! 933.5fF
-C26 diff_86256_20304# gnd! 191.0fF
-C27 diff_89640_27072# gnd! 245.9fF
-C28 diff_101088_27864# gnd! 122.2fF
-C29 diff_112536_37152# gnd! 236.5fF
-C30 diff_119448_37584# gnd! 62.4fF
-C31 diff_111456_39600# gnd! 62.0fF
-C32 diff_107136_37224# gnd! 66.3fF
-C33 diff_107136_39384# gnd! 66.8fF
-C34 diff_109872_43344# gnd! 75.9fF
-C35 diff_130968_44784# gnd! 138.2fF
-C36 diff_112536_45144# gnd! 212.0fF
-C37 diff_128664_43272# gnd! 117.8fF
-C38 q7 gnd! 979.3fF
-C39 diff_65592_20376# gnd! 193.5fF
-C40 diff_68976_27072# gnd! 239.1fF
-C41 diff_80208_27864# gnd! 122.0fF
-C42 diff_91656_37080# gnd! 211.0fF
-C43 diff_98640_37584# gnd! 62.3fF
-C44 diff_90504_39600# gnd! 63.9fF
-C45 diff_86184_37224# gnd! 64.7fF
-C46 diff_86184_39384# gnd! 68.2fF
-C47 diff_88920_43344# gnd! 77.8fF
-C48 diff_91656_45144# gnd! 250.7fF
-C49 q6 gnd! 1019.5fF
-C50 diff_44856_20304# gnd! 197.0fF
-C51 diff_48240_27072# gnd! 239.2fF
-C52 diff_59400_27864# gnd! 123.9fF
-C53 diff_70848_37080# gnd! 208.5fF
-C54 diff_77760_37656# gnd! 62.9fF
-C55 diff_69768_39600# gnd! 62.7fF
-C56 diff_65448_37224# gnd! 64.5fF
-C57 diff_65448_39384# gnd! 66.1fF
-C58 diff_68184_43344# gnd! 76.7fF
-C59 diff_70848_45144# gnd! 249.4fF
-C60 q5 gnd! 932.5fF
-C61 diff_23904_20304# gnd! 197.3fF
-C62 diff_27288_27000# gnd! 238.3fF
-C63 diff_38520_27936# gnd! 122.9fF
-C64 diff_49968_37080# gnd! 207.9fF
-C65 diff_56952_37512# gnd! 62.1fF
-C66 diff_48888_39600# gnd! 60.8fF
-C67 diff_44496_37296# gnd! 65.2fF
-C68 diff_44496_39456# gnd! 66.1fF
-C69 diff_47232_43344# gnd! 74.8fF
-C70 diff_49968_45072# gnd! 251.1fF
-C71 diff_29160_37080# gnd! 202.3fF
-C72 diff_36072_37512# gnd! 63.8fF
-C73 diff_26496_39600# gnd! 73.3fF
-C74 diff_27936_43560# gnd! 61.4fF
-C75 diff_25128_40320# gnd! 83.1fF
-C76 diff_24120_47160# gnd! 74.5fF
-C77 diff_29160_45072# gnd! 301.0fF
-C78 diff_127224_54648# gnd! 214.2fF
-C79 diff_127224_56880# gnd! 84.2fF
-C80 diff_117576_58536# gnd! 64.9fF
-C81 diff_117288_59472# gnd! 70.5fF
-C82 diff_117288_61128# gnd! 68.1fF
-C83 diff_117576_61776# gnd! 73.9fF
-C84 diff_128160_64224# gnd! 226.2fF
-C85 cp gnd! 805.8fF
-C86 diff_96768_58536# gnd! 77.8fF
-C87 diff_108864_59184# gnd! 59.2fF
-C88 diff_106848_61848# gnd! 204.2fF
-C89 diff_96408_59472# gnd! 71.2fF
-C90 diff_106848_64080# gnd! 267.5fF
-C91 diff_96768_61776# gnd! 62.8fF
-C92 diff_96408_61128# gnd! 68.6fF
-C93 diff_135864_68472# gnd! 501.4fF
-C94 diff_137808_70488# gnd! 144.2fF
-C95 diff_130608_80784# gnd! 243.8fF
-C96 diff_75960_58536# gnd! 78.8fF
-C97 diff_87912_59184# gnd! 60.0fF
-C98 diff_85968_61848# gnd! 207.5fF
-C99 diff_75600_59472# gnd! 69.3fF
-C100 diff_85968_64080# gnd! 260.3fF
-C101 diff_75960_61776# gnd! 61.5fF
-C102 diff_75600_61128# gnd! 67.9fF
-C103 diff_109080_73440# gnd! 243.5fF
-C104 diff_110448_66960# gnd! 122.0fF
-C105 diff_118440_81504# gnd! 193.1fF
-C106 diff_55080_58464# gnd! 78.9fF
-C107 diff_67104_59184# gnd! 60.7fF
-C108 diff_65160_61848# gnd! 207.6fF
-C109 diff_29592_56592# gnd! 777.0fF
-C110 diff_54720_59544# gnd! 70.0fF
-C111 diff_65160_64080# gnd! 260.0fF
-C112 diff_55080_61776# gnd! 62.1fF
-C113 diff_54720_61200# gnd! 68.6fF
-C114 diff_88200_73440# gnd! 242.6fF
-C115 diff_89568_66960# gnd! 126.6fF
-C116 diff_97632_81504# gnd! 192.2fF
-C117 diff_34272_58464# gnd! 78.2fF
-C118 diff_46224_59112# gnd! 62.7fF
-C119 diff_44280_61848# gnd! 207.2fF
-C120 diff_33912_59472# gnd! 71.5fF
-C121 diff_44280_64080# gnd! 259.5fF
-C122 diff_34272_61704# gnd! 63.3fF
-C123 diff_33912_61056# gnd! 69.4fF
-C124 diff_67392_73440# gnd! 243.8fF
-C125 diff_68760_66960# gnd! 121.1fF
-C126 diff_76752_81504# gnd! 191.6fF
-C127 diff_23760_52704# gnd! 312.2fF
-C128 diff_25416_59112# gnd! 60.5fF
-C129 diff_24120_49248# gnd! 241.4fF
-C130 diff_46512_73440# gnd! 244.1fF
-C131 diff_47880_66960# gnd! 126.8fF
-C132 diff_55944_81504# gnd! 191.7fF
-C133 diff_18000_39168# gnd! 1141.4fF
-C134 diff_25704_73440# gnd! 240.4fF
-C135 diff_27072_66960# gnd! 121.6fF
-C136 diff_35064_81432# gnd! 195.8fF
-C137 q0 gnd! 922.0fF
-C138 q1 gnd! 928.1fF
-C139 q2 gnd! 999.4fF
-C140 q3 gnd! 1033.9fF
-C141 q4 gnd! 943.0fF
-C142 diff_140688_76320# gnd! 118.6fF
-C143 data_in gnd! 922.2fF
-C144 diff_23760_48600# gnd! 1430.4fF
-C145 diff_20160_39168# gnd! 2023.2fF
-C146 diff_127224_87480# gnd! 387.3fF
-C147 diff_133632_86400# gnd! 217.8fF
-C148 diff_22392_39168# gnd! 1375.0fF
-C149 Vdd gnd! 6901.6fF
-C150 diff_25272_97560# gnd! 10.9fF ;**FLOATING
-C151 diff_24552_98496# gnd! 15.1fF ;**FLOATING
-C152 diff_24480_99288# gnd! 57.0fF ;**FLOATING
-C153 diff_24552_100152# gnd! 29.9fF ;**FLOATING
+M1488 e GND GND GND efet w=96480 l=7920
++ ad=2.10263e+09 pd=459360 as=0 ps=0 
+C0 metal_492480_22320# gnd! 10.3fF ;**FLOATING
+C1 metal_460080_38880# gnd! 5.7fF ;**FLOATING
+C2 metal_460080_55440# gnd! 49.3fF ;**FLOATING
+C3 metal_438480_56160# gnd! 20.7fF ;**FLOATING
+C4 metal_525600_108720# gnd! 132.3fF ;**FLOATING
+C5 metal_438480_131040# gnd! 3.4fF ;**FLOATING
+C6 metal_563040_925200# gnd! 41.3fF ;**FLOATING
+C7 metal_518400_923760# gnd! 41.9fF ;**FLOATING
+C8 metal_473760_938880# gnd! 35.3fF ;**FLOATING
+C9 metal_607680_967680# gnd! 35.0fF ;**FLOATING
+C10 metal_244080_967680# gnd! 6.5fF ;**FLOATING
+C11 metal_262080_992880# gnd! 6.7fF ;**FLOATING
+C12 diff_1334880_18720# gnd! 788.7fF ;**FLOATING
+C13 diff_1331280_244800# gnd! 195.7fF
+C14 serial_out gnd! 510.3fF
+C15 e gnd! 675.9fF
+C16 q9 gnd! 845.3fF
+C17 diff_1072800_203760# gnd! 193.3fF
+C18 diff_1107360_270720# gnd! 239.9fF
+C19 diff_1218960_278640# gnd! 123.8fF
+C20 diff_1277280_390240# gnd! 155.8fF
+C21 diff_1277280_367920# gnd! 186.3fF
+C22 diff_1306080_306000# gnd! 339.7fF
+C23 diff_1346400_435600# gnd! 29.7fF
+C24 diff_1343520_429120# gnd! 71.6fF
+C25 q8 gnd! 547.0fF
+C26 diff_862560_203040# gnd! 191.0fF
+C27 diff_896400_270720# gnd! 245.9fF
+C28 diff_1010880_278640# gnd! 122.2fF
+C29 diff_1125360_371520# gnd! 236.5fF
+C30 diff_1194480_375840# gnd! 62.4fF
+C31 diff_1114560_396000# gnd! 62.0fF
+C32 diff_1071360_372240# gnd! 66.3fF
+C33 diff_1071360_393840# gnd! 66.8fF
+C34 diff_1098720_433440# gnd! 75.9fF
+C35 diff_1309680_447840# gnd! 138.2fF
+C36 diff_1125360_451440# gnd! 212.0fF
+C37 diff_1286640_432720# gnd! 117.8fF
+C38 q7 gnd! 592.7fF
+C39 diff_655920_203760# gnd! 193.5fF
+C40 diff_689760_270720# gnd! 239.1fF
+C41 diff_802080_278640# gnd! 122.0fF
+C42 diff_916560_370800# gnd! 211.0fF
+C43 diff_986400_375840# gnd! 62.3fF
+C44 diff_905040_396000# gnd! 63.9fF
+C45 diff_861840_372240# gnd! 64.7fF
+C46 diff_861840_393840# gnd! 68.2fF
+C47 diff_889200_433440# gnd! 77.8fF
+C48 diff_916560_451440# gnd! 250.7fF
+C49 q6 gnd! 890.6fF
+C50 diff_448560_203040# gnd! 197.0fF
+C51 diff_482400_270720# gnd! 239.2fF
+C52 diff_594000_278640# gnd! 123.9fF
+C53 diff_708480_370800# gnd! 208.5fF
+C54 diff_777600_376560# gnd! 62.9fF
+C55 diff_697680_396000# gnd! 62.7fF
+C56 diff_654480_372240# gnd! 64.5fF
+C57 diff_654480_393840# gnd! 66.1fF
+C58 diff_681840_433440# gnd! 76.7fF
+C59 diff_708480_451440# gnd! 249.4fF
+C60 q5 gnd! 674.8fF
+C61 diff_239040_203040# gnd! 197.3fF
+C62 diff_272880_270000# gnd! 238.3fF
+C63 diff_385200_279360# gnd! 122.9fF
+C64 diff_499680_370800# gnd! 207.9fF
+C65 diff_569520_375120# gnd! 62.1fF
+C66 diff_488880_396000# gnd! 60.8fF
+C67 diff_444960_372960# gnd! 65.2fF
+C68 diff_444960_394560# gnd! 66.1fF
+C69 diff_472320_433440# gnd! 74.8fF
+C70 diff_499680_450720# gnd! 251.1fF
+C71 diff_291600_370800# gnd! 202.3fF
+C72 diff_360720_375120# gnd! 63.8fF
+C73 diff_264960_396000# gnd! 73.3fF
+C74 diff_279360_435600# gnd! 61.4fF
+C75 diff_251280_403200# gnd! 83.1fF
+C76 diff_241200_471600# gnd! 74.5fF
+C77 diff_291600_450720# gnd! 301.0fF
+C78 diff_1272240_546480# gnd! 214.2fF
+C79 diff_1272240_568800# gnd! 84.2fF
+C80 diff_1175760_585360# gnd! 64.9fF
+C81 diff_1172880_594720# gnd! 70.5fF
+C82 diff_1172880_611280# gnd! 68.1fF
+C83 diff_1175760_617760# gnd! 73.9fF
+C84 diff_1281600_642240# gnd! 226.2fF
+C85 cp gnd! 419.3fF
+C86 diff_967680_585360# gnd! 77.8fF
+C87 diff_1088640_591840# gnd! 59.2fF
+C88 diff_1068480_618480# gnd! 204.2fF
+C89 diff_964080_594720# gnd! 71.2fF
+C90 diff_1068480_640800# gnd! 267.5fF
+C91 diff_967680_617760# gnd! 62.8fF
+C92 diff_964080_611280# gnd! 68.6fF
+C93 diff_1358640_684720# gnd! 501.4fF
+C94 diff_1378080_704880# gnd! 144.2fF
+C95 diff_1306080_807840# gnd! 243.8fF
+C96 diff_759600_585360# gnd! 78.8fF
+C97 diff_879120_591840# gnd! 60.0fF
+C98 diff_859680_618480# gnd! 207.5fF
+C99 diff_756000_594720# gnd! 69.3fF
+C100 diff_859680_640800# gnd! 260.3fF
+C101 diff_759600_617760# gnd! 61.5fF
+C102 diff_756000_611280# gnd! 67.9fF
+C103 diff_1090800_734400# gnd! 243.5fF
+C104 diff_1104480_669600# gnd! 122.0fF
+C105 diff_1184400_815040# gnd! 193.1fF
+C106 diff_550800_584640# gnd! 78.9fF
+C107 diff_671040_591840# gnd! 60.7fF
+C108 diff_651600_618480# gnd! 207.6fF
+C109 diff_295920_565920# gnd! 648.1fF
+C110 diff_547200_595440# gnd! 70.0fF
+C111 diff_651600_640800# gnd! 260.0fF
+C112 diff_550800_617760# gnd! 62.1fF
+C113 diff_547200_612000# gnd! 68.6fF
+C114 diff_882000_734400# gnd! 242.6fF
+C115 diff_895680_669600# gnd! 126.6fF
+C116 diff_976320_815040# gnd! 192.2fF
+C117 diff_342720_584640# gnd! 78.2fF
+C118 diff_462240_591120# gnd! 62.7fF
+C119 diff_442800_618480# gnd! 207.2fF
+C120 diff_339120_594720# gnd! 71.5fF
+C121 diff_442800_640800# gnd! 259.5fF
+C122 diff_342720_617040# gnd! 63.3fF
+C123 diff_339120_610560# gnd! 69.4fF
+C124 diff_673920_734400# gnd! 243.8fF
+C125 diff_687600_669600# gnd! 121.1fF
+C126 diff_767520_815040# gnd! 191.6fF
+C127 diff_237600_527040# gnd! 312.2fF
+C128 diff_254160_591120# gnd! 60.5fF
+C129 diff_241200_492480# gnd! 241.4fF
+C130 diff_465120_734400# gnd! 244.1fF
+C131 diff_478800_669600# gnd! 126.8fF
+C132 diff_559440_815040# gnd! 191.7fF
+C133 diff_180000_391680# gnd! 754.8fF
+C134 diff_257040_734400# gnd! 240.4fF
+C135 diff_270720_669600# gnd! 121.6fF
+C136 diff_350640_814320# gnd! 195.8fF
+C137 q0 gnd! 535.4fF
+C138 q1 gnd! 541.5fF
+C139 q2 gnd! 612.8fF
+C140 q3 gnd! 776.2fF
+C141 q4 gnd! 685.3fF
+C142 diff_1406880_763200# gnd! 118.6fF
+C143 data_in gnd! 535.7fF
+C144 diff_237600_486000# gnd! 1430.4fF
+C145 diff_201600_391680# gnd! 2023.2fF
+C146 diff_1272240_874800# gnd! 387.3fF
+C147 diff_1336320_864000# gnd! 217.8fF
+C148 diff_223920_391680# gnd! 1375.0fF
+C149 Vdd gnd! 5999.7fF
+C150 diff_252720_975600# gnd! 10.9fF ;**FLOATING
+C151 diff_245520_984960# gnd! 15.1fF ;**FLOATING
+C152 diff_244800_992880# gnd! 57.0fF ;**FLOATING
+C153 diff_245520_1001520# gnd! 29.9fF ;**FLOATING

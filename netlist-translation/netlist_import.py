@@ -148,3 +148,51 @@ def read_netlist_from_javascript(dir,remove_dups=True,remove_shorts=True):
     np.data['name'] = name
 
   return p
+
+def read_spice_lines(filename):
+  r = []
+  f = open(filename,'r')
+  header = f.readline()
+  for s in f.readlines():
+    if not s:
+      continue
+    if s=='\n':
+      continue
+    if s[0]=='+':
+      continue
+    r.append(s)
+  return r
+
+def read_netlist_from_spice(filename):
+  p = netlist()
+
+  for t in read_spice_lines(filename):
+    v = string.split(t)
+    name = v[0]
+    if name[0]=='M':
+      g,s,d = v[2],v[1],v[3]
+#      print g,s,d
+      if g=='vcc' and s=='vcc' and d=='vcc':
+        continue
+      if s=='vcc':
+        s,d = d,s
+      if g=='vcc' and d=='vcc':
+        pullup = p.add_node(s,'node_analog')
+        np = p.add_node(new_name('pullup'),'pullup')
+        link(np,'s',pullup,None)
+      else:
+        ng = p.add_node(g,'node_analog')
+        ns = p.add_node(s,'node_analog')
+        nd = p.add_node(d,'node_analog')
+        nt = p.add_node(name,'t')
+        port = new_name('in')
+        link(nt,port,ng,None)
+        link(nt,'s',ns,None)
+        link(nt,'d',nd,None)
+        nt.data['function'] = port
+    elif name[0]=='C':
+      continue
+    else:
+      print 'unrecognized spice line: %s' % t
+
+  return p

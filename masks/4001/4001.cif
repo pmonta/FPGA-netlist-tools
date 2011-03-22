@@ -1,5 +1,5 @@
 ( CIF conversion of visual6502 polygon data );
-DS 1 60 1;
+DS 1 600 10;
 9 4001;
 L ND;
  B 28 28 724 3250;

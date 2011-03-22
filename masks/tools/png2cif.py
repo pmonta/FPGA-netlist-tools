@@ -50,7 +50,7 @@ scale = sys.argv[2]
 # CIF header
 
 print "( CIF conversion of visual6502 polygon data );"
-print "DS 1 %d 1;" % round(100*float(scale)/2)
+print "DS 1 %d 10;" % round(1000*float(scale)/2)
 print "9 %s;" % name
 
 # CIF layers (NMOS)
