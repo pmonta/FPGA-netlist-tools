@@ -4,7 +4,8 @@ all: 4001.gds 4001.cif 4001.spice
 
 PNGS = contact.png diffusion.png metal.png poly.png
 NAME = 4001
-SCALE = 1.2
+# scale (in microns per pixel) of the png files (must be a multiple of 0.002):
+SCALE = 1.480
 
 4001.cif: $(PNGS) pads.txt
 	../tools/png2cif.py $(NAME) $(SCALE) >4001.cif

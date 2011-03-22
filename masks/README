@@ -14,3 +14,13 @@ Source data:
   http://t1.gstatic.com/images?q=tbn:ANd9GcS4bS76Y7aJZjaLz6W0qEReU_7AJX9aK2H9MfwYFgdYNQkpAQNp
   the wafers are 300 mm and 50.8 mm
   the chip dimensions from scribe line to scribe line are about 2.95 mm by 4.04 mm give or take ~1%
+
+4001 die size:
+  http://www.cpu-zone.com/4001/Intel%204001%20wafer.JPG
+  http://www.cpu-zone.com/4001.htm
+  the wafer is 3 inch (76.2 mm)
+  the chip dimensions from scribe line to scribe line are about 2.62 mm by 4.02 mm give or take ~1%
+
+4002 and 4003 image scales:
+  can't find any wafer or die-with-package shots
+  derived assuming their pad dimensions are the same as 4004 and 4001 (~123 microns)
