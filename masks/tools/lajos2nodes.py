@@ -10,6 +10,8 @@ for x in sys.stdin.readlines():
     x = x[:-1]
   if x[-1]=='\r':
     x = x[:-1]
+  if x[0]==';':
+    continue
   r = string.split(x,',')
   layer,x,y,name = r[0],int(r[1]),int(r[2]),r[3]
   layer = translate_layer[layer]

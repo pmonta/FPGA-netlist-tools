@@ -17,6 +17,6 @@ for x in sys.stdin.readlines():
     if r[1]==r[3]:
 #      print 'cap',r[1]
       continue
-#    x = string.replace(x,'Vdd','vcc')
-#    x = string.replace(x,'GND','vss')
+    x = string.replace(x,'Vdd','vcc')
+    x = string.replace(x,'GND','vss')
     sys.stdout.write(x)

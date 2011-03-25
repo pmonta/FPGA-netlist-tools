@@ -16,7 +16,7 @@ from netlist_util import *
 # main program
 #
 
-p = read_netlist_from_spice('4004-test.spice')
+p = read_netlist_from_spice('4004-reduced.spice')
 print_summary(p)
 
 #clean_netlist(p)
