@@ -1,0 +1,14 @@
+cp input
+data_in input
+e input
+q0 output
+q1 output
+q2 output
+q3 output
+q4 output
+q5 output
+q6 output
+q7 output
+q8 output
+q9 output
+serial_out output

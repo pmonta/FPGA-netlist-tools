@@ -16,7 +16,7 @@
 	echo -n 'feedback save ' >>magic.script
 	echo '$*.feedback' >>magic.script
 	echo 'quit -noprompt' >>magic.script
-	magic -T nmos -dnull -noconsole <magic.script >magic.log 2>magic.log2
+	magic -T chip.tech -dnull -noconsole <magic.script >magic.log 2>magic.log2
 	rm -f magic.script
 	rm -f \(UNNAMED\).ext
 

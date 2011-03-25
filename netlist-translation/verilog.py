@@ -211,7 +211,8 @@ def print_verilog_spice_netlist(p,filename,verilog_module_name):
 
   gen0(f)
   f.write('\n')
-  node_sizes.remove(0)
+  if 0 in node_sizes:
+    node_sizes.remove(0)
   for s in node_sizes:
     gen(f,s)
     f.write('\n')

@@ -13,6 +13,10 @@ SCALE = 0.830
 4003.gds: $(PNGS)
 	../tools/png2gds.py $(NAME) $(SCALE) >4003.gds
 
+extract: 4003.spice
+	<4003.spice ../tools/spice-reduce.py >4003-reduced.spice
+	python ./translate.py
+
 clean:
 	rm -f $(PNGS) *.cif *.gds *~
 	rm -f 4003.spice 4003.ext 4003.feedback

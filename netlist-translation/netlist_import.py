@@ -21,6 +21,8 @@ def sanitize(s):
   s = s.replace(r'#',r'n')
   s = s.replace(r'(',r'_')
   s = s.replace(r')',r'_')
+  s = s.replace(r'~',r'_')
+  s = s.replace(r'&',r'_')
   if s[0] in ['0','1','2','3','4','5','6','7','8','9']:
     s = 'n_' + s
   if nodenames.has_key(s):
@@ -166,11 +168,13 @@ def read_spice_lines(filename):
 def read_netlist_from_spice(filename):
   p = netlist()
 
+  pins = read_pins('pins.txt')
+
   for t in read_spice_lines(filename):
     v = string.split(t)
     name = v[0]
     if name[0]=='M':
-      g,s,d = v[2],v[1],v[3]
+      g,s,d = sanitize(v[2]),sanitize(v[1]),sanitize(v[3])
 #      print g,s,d
       if g=='vcc' and s=='vcc' and d=='vcc':
         continue
@@ -184,7 +188,7 @@ def read_netlist_from_spice(filename):
         ng = p.add_node(g,'node_analog')
         ns = p.add_node(s,'node_analog')
         nd = p.add_node(d,'node_analog')
-        nt = p.add_node(name,'t')
+        nt = p.add_node('t'+name,'t')
         port = new_name('in')
         link(nt,port,ng,None)
         link(nt,'s',ns,None)
@@ -194,5 +198,11 @@ def read_netlist_from_spice(filename):
       continue
     else:
       print 'unrecognized spice line: %s' % t
+
+  for (i,name,pin_type) in pins:
+    np = p.add_node(new_name('pin'),'pin_'+pin_type)
+    link(np,'pin',p[name],None)
+    np.data['index'] = i
+    np.data['name'] = name
 
   return p

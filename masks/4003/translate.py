@@ -16,26 +16,27 @@ from netlist_util import *
 # main program
 #
 
-p = read_netlist_from_spice('4003.spice')
-print_summary(p)
-clean_netlist(p)
+p = read_netlist_from_spice('4003-reduced.spice')
 print_summary(p)
 
-detect_gates(p)
-print_summary(p)
+#clean_netlist(p)
+#print_summary(p)
+
+#detect_gates(p)
+#print_summary(p)
 #print_gate_stats(p)
 
-detect_latches(p)
-print_summary(p)
+#detect_latches(p)
+#print_summary(p)
 
-detect_inverters(p)
-print_summary(p)
-detect_inverters(p)
-print_summary(p)
-detect_inverters(p)
-print_summary(p)
-detect_inverters(p)
-print_summary(p)
+#detect_inverters(p)
+#print_summary(p)
+#detect_inverters(p)
+#print_summary(p)
+#detect_inverters(p)
+#print_summary(p)
+#detect_inverters(p)
+#print_summary(p)
 
 #detect_muxes(p)
 #print_summary(p)

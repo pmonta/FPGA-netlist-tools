@@ -1,0 +1,132 @@
+#
+# Technology file for Intel i4004
+#
+# Peter Monta
+# March 2011
+#
+
+tech
+  format 30
+  4004-nmos-buried-stacked
+end
+
+version
+  version 0.1
+  description "NMOS for the Intel i4004 with stacked buried contacts"
+end
+
+planes
+  active
+  metal
+end
+
+types
+  active  polysilicon,poly
+  active  diffusion,diff
+  active  fet
+  active  poly_metal_contact,pmc
+  active  diff_metal_contact,dmc
+  active  buried_contact,bc
+  active  triple_contact,tc
+  metal   metal
+end
+
+contact
+  poly_metal_contact   poly    metal
+  diff_metal_contact   diff    metal
+  triple_contact       buried  metal
+end
+
+styles
+  styletype mos
+  polysilicon          1
+  diffusion            2
+  fet                  6 7
+  poly_metal_contact   1 20 32
+  diff_metal_contact   2 20 32
+  buried_contact       6 33
+  triple_contact       34
+  metal                20
+end
+
+compose
+  compose    fet       poly diff
+  decompose  bc        poly diff
+end
+
+connect
+  poly    fet,pmc,bc,tc
+  diff    dmc,bc,tc
+  fet     pmc,bc,tc
+# fet dmc?
+  pmc     dmc,bc,tc
+  dmc     bc,tc
+  bc      tc
+  metal   pmc,dmc,tc
+end
+
+cifoutput
+  style default
+  scalefactor 200 100
+  layer NP poly,pmc,fet,bc,tc
+    labels poly,fet,bc,tc
+  layer ND diff,dmc,fet,bc,tc
+    labels diff
+  layer NM metal,pmc,dmc,tc
+    labels metal,pmc,dmc
+  layer NC dmc,pmc,tc
+  layer NB bc
+end
+
+cifinput
+  style default
+  scalefactor 200
+  layer poly NP
+    labels NP
+  layer diff ND
+    labels ND
+  layer metal NM
+    labels NM
+  layer fet NP
+    and ND
+  layer pmc NC
+    and NM
+    and NP
+  layer dmc NC
+    and NM
+    and ND
+  layer bc NB
+    and NP
+    and ND
+  layer tc NB
+    and NP
+    and ND
+    and NC
+    and NM
+end
+
+drc
+end
+
+extract
+  style default
+
+  lambda 200
+  step 100
+
+  resist     poly,pmc/active,fet,bc  30000
+  resist     diff,dmc/active         10000
+  resist     metal                      30
+
+  areacap    poly,fet                  200
+# fixme: fet capacitance is already in spice model, should be zero here?
+  areacap    metal                     120
+  areacap    diff                      400
+  areacap    bc,tc                     600
+  areacap    dmc/active                520
+  areacap    pmc/active                320
+
+#  perimcap     diff,dmc/diff,bc,tc  space,fet  200
+
+  fet fet diff,dmc,bc,tc 2 efet GND! 0 0
+end

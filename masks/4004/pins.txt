@@ -1,0 +1,14 @@
+CLK1 input
+CLK2 input
+SYNC output
+POC input
+TEST_PAD input
+D0 bidirectional
+D1 bidirectional
+D2 bidirectional
+D3 bidirectional
+CMROM output
+CMRAM3 output
+CMRAM2 output
+CMRAM1 output
+CMRAM0 output

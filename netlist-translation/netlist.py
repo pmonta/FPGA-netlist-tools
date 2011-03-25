@@ -59,7 +59,7 @@ class netlist:
     if self._nodes.has_key(c):
       n = self._nodes[c]
       if n.ntype()!=ntype:
-        print 'type conflict when adding node',c,ntype
+        print 'type conflict when adding node',c,ntype,n.ntype()
       return n
     n = node(c,ntype)
     self._nodes[c] = n
