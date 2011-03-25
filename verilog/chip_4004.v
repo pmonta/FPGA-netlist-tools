@@ -161,8 +161,8 @@ module chip_4004(
   wire signed [`W-1:0] N0585_port_0, N0585_port_1, N0585_v;
   wire signed [`W-1:0] cm_ram0_port_0, cm_ram0_port_1, cm_ram0_v;
   wire signed [`W-1:0] N0344_port_2, N0344_port_0, N0344_v;
-  wire signed [`W-1:0] d2_port_2, d2_port_0, d2_port_1, d2_port_4, d2_port_5, d2_v;
-  wire signed [`W-1:0] d3_port_2, d3_port_0, d3_port_1, d3_port_4, d3_port_5, d3_v;
+  wire signed [`W-1:0] d2_port_2, d2_port_0, d2_port_1, d2_port_5, d2_v;
+  wire signed [`W-1:0] d3_port_2, d3_port_0, d3_port_1, d3_port_5, d3_v;
   wire signed [`W-1:0] WRAB1_port_4, WRAB1_port_5, WRAB1_v;
   wire signed [`W-1:0] WRAB0_port_4, WRAB0_port_5, WRAB0_v;
   wire signed [`W-1:0] DCL_port_2, DCL_port_3, DCL_port_0, DCL_port_1, DCL_port_4, DCL_port_5, DCL_v;
@@ -270,7 +270,7 @@ module chip_4004(
   wire signed [`W-1:0] N0439_port_12, N0439_port_13, N0439_v;
   wire signed [`W-1:0] ADD_port_2, ADD_port_3, ADD_port_0, ADD_port_1, ADD_port_4, ADD_v;
   wire signed [`W-1:0] ADM_port_2, ADM_port_3, ADM_port_0, ADM_port_1, ADM_port_4, ADM_port_5, ADM_v;
-  wire signed [`W-1:0] reset_port_2, reset_port_0, reset_v;
+  wire signed [`W-1:0] reset_port_2, reset_v;
   wire signed [`W-1:0] N0728_port_2, N0728_port_0, N0728_port_1, N0728_v;
   wire signed [`W-1:0] N0729_port_2, N0729_v;
   wire signed [`W-1:0] N0726_port_2, N0726_port_0, N0726_port_1, N0726_v;
@@ -526,7 +526,7 @@ module chip_4004(
   wire signed [`W-1:0] N0918_port_0, N0918_port_1, N0918_v;
   wire signed [`W-1:0] N0626_port_3, N0626_port_1, N0626_port_4, N0626_v;
   wire signed [`W-1:0] N0914_port_2, N0914_port_0, N0914_port_1, N0914_v;
-  wire signed [`W-1:0] test_port_2, test_port_0, test_v;
+  wire signed [`W-1:0] test_port_2, test_v;
   wire signed [`W-1:0] S00834_port_0, S00834_v;
   wire signed [`W-1:0] N0915_port_0, N0915_port_1, N0915_v;
   wire signed [`W-1:0] S00804_port_0, S00804_v;
@@ -857,8 +857,8 @@ module chip_4004(
   wire signed [`W-1:0] N0798_port_0, N0798_port_1, N0798_v;
   wire signed [`W-1:0] N0828_port_0, N0828_port_1, N0828_v;
   wire signed [`W-1:0] __X31__CLK2__port_2, __X31__CLK2__port_1, __X31__CLK2__v;
-  wire signed [`W-1:0] clk1_port_0, clk1_port_1, clk1_port_28, clk1_v;
-  wire signed [`W-1:0] clk2_port_51, clk2_port_0, clk2_v;
+  wire signed [`W-1:0] clk1_port_1, clk1_port_28, clk1_v;
+  wire signed [`W-1:0] clk2_port_51, clk2_v;
   wire signed [`W-1:0] N0317_port_0, N0317_v;
   wire signed [`W-1:0] N0316_port_2, N0316_port_0, N0316_port_1, N0316_v;
   wire signed [`W-1:0] N0315_port_0, N0315_v;
@@ -907,8 +907,8 @@ module chip_4004(
   wire signed [`W-1:0] N0501_port_0, N0501_port_1, N0501_v;
   wire signed [`W-1:0] ADD_0_port_2, ADD_0_port_3, ADD_0_port_1, ADD_0_port_4, ADD_0_port_5, ADD_0_v;
   wire signed [`W-1:0] _I_O_port_0, _I_O_port_1, _I_O_v;
-  wire signed [`W-1:0] d0_port_2, d0_port_3, d0_port_0, d0_port_4, d0_port_5, d0_v;
-  wire signed [`W-1:0] d1_port_2, d1_port_3, d1_port_0, d1_port_4, d1_port_5, d1_v;
+  wire signed [`W-1:0] d0_port_2, d0_port_3, d0_port_4, d0_port_5, d0_v;
+  wire signed [`W-1:0] d1_port_2, d1_port_3, d1_port_4, d1_port_5, d1_v;
   wire signed [`W-1:0] N0347_port_3, N0347_port_1, N0347_port_4, N0347_v;
   wire signed [`W-1:0] N1013_port_1, N1013_v;
   wire signed [`W-1:0] N1012_port_1, N1012_v;
@@ -1500,7 +1500,6 @@ module chip_4004(
   spice_transistor_nmos_gnd tM2108(v(N0703_v), L_v, L_port_1);
   spice_transistor_nmos tM2109(v(clk2_v), N0631_v, N0630_v, N0631_port_1, N0630_port_1);
   spice_transistor_nmos_gnd tM2459(v(X22_v), N0383_v, N0383_port_0);
-  spice_transistor_nmos_gnd tM3231(v(vss_v), d0_v, d0_port_0);
   spice_transistor_nmos_gnd tM1639(v(N0541_v), N0545_v, N0545_port_4);
   spice_transistor_nmos_gnd tM1638(v(N0541_v), N0539_v, N0539_port_1);
   spice_transistor_nmos_gnd tM1637(v(N0646_v), N0613_v, N0613_port_6);
@@ -1556,7 +1555,6 @@ module chip_4004(
   spice_transistor_nmos_gnd tM3276(v(N0676_v), N0667_v, N0667_port_1);
   spice_transistor_nmos_gnd tM3271(v(d1_v), N0668_v, N0668_port_0);
   spice_transistor_nmos_gnd tM2407(v(OPA_2_v), CMC_v, CMC_port_3);
-  spice_transistor_nmos_gnd tM3273(v(vss_v), d2_v, d2_port_4);
   spice_transistor_nmos_vdd tM2870(v(N0939_v), _TMP_0_v, _TMP_0_port_2);
   spice_transistor_nmos_vdd tM3279(v(N0667_v), D1_v, D1_port_17);
   spice_transistor_nmos tM1440(v(N0543_v), N0910_v, N0869_v, N0910_port_0, N0869_port_2);
@@ -1628,8 +1626,6 @@ module chip_4004(
   spice_transistor_nmos tM2938(v(N0351_v), N0371_v, N0767_v, N0371_port_3, N0767_port_2);
   spice_transistor_nmos_gnd tM2532(v(clk1_v), N0335_v, N0335_port_0);
   spice_transistor_nmos_gnd tM1000(v(N0770_v), N0385_v, N0385_port_0);
-  spice_transistor_nmos_gnd tM1001(v(vss_v), test_v, test_port_0);
-  spice_transistor_nmos_gnd tM1002(v(vss_v), reset_v, reset_port_0);
   spice_transistor_nmos_gnd tM1003(v(N0754_v), N0761_v, N0761_port_0);
   spice_transistor_nmos_gnd tM1004(v(PC0_11_v), N0785_v, N0785_port_0);
   spice_transistor_nmos tM1005(v(N0406_v), N0785_v, N0770_v, N0785_port_1, N0770_port_1);
@@ -1707,7 +1703,6 @@ module chip_4004(
   spice_transistor_nmos_vdd tM3084(v(N0690_v), d2_v, d2_port_2);
   spice_transistor_nmos tM3083(v(SUB_GROUP_6__v), TMP_2_v, N0891_v, TMP_2_port_2, N0891_port_5);
   spice_transistor_nmos_vdd tM3081(v(N0944_v), TMP_2_v, TMP_2_port_0);
-  spice_transistor_nmos_gnd tM3240(v(vss_v), d1_v, d1_port_0);
   spice_transistor_nmos_gnd tM2997(v(N0851_v), N0348_v, N0348_port_1);
   spice_transistor_nmos_gnd tM3243(v(N0676_v), N0670_v, N0670_port_3);
   spice_transistor_nmos_gnd tM3244(v(N0676_v), N0669_v, N0669_port_1);
@@ -1878,8 +1873,6 @@ module chip_4004(
   spice_transistor_nmos tM1067(v(RADB0_v), N0394_v, D0_v, N0394_port_0, D0_port_1);
   spice_transistor_nmos tM1064(v(M12_M22_CLK1__M11_M12__v), N0292_v, D0_v, N0292_port_4, D0_port_0);
   spice_transistor_nmos_gnd tM1065(v(N0292_v), N0759_v, N0759_port_0);
-  spice_transistor_nmos_gnd tM1488(v(vss_v), clk2_v, clk2_port_0);
-  spice_transistor_nmos_gnd tM1489(v(vss_v), clk1_v, clk1_port_0);
   spice_transistor_nmos tM1484(v(N0632_v), N0869_v, N0973_v, N0869_port_7, N0973_port_1);
   spice_transistor_nmos tM1485(v(N0645_v), N0982_v, N0869_v, N0982_port_0, N0869_port_8);
   spice_transistor_nmos_gnd tM1486(v(R13_3_v), N0982_v, N0982_port_1);
@@ -2057,7 +2050,6 @@ module chip_4004(
   spice_transistor_nmos_gnd tM3305(v(d3_v), N0664_v, N0664_port_4);
   spice_transistor_nmos_gnd tM3304(v(N0676_v), N0663_v, N0663_port_3);
   spice_transistor_nmos_gnd tM3307(v(POC_v), d1_v, d1_port_4);
-  spice_transistor_nmos_gnd tM3306(v(vss_v), d3_v, d3_port_4);
   spice_transistor_nmos_vdd tM3300(v(S00840_v), N0695_v, N0695_port_3);
   spice_transistor_nmos tM2528(v(X22_v), N0330_v, N0331_v, N0330_port_0, N0331_port_0);
   spice_transistor_nmos_gnd tM2529(v(clk2_v), N0330_v, N0330_port_1);
@@ -2759,7 +2751,7 @@ module chip_4004(
   spice_transistor_nmos_gnd tM1527(v(N0300_v), WADB0_v, WADB0_port_5);
   spice_transistor_nmos_gnd tM1525(v(N0315_v), N0316_v, N0316_port_0);
   spice_transistor_nmos_gnd tM1524(v(A12_v), N0711_v, N0711_port_0);
-  spice_transistor_nmos tM1522(v(vcc_v), N0325_v, clk1_v, N0325_port_6, clk1_port_1);
+  spice_transistor_nmos tM1522(1'b1, N0325_v, clk1_v, N0325_port_6, clk1_port_1);
   spice_transistor_nmos_gnd tM2614(v(RAR_v), READ_ACC_3__v, READ_ACC_3__port_1);
   spice_transistor_nmos_gnd tM2615(v(RAL_v), READ_ACC_3__v, READ_ACC_3__port_2);
   spice_transistor_nmos tM2616(v(N0445_v), N0448_v, ACB_IB_v, N0448_port_2, ACB_IB_port_0);
@@ -3505,8 +3497,8 @@ module chip_4004(
   spice_node_2 n_N0585(eclk, ereset, N0585_port_0,N0585_port_1, N0585_v);
   spice_node_2 n_cm_ram0(eclk, ereset, cm_ram0_port_0,cm_ram0_port_1, cm_ram0_v);
   spice_node_2 n_N0344(eclk, ereset, N0344_port_2,N0344_port_0, N0344_v);
-  spice_node_5 n_d2(eclk, ereset, d2_port_2,d2_port_0,d2_port_1,d2_port_4,d2_port_5, d2_v);
-  spice_node_5 n_d3(eclk, ereset, d3_port_2,d3_port_0,d3_port_1,d3_port_4,d3_port_5, d3_v);
+  spice_node_4 n_d2(eclk, ereset, d2_port_2,d2_port_0,d2_port_1,d2_port_5, d2_v);
+  spice_node_4 n_d3(eclk, ereset, d3_port_2,d3_port_0,d3_port_1,d3_port_5, d3_v);
   spice_node_2 n_WRAB1(eclk, ereset, WRAB1_port_4,WRAB1_port_5, WRAB1_v);
   spice_node_2 n_WRAB0(eclk, ereset, WRAB0_port_4,WRAB0_port_5, WRAB0_v);
   spice_node_6 n_DCL(eclk, ereset, DCL_port_2,DCL_port_3,DCL_port_0,DCL_port_1,DCL_port_4,DCL_port_5, DCL_v);
@@ -3614,7 +3606,7 @@ module chip_4004(
   spice_node_2 n_N0439(eclk, ereset, N0439_port_12,N0439_port_13, N0439_v);
   spice_node_5 n_ADD(eclk, ereset, ADD_port_2,ADD_port_3,ADD_port_0,ADD_port_1,ADD_port_4, ADD_v);
   spice_node_6 n_ADM(eclk, ereset, ADM_port_2,ADM_port_3,ADM_port_0,ADM_port_1,ADM_port_4,ADM_port_5, ADM_v);
-  spice_node_2 n_reset(eclk, ereset, reset_port_2,reset_port_0, reset_v);
+  spice_node_1 n_reset(eclk, ereset, reset_port_2, reset_v);
   spice_node_3 n_N0728(eclk, ereset, N0728_port_2,N0728_port_0,N0728_port_1, N0728_v);
   spice_node_1 n_N0729(eclk, ereset, N0729_port_2, N0729_v);
   spice_node_3 n_N0726(eclk, ereset, N0726_port_2,N0726_port_0,N0726_port_1, N0726_v);
@@ -3870,7 +3862,7 @@ module chip_4004(
   spice_node_2 n_N0918(eclk, ereset, N0918_port_0,N0918_port_1, N0918_v);
   spice_node_3 n_N0626(eclk, ereset, N0626_port_3,N0626_port_1,N0626_port_4, N0626_v);
   spice_node_3 n_N0914(eclk, ereset, N0914_port_2,N0914_port_0,N0914_port_1, N0914_v);
-  spice_node_2 n_test(eclk, ereset, test_port_2,test_port_0, test_v);
+  spice_node_1 n_test(eclk, ereset, test_port_2, test_v);
   spice_node_1 n_S00834(eclk, ereset, S00834_port_0, S00834_v);
   spice_node_2 n_N0915(eclk, ereset, N0915_port_0,N0915_port_1, N0915_v);
   spice_node_1 n_S00804(eclk, ereset, S00804_port_0, S00804_v);
@@ -4201,8 +4193,8 @@ module chip_4004(
   spice_node_2 n_N0798(eclk, ereset, N0798_port_0,N0798_port_1, N0798_v);
   spice_node_2 n_N0828(eclk, ereset, N0828_port_0,N0828_port_1, N0828_v);
   spice_node_2 n___X31__CLK2_(eclk, ereset, __X31__CLK2__port_2,__X31__CLK2__port_1, __X31__CLK2__v);
-  spice_node_3 n_clk1(eclk, ereset, clk1_port_0,clk1_port_1,clk1_port_28, clk1_v);
-  spice_node_2 n_clk2(eclk, ereset, clk2_port_51,clk2_port_0, clk2_v);
+  spice_node_2 n_clk1(eclk, ereset, clk1_port_1,clk1_port_28, clk1_v);
+  spice_node_1 n_clk2(eclk, ereset, clk2_port_51, clk2_v);
   spice_node_1 n_N0317(eclk, ereset, N0317_port_0, N0317_v);
   spice_node_3 n_N0316(eclk, ereset, N0316_port_2,N0316_port_0,N0316_port_1, N0316_v);
   spice_node_1 n_N0315(eclk, ereset, N0315_port_0, N0315_v);
@@ -4251,8 +4243,8 @@ module chip_4004(
   spice_node_2 n_N0501(eclk, ereset, N0501_port_0,N0501_port_1, N0501_v);
   spice_node_5 n_ADD_0(eclk, ereset, ADD_0_port_2,ADD_0_port_3,ADD_0_port_1,ADD_0_port_4,ADD_0_port_5, ADD_0_v);
   spice_node_2 n__I_O(eclk, ereset, _I_O_port_0,_I_O_port_1, _I_O_v);
-  spice_node_5 n_d0(eclk, ereset, d0_port_2,d0_port_3,d0_port_0,d0_port_4,d0_port_5, d0_v);
-  spice_node_5 n_d1(eclk, ereset, d1_port_2,d1_port_3,d1_port_0,d1_port_4,d1_port_5, d1_v);
+  spice_node_4 n_d0(eclk, ereset, d0_port_2,d0_port_3,d0_port_4,d0_port_5, d0_v);
+  spice_node_4 n_d1(eclk, ereset, d1_port_2,d1_port_3,d1_port_4,d1_port_5, d1_v);
   spice_node_3 n_N0347(eclk, ereset, N0347_port_3,N0347_port_1,N0347_port_4, N0347_v);
   spice_node_1 n_N1013(eclk, ereset, N1013_port_1, N1013_v);
   spice_node_1 n_N1012(eclk, ereset, N1012_port_1, N1012_v);
