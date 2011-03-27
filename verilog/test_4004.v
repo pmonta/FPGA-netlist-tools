@@ -16,8 +16,8 @@ module main();
   wire [3:0] db_t;
   wire cm_rom, cm_ram3, cm_ram2, cm_ram1, cm_ram0;
 
-  assign test = 0;
-  assign db_i = 0;
+  assign test = 1;
+  assign db_i = 4'd15;
 
   clocks_4004 _clocks_4004(eclk, ereset, reset, clk1, clk2);
 

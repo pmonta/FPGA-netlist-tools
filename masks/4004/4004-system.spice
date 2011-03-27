@@ -1,0 +1,38 @@
+* 4004 circuit simulation
+
+* FET models
+
+.model efet NMOS level=1 vt0=1.0
+
+* handle floating nodes
+
+.option rshunt = 1.0e12
+
+* supply voltages
+
+v0 gnd! 0 dc 0
+v1 Vdd 0 dc 5
+
+* pull up the data bus to supply 0x00 for reads (after PMOS "inversion") and allow writes to be seen
+
+r0 db0 Vdd 10k
+r1 db1 Vdd 10k
+r2 db2 Vdd 10k
+r3 db3 Vdd 10k
+r4 db4 Vdd 10k
+r5 db5 Vdd 10k
+r6 db6 Vdd 10k
+r7 db7 Vdd 10k
+
+* pin settings, reset pulse, clock waveform
+
+v10 reset 0 pulse (5 0 20u 2n 2n)
+v11 test 0 dc 0
+v12 clk1 0 pulse (0 5 0u 2n 2n 1.5u 4u)
+v13 clk2 0 pulse (0 5 2u 2n 2n 1.5u 4u)
+
+* the 4004 model
+
+.include "4004.spice"
+
+.end

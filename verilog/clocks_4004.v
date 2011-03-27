@@ -4,31 +4,33 @@
 
 module clocks_4004(
   input eclk, ereset,
-  output reg res,
-  output reg clk1,
+  output reg reset,
+  output clk1,
   output clk2
 );
 
   reg [10:0] c;
   reg [7:0] i;
+  reg [1:0] p;
 
   always @(posedge eclk)
     if (ereset) begin
       c <= 0;
-      res <= 0;
-      clk1 <= 0;
+      reset <= 1;
+      p <= 0;
       i <= 0;
     end else begin
       c <= c + 1;
       if (c==11'd2047)
-        res <= 1;
-      if (i==8'd`HALFCYCLE-1) begin
+        reset <= 0;
+      if (i==8'd`QUARTERCYCLE-1) begin
         i <= 0;
-        clk1 <= ~clk1;
+        p <= p+1;
       end else
         i <= i + 1;
     end
 
-  assign clk2 = ~clk1;
+  assign clk1 = (p==2'd0);
+  assign clk2 = (p==2'd2);
 
 endmodule

@@ -1,0 +1,9 @@
+* top-level ngspice script
+
+.control
+  source 4004-system.spice
+  tran 2ns 120us
+  write 4004-spice-rawfile.raw
+.endc
+
+.end

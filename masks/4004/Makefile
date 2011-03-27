@@ -7,6 +7,9 @@ NAME = 4004
 # scale (in microns per pixel) of the png files (must be a multiple of 0.002):
 SCALE = 1.450
 
+sim: 4004-run.spice 4004-system.spice 4004.spice
+	ngspice --batch 4004-run.spice
+
 4004.cif: $(PNGS) nodes.txt pads.txt
 	../tools/png2cif.py $(NAME) $(SCALE) >4004.cif
 
