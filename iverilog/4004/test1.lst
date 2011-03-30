@@ -1,0 +1,5 @@
+D3                ldm 3
+B2                xch 2
+D9                ldm 9
+82          loop: add 2
+40 03             jun loop
