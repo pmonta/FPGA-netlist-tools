@@ -66,6 +66,22 @@ module spice_latch(input eclk,ereset, input g, input in, output reg out);
 
 endmodule
 
+module spice_latch_delay(input eclk,ereset, input g, input in, output reg out);
+
+  reg in1,in2,in3,in4;
+
+  always @(posedge eclk)
+    if (ereset) begin
+      out <= 0;
+      {in1,in2,in3,in4} <= 0;
+    end else begin
+      {in1,in2,in3,in4} <= {in,in1,in2,in3};
+      if (g)
+        out <= in4;
+    end
+
+endmodule
+
 module mux_cascade(input c0,v0,c1,v1, output c, output reg v);
   assign c = c0 | c1;
   always @*

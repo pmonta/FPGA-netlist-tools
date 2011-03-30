@@ -1,4 +1,4 @@
-// Top-level test SoC for 4004 core, RAM, peripherals, clocks
+// Top-level test SoC for 4004 core, clocks, ROM, RAM
 //
 // Copyright (c) 2011 Peter Monta
 
@@ -17,9 +17,14 @@ module main();
   wire cm_rom, cm_ram3, cm_ram2, cm_ram1, cm_ram0;
 
   assign test = 1;
-  assign db_i = 4'd15;
 
   clocks_4004 _clocks_4004(eclk, ereset, reset, clk1, clk2);
+
+  wire [3:0] db_rom;
+
+  rom_4004 _rom_4004(eclk, ereset, clk1, clk2, sync, cm_rom, db_o, db_rom);
+
+  assign db_i = db_rom;
 
   chip_4004 _chip_4004(eclk, ereset,
     clk1, clk2, sync, reset, test,

@@ -11,7 +11,7 @@
 * supply voltages
 
 v0 gnd! 0 dc 0
-v1 Vdd 0 dc 5
+v1 Vdd 0 dc 15
 
 * pull up the data bus to supply 0x00 for reads (after PMOS "inversion") and allow writes to be seen
 
@@ -26,10 +26,10 @@ r7 db7 Vdd 10k
 
 * pin settings, reset pulse, clock waveform
 
-v10 reset 0 pulse (5 0 20u 2n 2n)
+v10 reset 0 pulse (0 15 40u 5n 5n)
 v11 test 0 dc 0
-v12 clk1 0 pulse (0 5 0u 2n 2n 1.5u 4u)
-v13 clk2 0 pulse (0 5 2u 2n 2n 1.5u 4u)
+v12 clk1 0 pulse (0 15 0u 5n 5n 3u 8u)
+v13 clk2 0 pulse (0 15 4u 5n 5n 3u 8u)
 
 * the 4004 model
 

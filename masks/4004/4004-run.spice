@@ -2,7 +2,7 @@
 
 .control
   source 4004-system.spice
-  tran 2ns 120us
+  tran 5ns 240us
   write 4004-spice-rawfile.raw
 .endc
 

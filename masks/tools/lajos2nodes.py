@@ -4,7 +4,7 @@ import sys
 import string
 
 def sanitize(s):
-  s = s.replace(r'.',r'_')
+  s = s.replace(r'.',r'__')
   s = s.replace(r'/',r'_')
   s = s.replace(r'+',r'_')
   s = s.replace(r'-',r'_')
@@ -17,6 +17,8 @@ def sanitize(s):
 
 translate_layer = { '1':'NM', '2':'NP', '3':'ND' }
 
+names = {}
+
 for x in sys.stdin.readlines():
   if x[-1]=='\n':
     x = x[:-1]
@@ -28,4 +30,7 @@ for x in sys.stdin.readlines():
   layer,x,y,name = r[0],int(r[1]),int(r[2]),r[3]
   layer = translate_layer[layer]
   name = sanitize(name)
+  if names.has_key(name):
+    print 'collision: ',name
+  names[name] = 1
   print '%s %d %d %s' % (name,x,y,layer)
