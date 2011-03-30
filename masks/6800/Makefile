@@ -7,6 +7,20 @@ NAME = 6800
 # scale (in microns per pixel) of the png files (must be a multiple of 0.002):
 SCALE = 1.000
 
+poly.png: poly.svg
+	pbmmake -white 3 3 >t3.pbm
+	<$< ../tools/svg2png.py 6500 6280
+	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@
+	rm -f out.png
+	rm -f t3.pbm
+
+diffusion.png: diffusion.svg
+	pbmmake -white 3 3 >t3.pbm
+	<$< ../tools/svg2png.py 6500 6280
+	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@
+	rm -f out.png
+	rm -f t3.pbm
+
 6800.cif: $(PNGS)
 	../tools/png2cif.py $(NAME) $(SCALE) >6800.cif
 

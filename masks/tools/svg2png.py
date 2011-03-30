@@ -70,9 +70,9 @@ def parse_contact(s):
     return None
   width,height,x,y = float(t.group(3)),float(t.group(4)),float(t.group(1)),float(t.group(2))
   if x<0:
-    x = -x
+    x = -x - 10.51
   if y<0:
-    y = -y
+    y = -y - 10.42
   return [(x,y),(x+width,y),(x+width,y+height),(x,y+height)]
 
 def draw_path(ctx,p,color,scale=1.0):
