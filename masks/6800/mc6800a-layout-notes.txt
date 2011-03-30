@@ -1,0 +1,36 @@
+
+Attached in the archive are files that are the result of reverse engineering a MC6800A die. This was done based on microphotos taken and stitched by members of the Visual 6502 team. Included is the extracted layout in SVG form, and the netlist in Spice like compatible format. The Layout is included in PDF form as well, but note that colors and transparency styles might be slightly different.
+
+
+Circuit notes:
+
+There seems to be at least one case with charge sharing. I remember the conversation about this happening in the 6502, and I understand that the simulator currently make a simple shortcut favoring a positive charge in these cases. I don't think this will work here. Simulation would need to consider which "side" has the bigger capacitance. This data is currently not provided in the netlist.
+
+The data bus input buffers use a strange "refresh" logic. The latch is not completely dynamic, but it is not a standard static latch either. The feedback is applied only when the data latched is a logic one. This is implemented with a conditional enhancement pullup. I assume the idea is that a dynamic cell with a logic one would eventually discharge, but a logic zero would never recharge itself? From the point of view of simulation, this is one of the few cases where it is critical to realize it is an enhacement, and not a depletion FET pullup.
+
+The register file also use an unusual static feedback logic. The feedback to the latch is enabled all the time, only that it goes through a resisitive (long channel) transistor. So that when a new value is being latched, it overrides the weak feedback. Otherwise, the weak feedback is enough for refreshing the static latch.
+
+The transistor count matches our earlier assumption. It is indeed ~5100 (including multiple fingers), with about 1000 being pullups. So the 4000 figure in the original enhancement load version didn't count the pullups.
+
+
+
+SVG layout notes:
+
+There was no attempt to reproduce the exact shape of the metal contacts accurately. They are just an ideal circle, all of the same size.
+
+All metal polygons are in the same layer/group. Power rails are not separated.
+
+I didn't bother including all the test polygons that aren't part of the circuit. I did care to include the marks that identify the die.
+
+
+
+Simulation notes:
+
+There is a small problem to provide files for visual simulation. I understand that there is currently no way to describe polygons with holes. So this should be fixed, or I might try some cheating, by converting a polygon with holes, into multiple adjacent ones without holes.
+
+I understand that simulation would also need to be enhanced for the resistive feedback. And we also need to somehow mark these transistors as having the higher resistance.
+
+I performed just a basic, minimal, testing with actual code.
+
+
+Jorge Cwik

@@ -26,6 +26,11 @@
 	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pnmtopng >$@
 	rm -f temp.polygon out.png
 
+%.png: %.svg
+	<$< ../tools/svg2png.py 6500 6280
+	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pnmtopng >$@
+	rm -f out.png
+
 %.png: %.bmp
 #	pbmmake -white 3 3 >t3.pbm
 #	<$< bmptoppm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pamenlarge 3 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@

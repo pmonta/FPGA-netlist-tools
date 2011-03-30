@@ -24,3 +24,10 @@ Source data:
 4002 and 4003 image scales:
   can't find any wafer or die-with-package shots
   derived assuming their pad dimensions are the same as 4004 and 4001 (~123 microns)
+
+6800:
+  posting to 6502hackers by jorge@rahul.net on 2011-03-27
+  files included here:
+    mc6800a-layout-notes.txt
+    mc6800a-layout.svg
+    spice-netlist.txt
