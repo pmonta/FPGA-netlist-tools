@@ -31,6 +31,9 @@
 	<out.png pngtopnm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pnmtopng >$@
 	rm -f out.png
 
+%.vec.svg: %.png
+	<$< pngtopnm | pamflip -topbottom | potrace -a -1 -b svg >$@
+
 %.png: %.bmp
 #	pbmmake -white 3 3 >t3.pbm
 #	<$< bmptoppm | ppmtopgm | pamthreshold -simple -threshold=0.5 | pamenlarge 3 | pgmmorphconv -dilate t3.pbm | pnmtopng >$@

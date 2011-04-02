@@ -6,4 +6,5 @@ klayout-nmos.lyp
     In File->Setup:
       Application->Layer List:  use klayout-nmos.lyp as default layer table
       Display->General:  use 2x oversampling for a nicer display
+      Display->Background:  uncheck "Show Ruler"
       Navigation->New Cell:  check "Select all hierarchy levels"
