@@ -32,7 +32,7 @@
 	rm -f out.png
 
 %.vec.svg: %.png
-	<$< pngtopnm | pamflip -topbottom | potrace -a -1 -b svg >$@
+	<$< pngtopnm | pamflip -topbottom | potrace --unit 1 --debug 4 -b svg >$@
 
 %.png: %.bmp
 #	pbmmake -white 3 3 >t3.pbm

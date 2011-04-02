@@ -8,3 +8,6 @@ klayout-nmos.lyp
       Display->General:  use 2x oversampling for a nicer display
       Display->Background:  uncheck "Show Ruler"
       Navigation->New Cell:  check "Select all hierarchy levels"
+
+potrace-1.9-optimal-polygon
+  patch to potrace 1.9 to output optimal polygons (before adjustment and smoothing) to SVG.

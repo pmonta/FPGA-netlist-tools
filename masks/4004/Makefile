@@ -8,7 +8,7 @@ NAME = 4004
 SCALE = 1.450
 
 4004.svg: buried.vec.svg contact.vec.svg diffusion.vec.svg metal.vec.svg poly.vec.svg
-	../tools/make-composite-svg.py 19680 27060 >4004.svg
+	../tools/make-composite-svg.py 1968 2706 >4004.svg
 
 sim: 4004-run.spice 4004-system.spice 4004.spice
 	ngspice --batch 4004-run.spice

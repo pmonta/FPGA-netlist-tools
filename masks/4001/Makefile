@@ -8,7 +8,7 @@ NAME = 4001
 SCALE = 1.480
 
 4001.svg: contact.vec.svg diffusion.vec.svg metal.vec.svg poly.vec.svg
-	../tools/make-composite-svg.py 27120 17680 >4001.svg
+	../tools/make-composite-svg.py 2712 1768 >4001.svg
 
 4001.cif: $(PNGS) pads.txt
 	../tools/png2cif.py $(NAME) $(SCALE) >4001.cif
